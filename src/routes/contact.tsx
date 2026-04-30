@@ -5,7 +5,7 @@ import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { Faq } from "@/components/home/Faq";
 import { business, buildWhatsAppLink } from "@/content/site";
 
-const SITE_URL = "https://elizahealthcare.in";
+const SITE_URL = "https://elshadaihealthcare.com";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

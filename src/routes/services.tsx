@@ -6,7 +6,7 @@ import { Faq } from "@/components/home/Faq";
 import { services } from "@/content/site";
 import serviceImg from "@/assets/service-nursing.jpg";
 
-const SITE_URL = "https://elizahealthcare.in";
+const SITE_URL = "https://elshadaihealthcare.com";
 
 export const Route = createFileRoute("/services")({
   head: () => ({

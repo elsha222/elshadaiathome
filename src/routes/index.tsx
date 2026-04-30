@@ -15,7 +15,7 @@ import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { business, faqs } from "@/content/site";
 import heroImg from "@/assets/hero-nurse.jpg";
 
-const SITE_URL = "https://elizahealthcare.in";
+const SITE_URL = "https://elshadaihealthcare.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({

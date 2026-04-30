@@ -1,25 +1,25 @@
 /**
- * ELIZA Remote Nursing & Healthcare — Centralized Content
+ * Elshadai Home Healthcare — Centralized Content
  * ----------------------------------------------------------------
  * Edit this single file to change ALL copy across the website.
  * Do not hardcode strings inside components — add them here instead.
  */
 
 export const business = {
-  name: "ELIZA",
-  fullName: "ELIZA Remote Nursing & Healthcare",
+  name: "Elshadai",
+  fullName: "Elshadai Home Healthcare",
   tagline: "Hospital-grade care, gently delivered to your home.",
   shortDescription:
     "Certified nurses, attendants, physiotherapists and home medical equipment for compassionate at-home care across India.",
-  phone: "+919876543210",
-  phoneDisplay: "+91 90168 95594",
-  whatsapp: "90168 95594",
-  email: "care@elizahealthcare.in",
-  address: "Mumbai • Thane • Navi Mumbai • Pune",
+  phone: "+917573923584",
+  phoneDisplay: "+91 75739 23584",
+  whatsapp: "917573923584",
+  email: "elshadaiathome25@gmail.com",
+  address: "2nd Floor, Opp Fire Brigade, 6 Kasar Ali, Bhiwandi, Thane — 421308",
   hours: "24 / 7 — including holidays",
   social: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
+    instagram: "https://instagram.com/elshadaihealthcare",
+    facebook: "https://facebook.com/elshadaihealthcare",
     linkedin: "https://linkedin.com",
     youtube: "https://youtube.com",
     twitter: "https://twitter.com",
@@ -373,8 +373,8 @@ export const aboutContent = {
   mission:
     "To make hospital-grade healthcare accessible, affordable, and human — right where people heal best: at home.",
   story: [
-    "ELIZA was born from a simple, painful truth — every Indian family eventually faces a moment when a loved one needs more care than the home can provide, and the hospital feels too cold, too far, too expensive.",
-    "We built ELIZA so that families never have to choose between quality care and the comfort of home. From a small Mumbai team in 2020, we now serve thousands of families across India with verified nurses, doctors, attendants and full home medical equipment.",
+    "Elshadai was born from a simple, painful truth — every Indian family eventually faces a moment when a loved one needs more care than the home can provide, and the hospital feels too cold, too far, too expensive.",
+    "We built Elshadai so that families never have to choose between quality care and the comfort of home. From our base in Bhiwandi, Thane, we serve thousands of families across Mumbai, Thane, Navi Mumbai and Pune with verified nurses, doctors, attendants and full home medical equipment.",
     "Every caregiver we send to your home is someone we'd send to our own.",
   ],
   values: [

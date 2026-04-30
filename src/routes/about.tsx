@@ -6,7 +6,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { aboutContent, business, cities } from "@/content/site";
 import teamImg from "@/assets/team.jpg";
 
-const SITE_URL = "https://elizahealthcare.in";
+const SITE_URL = "https://elshadaihealthcare.com";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
