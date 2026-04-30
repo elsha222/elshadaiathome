@@ -84,6 +84,7 @@ function submitToSheets(data: F) {
 
 export function AppointmentForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "duplicate" | "error">("idle");
+  const [submittedData, setSubmittedData] = useState<F | null>(null);
 
   const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<F>({
     resolver: zodResolver(schema),
@@ -128,6 +129,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
 
     if (brevoOk || !BREVO_API_KEY) {
       localStorage.setItem(LS_KEY, String(Date.now()));
+      setSubmittedData(data);
       setStatus("success");
       reset();
     } else {
@@ -137,6 +139,11 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
 
   // ── success ──────────────────────────────────────────────────────────────
   if (status === "success") {
+    let whatsappText = "Hi ELIZA, I just booked an appointment on your website.";
+    if (submittedData) {
+      whatsappText = `Hi ELIZA, I just booked an appointment on your website.\n\n*Name:* ${submittedData.name}\n*Phone:* ${submittedData.phone}\n*City:* ${submittedData.city}\n*Service:* ${submittedData.service}\n*Duration:* ${submittedData.duration}`;
+    }
+
     return (
       <div className="rounded-2xl border border-[#E2F0EE] bg-[#E8F5F3] p-8 text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#0E7C6E]">
@@ -147,7 +154,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
           Our coordinator will call you back within <strong>30 minutes</strong> to confirm.
         </p>
         <a
-          href={buildWhatsAppLink("Hi ELIZA, I just booked an appointment on your website.")}
+          href={buildWhatsAppLink(whatsappText)}
           target="_blank" rel="noopener noreferrer"
           className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white"
         >
@@ -273,7 +280,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             ? <><Loader2 className="h-5 w-5 animate-spin" /> Booking…</>
             : <><Send className="h-5 w-5" /> Book Appointment</>}
         </button>
-        <a href={buildWhatsAppLink("Hi ELIZA, I need home nursing care.")}
+        <a href={buildWhatsAppLink("Hi ELIZA, I need home nursing care. I'm connecting directly via WhatsApp.")}
           target="_blank" rel="noopener noreferrer"
           className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#25D366] bg-white py-3.5 text-sm font-semibold text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all">
           <MessageCircle className="h-4 w-4" /> Or book via WhatsApp

@@ -18,8 +18,8 @@ export const business = {
   address: "2nd Floor, Opp Fire Brigade, 6 Kasar Ali, Bhiwandi, Thane — 421308",
   hours: "24 / 7 — including holidays",
   social: {
-    instagram: "https://instagram.com/elshadaihealthcare",
-    facebook: "https://facebook.com/elshadaihealthcare",
+    instagram: "https://www.instagram.com/elshada37?utm_source=qr&igsh=MXdvYWlneHY0Y2t5cA==",
+    facebook: "https://www.facebook.com/share/1Fy5EuoTUk/",
     linkedin: "https://linkedin.com",
     youtube: "https://youtube.com",
     twitter: "https://twitter.com",
