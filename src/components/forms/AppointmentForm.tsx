@@ -108,8 +108,8 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
         method: "POST",
         headers: { "api-key": BREVO_API_KEY, "Content-Type": "application/json" },
         body: JSON.stringify({
-          sender:      { name: "ELIZA Website", email: "mrviperoffical@gmail.com" },
-          to:          [{ email: "mrviperoffical@gmail.com", name: "ELIZA Care Team" }],
+          sender:      { name: "ELIZA Website", email: "elshadaiathome25@gmail.com" },
+          to:          [{ email: "elshadaiathome25@gmail.com", name: "ELIZA Care Team" }],
           subject:     `New booking — ${data.service} — ${data.city}`,
           htmlContent: buildEmailHtml(data),
         }),
