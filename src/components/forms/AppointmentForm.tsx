@@ -280,7 +280,14 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             ? <><Loader2 className="h-5 w-5 animate-spin" /> Booking…</>
             : <><Send className="h-5 w-5" /> Book Appointment</>}
         </button>
-        <a href={buildWhatsAppLink("Hi ELIZA, I need home nursing care. I'm connecting directly via WhatsApp.")}
+        <a href={buildWhatsAppLink(
+            `Hi ELIZA, I'm connecting to book an appointment.\n\n` +
+            (watch("name") ? `*Name:* ${watch("name")}\n` : "") +
+            (watch("phone") ? `*Phone:* ${watch("phone")}\n` : "") +
+            (watch("city") ? `*City:* ${watch("city")}\n` : "") +
+            (watch("service") ? `*Service:* ${watch("service")}\n` : "") +
+            (watch("duration") ? `*Duration:* ${watch("duration")}` : "")
+          )}
           target="_blank" rel="noopener noreferrer"
           className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#25D366] bg-white py-3.5 text-sm font-semibold text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all">
           <MessageCircle className="h-4 w-4" /> Or book via WhatsApp

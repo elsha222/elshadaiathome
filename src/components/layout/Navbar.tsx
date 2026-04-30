@@ -4,6 +4,7 @@ import { Menu, X, Phone, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business, nav } from "@/content/site";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,9 +30,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-[#0D2D4F] transition-shadow duration-300" style={{ boxShadow: scrolled ? "0 2px 16px rgba(13,45,79,0.22)" : "none" }}>
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 md:h-20 lg:px-12">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#0E7C6E] text-white group-hover:bg-[#1A9E8C] transition-colors">
-            <HeartPulse className="h-5 w-5" />
-          </span>
+          <img src={logo} alt="Elshadai Healthcare" className="h-10 w-auto object-contain" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold tracking-tight text-white">{business.name}</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Home Healthcare</div>

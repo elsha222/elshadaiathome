@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { HeartPulse, Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin, Youtube, Twitter } from "lucide-react";
 import { business, nav, services, equipment, buildWhatsAppLink } from "@/content/site";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -8,9 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:px-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#0E7C6E] text-white">
-              <HeartPulse className="h-5 w-5" />
-            </span>
+            <img src={logo} alt="Elshadai Healthcare" className="h-10 w-auto object-contain" />
             <div className="font-display text-lg font-bold text-white">{business.name}</div>
           </Link>
           <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">

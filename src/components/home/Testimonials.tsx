@@ -60,9 +60,13 @@ export function Testimonials() {
                   "{t.text}"
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3 border-t border-[#EEF2F7] pt-4">
-                  <div className="grid h-11 w-11 place-items-center rounded-full bg-[#0E7C6E] font-display text-sm font-bold text-white">
-                    {t.name.charAt(0)}
-                  </div>
+                  {t.image ? (
+                    <img src={t.image} alt={t.name} className="h-11 w-11 rounded-full object-cover border-2 border-[#E8F5F3]" />
+                  ) : (
+                    <div className="grid h-11 w-11 place-items-center rounded-full bg-[#0E7C6E] font-display text-sm font-bold text-white shrink-0">
+                      {t.name.charAt(0)}
+                    </div>
+                  )}
                   <div>
                     <div className="text-sm font-semibold text-[#0D2D4F]">{t.name}</div>
                     <div className="text-xs text-[#4A5568]">{t.role}</div>

@@ -85,13 +85,23 @@ export function EquipmentGrid({ limit, withHeader = true }: { limit?: number; wi
                   </li>
                 ))}
               </ul>
-              <Link
-                to="/book"
-                aria-label={`Enquire about ${e.title}`}
-                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[#0E7C6E] hover:gap-2 transition-all"
-              >
-                Enquire now <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="mt-5 flex items-center justify-between gap-2">
+                <Link
+                  to="/equipment/$slug"
+                  params={{ slug: e.slug }}
+                  className="text-sm font-semibold text-[#0E7C6E] hover:underline"
+                  aria-label={`Learn more about ${e.title}`}
+                >
+                  Learn more
+                </Link>
+                <Link
+                  to="/book"
+                  className="inline-flex items-center gap-1 rounded-full bg-[#0E7C6E] px-4 py-1.5 text-[13px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
+                  aria-label={`Book ${e.title}`}
+                >
+                  Book
+                </Link>
+              </div>
             </div>
           </motion.article>
         ))}

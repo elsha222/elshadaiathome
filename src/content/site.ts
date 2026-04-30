@@ -15,7 +15,7 @@ export const business = {
   phoneDisplay: "+91 75739 23584",
   whatsapp: "917573923584",
   email: "elshadaiathome25@gmail.com",
-  address: "2nd Floor, Opp Fire Brigade, 6 Kasar Ali, Bhiwandi, Thane — 421308",
+  address: "2nd floor, Kasar ali, 6, Thane Rd, opp. Fire bridge, Kamatghar, Bhiwandi, Maharashtra 421308",
   hours: "24 / 7 — including holidays",
   social: {
     instagram: "https://www.instagram.com/elshada37?utm_source=qr&igsh=MXdvYWlneHY0Y2t5cA==",
@@ -42,8 +42,8 @@ export const hero = {
   title: "Hospital-grade care,\ngently at home.",
   subtitle:
     "Certified nurses, doctors, attendants and home medical equipment — so your loved ones heal in the comfort of home, surrounded by the people who love them most.",
-  primaryCta: { label: "Book a Nurse Now", to: "/book" },
-  secondaryCta: { label: "Talk on WhatsApp" },
+  primaryCta: { label: "Book appointment", to: "/book" },
+  secondaryCta: { label: "Book via WhatsApp" },
   trustChips: [
     "ANM / GNM Certified",
     "24×7 Coordinator",
@@ -285,7 +285,7 @@ export const howItWorks = [
   },
 ];
 
-export const testimonials = [
+export const testimonials: { name: string; role: string; text: string; rating: number; image?: string }[] = [
   {
     name: "Priya Sharma",
     role: "Daughter • Mumbai",

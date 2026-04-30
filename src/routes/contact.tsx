@@ -104,7 +104,7 @@ function ContactPage() {
           <div className="overflow-hidden rounded-3xl shadow-card border border-border">
             <iframe
               title="ELIZA Mumbai location"
-              src="https://www.google.com/maps?q=Mumbai&output=embed"
+              src="https://www.google.com/maps?q=2nd+floor,+Kasar+ali,+6,+Thane+Rd,+opp.+Fire+bridge,+Kamatghar,+Bhiwandi,+Maharashtra+421308&output=embed"
               loading="lazy"
               className="block h-72 w-full border-0"
               referrerPolicy="no-referrer-when-downgrade"
