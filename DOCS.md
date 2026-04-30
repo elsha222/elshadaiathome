@@ -1,142 +1,358 @@
-# ELIZA Healthcare — Complete Website Documentation
+# Elshadai Home Healthcare — Complete Deployment & Operations Guide
+
+## Quick Answer to Your Questions
+
+### Is Vercel free for a static website? YES ✅
+- Vercel Hobby (free) = unlimited static deployments
+- 100GB bandwidth/month free
+- Custom domain free
+- HTTPS free
+- Your site is static HTML/JS/CSS — perfectly fits free tier forever
+
+### Private repo on Vercel — does it work? YES ✅
+- Vercel can deploy from **private GitHub repos** on the free plan
+- Your code stays private, only the built website is public
+- Credentials (API keys) go into Vercel's Environment Variables — never in code
+
+### Are credentials safe on a static site?
+- `VITE_` prefixed variables get **baked into the JS bundle at build time**
+- Anyone can find them with browser DevTools → Sources
+- This is **acceptable** for Brevo API key (it's a send-only key, not admin)
+- The real protection: Brevo lets you restrict the key to only send emails
+- Google Sheets webhook URL is also low-risk (it only appends rows)
+- **Never put payment keys, database passwords, or admin tokens in VITE_ vars**
+
+---
 
 ## Table of Contents
-1. [Project Overview](#1-project-overview)
-2. [Local Development Setup](#2-local-development-setup)
-3. [Deploy to GitHub Pages (Step-by-Step)](#3-deploy-to-github-pages-step-by-step)
-4. [Environment Variables & Email Setup](#4-environment-variables--email-setup)
-5. [SEO — What's Already Done](#5-seo--whats-already-done)
-6. [SEO — What You Must Do Next](#6-seo--what-you-must-do-next)
-7. [Performance Optimizations](#7-performance-optimizations)
-8. [Trust & Conversion Improvements](#8-trust--conversion-improvements)
-9. [Alternative Hosting (Netlify / Vercel / Cloudflare Pages)](#9-alternative-hosting-netlify--vercel--cloudflare-pages)
-10. [Nice-to-Have Features](#10-nice-to-have-features)
-11. [Updating Content](#11-updating-content)
-12. [Troubleshooting](#12-troubleshooting)
+1. [Deploy on Vercel (Recommended)](#1-deploy-on-vercel-recommended)
+2. [Connect GoDaddy Domain to Vercel](#2-connect-godaddy-domain-to-vercel)
+3. [Deploy on GitHub Pages (Alternative)](#3-deploy-on-github-pages-alternative)
+4. [Credential Security — Full Explanation](#4-credential-security--full-explanation)
+5. [First-time Git Push to GitHub](#5-first-time-git-push-to-github)
+6. [SEO Checklist](#6-seo-checklist)
+7. [Updating Content](#7-updating-content)
+8. [Email & Google Sheets Setup](#8-email--google-sheets-setup)
 
 ---
 
-## 1. Project Overview
+## 1. Deploy on Vercel (Recommended)
 
-| Item | Detail |
-|------|--------|
-| Framework | React 19 + TanStack Router (SPA) |
-| Styling | Tailwind CSS v4 |
-| Build tool | Vite 7 |
-| Email | Brevo (Sendinblue) transactional API |
-| CRM | Google Sheets via Apps Script webhook |
-| Hosting | GitHub Pages (via GitHub Actions CI/CD) |
-| Domain target | `elizahealthcare.in` |
+Vercel is better than GitHub Pages for SPAs — no 404 redirect hacks, faster CDN, better analytics.
 
----
+### Step 1 — Create GitHub repo first
 
-## 2. Local Development Setup
+1. Go to https://github.com/new
+2. Sign in as `elsha222`
+3. Name: `elshadaiathome`
+4. Set to **Private** (your code stays hidden)
+5. Do NOT add README or any files
+6. Click **Create repository**
+
+### Step 2 — Push your code
+
+Open terminal in your project folder and run:
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/elsha222/elshadaiathome.git
-cd elshadaiathome
-
-# 2. Install dependencies
-npm install
-
-# 3. Copy env file and fill in your keys
-cp .env.example .env
-# Edit .env — add your Brevo API key and Google Sheets URL
-
-# 4. Start dev server
-npm run dev
-# Opens at http://localhost:8080
-```
-
----
-
-## 3. Deploy to GitHub Pages (Step-by-Step)
-
-### 3.1 — First-time Git setup (run once)
-
-```bash
-cd "path/to/eliza-care-blueprint-main"
-
-git init
-git add .
-git commit -m "Initial commit — ELIZA Healthcare website"
-git branch -M main
-git remote add origin https://github.com/elsha222/elshadaiathome.git
 git push -u origin main
 ```
 
-### 3.2 — Enable GitHub Pages in repo settings
+If it asks for credentials, use your GitHub username + a Personal Access Token
+(GitHub → Settings → Developer settings → Personal access tokens → Generate new token → check "repo" scope)
 
-1. Go to `https://github.com/elsha222/elshadaiathome`
-2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Source**, select **GitHub Actions**
-4. Save
+### Step 3 — Deploy on Vercel
 
-### 3.3 — Add secrets (for email to work in production)
+1. Go to https://vercel.com → Sign up with GitHub (use elsha222 account)
+2. Click **Add New Project**
+3. Click **Import** next to `elshadaiathome` (private repos show up too)
+4. Framework Preset: **Vite** (auto-detected)
+5. Build settings (auto-filled, verify):
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm ci`
+6. Click **Environment Variables** → Add these two:
 
-1. Go to **Settings** → **Secrets and variables** → **Actions**
-2. Click **New repository secret** and add:
+   | Name | Value |
+   |------|-------|
+   | `VITE_BREVO_API_KEY` | your Brevo API key from `.env` file |
+   | `VITE_SHEETS_WEBHOOK_URL` | your Google Sheets webhook URL from `.env` file |
 
-| Secret Name | Value |
-|-------------|-------|
-| `VITE_BREVO_API_KEY` | Your Brevo API key from `.env` |
-| `VITE_SHEETS_WEBHOOK_URL` | Your Google Sheets webhook URL from `.env` |
+7. Click **Deploy**
 
-### 3.4 — Trigger deployment
+Your site goes live at: `https://elshadaiathome.vercel.app` in ~2 minutes.
 
-Every `git push` to `main` auto-deploys. Or go to **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**.
-
-Your site will be live at: `https://elsha222.github.io/elshadaiathome/`
-
-### 3.5 — Connect custom domain `elizahealthcare.in`
-
-1. In repo **Settings** → **Pages** → **Custom domain** → enter `elizahealthcare.in`
-2. At your domain registrar (GoDaddy / Namecheap / etc.), add these DNS records:
-
-```
-Type    Name    Value
-A       @       185.199.108.153
-A       @       185.199.109.153
-A       @       185.199.110.153
-A       @       185.199.111.153
-CNAME   www     elsha222.github.io
-```
-
-3. Check **Enforce HTTPS** in GitHub Pages settings (after DNS propagates ~24h)
-
-> **Important:** Once you have a custom domain, update `base: "/"` in `vite.config.ts` (already set correctly).
-> If you're using the subdirectory URL `elsha222.github.io/elshadaiathome/`, change `base` to `"/elshadaiathome/"`.
-
-### 3.6 — Subsequent deployments
+### Step 4 — Every future update
 
 ```bash
-# Make changes, then:
+# Make changes to any file, then:
 git add .
-git commit -m "Update: describe what changed"
+git commit -m "describe what you changed"
 git push
-# GitHub Actions auto-builds and deploys in ~2 minutes
+# Vercel auto-detects the push and redeploys in ~90 seconds
 ```
 
 ---
 
-## 4. Environment Variables & Email Setup
+## 2. Connect GoDaddy Domain to Vercel
 
-### 4.1 — Brevo (Email) Setup
+Your domain: **elshadaihealthcare.com** (registered at GoDaddy, expires Oct 7 2026)
 
-1. Sign up free at [app.brevo.com](https://app.brevo.com)
-2. Go to **Settings** → **SMTP & API** → **API Keys** → **Create a new API key**
-3. Copy the key → paste into `.env` as `VITE_BREVO_API_KEY`
-4. Also add it as a GitHub Secret (see 3.3 above)
-5. In Brevo, verify your sender email `care@elizahealthcare.in` under **Senders & IPs**
+### Step A — Add domain in Vercel
 
-**Test email works:** Fill the booking form on localhost — you should receive an email at `care@elizahealthcare.in`.
+1. In Vercel → your project → **Settings** → **Domains**
+2. Type `elshadaihealthcare.com` → click **Add**
+3. Also add `www.elshadaihealthcare.com` → click **Add**
+4. Vercel shows you DNS records to add — keep this tab open
 
-### 4.2 — Google Sheets (CRM) Setup
+### Step B — Add DNS records in GoDaddy
 
-1. Create a new Google Sheet
-2. Go to **Extensions** → **Apps Script**
-3. Paste this script:
+1. Go to https://dcc.godaddy.com/manage/elshadaihealthcare.com/dns
+   (or: GoDaddy → My Products → elshadaihealthcare.com → DNS)
+2. Delete any existing **A record** pointing to `@` (the root domain)
+3. Add these records:
+
+   | Type | Name | Value | TTL |
+   |------|------|-------|-----|
+   | A | @ | 76.76.21.21 | 600 |
+   | CNAME | www | cname.vercel-dns.com | 600 |
+
+   > The A record IP `76.76.21.21` is Vercel's IP. The CNAME for www points to Vercel.
+
+4. Save
+
+### Step C — Wait for DNS propagation
+
+- Takes 10 minutes to 48 hours (usually under 1 hour with GoDaddy)
+- Check status at: https://dnschecker.org/#A/elshadaihealthcare.com
+- Once green globally, Vercel auto-issues a free SSL certificate
+
+### Step D — Set root domain as primary in Vercel
+
+1. Vercel → Settings → Domains
+2. Click the three dots next to `elshadaihealthcare.com` → **Set as Primary**
+3. Vercel auto-redirects `www` → root domain
+
+Your site is now live at **https://elshadaihealthcare.com** 🎉
+
+---
+
+## 3. Deploy on GitHub Pages (Alternative)
+
+Use this only if you don't want Vercel. GitHub Pages is free but has limitations:
+- No server-side redirects (uses 404.html hack — already set up)
+- Slower CDN than Vercel
+- Public repo required for free Pages (private repo needs GitHub Pro = $4/month)
+
+### Step 1 — Create repo as PUBLIC on GitHub
+
+1. Go to https://github.com/new
+2. Name: `elshadaiathome`
+3. Set to **Public** (required for free Pages)
+4. Create repository
+
+### Step 2 — Push code
+
+```bash
+git push -u origin main
+```
+
+### Step 3 — Enable GitHub Pages
+
+1. Go to https://github.com/elsha222/elshadaiathome/settings/pages
+2. Source → **GitHub Actions**
+3. Save
+
+### Step 4 — Add secrets
+
+1. https://github.com/elsha222/elshadaiathome/settings/secrets/actions
+2. Add `VITE_BREVO_API_KEY` and `VITE_SHEETS_WEBHOOK_URL`
+
+### Step 5 — Connect GoDaddy domain to GitHub Pages
+
+In GoDaddy DNS, add:
+
+| Type | Name | Value | TTL |
+|------|------|-------|-----|
+| A | @ | 185.199.108.153 | 600 |
+| A | @ | 185.199.109.153 | 600 |
+| A | @ | 185.199.110.153 | 600 |
+| A | @ | 185.199.111.153 | 600 |
+| CNAME | www | elsha222.github.io | 600 |
+
+Then in GitHub Pages settings → Custom domain → type `elshadaihealthcare.com` → Save → check **Enforce HTTPS**.
+
+---
+
+## 4. Credential Security — Full Explanation
+
+### What happens to VITE_ variables
+
+```
+Your .env file  →  Vite build  →  dist/assets/index-xxx.js  →  Vercel CDN  →  User's browser
+```
+
+The API key ends up **inside the JavaScript file** that browsers download.
+Anyone can open DevTools → Sources → search for the key.
+
+### Is this a problem for your specific keys?
+
+| Key | Risk Level | Why it's OK |
+|-----|-----------|-------------|
+| `VITE_BREVO_API_KEY` | Low | Can only send emails, not read/delete. Restrict it in Brevo dashboard to only the "transactional" permission. Worst case: someone sends spam from your account — you revoke and regenerate the key. |
+| `VITE_SHEETS_WEBHOOK_URL` | Very Low | Can only append rows to your sheet. No sensitive data at risk. |
+
+### What you must NEVER put in VITE_ variables
+
+- Database passwords (MongoDB, MySQL, etc.)
+- Stripe/Razorpay secret keys
+- AWS secret access keys
+- Any admin/full-access API tokens
+- JWT secrets
+
+### How Vercel protects your keys
+
+1. Keys are stored encrypted in Vercel's vault
+2. They're injected only at **build time** — not exposed in Vercel's UI after saving
+3. Your **source code** (private repo) never contains the keys
+4. The built JS contains them — but that's unavoidable for client-side apps
+
+### Best practice for Brevo key
+
+1. Log into https://app.brevo.com
+2. Settings → SMTP & API → API Keys
+3. Create a **new restricted key** with only "Transactional emails" permission
+4. Use that key instead of a full-access key
+5. If the key leaks, revoke it and create a new one — takes 30 seconds
+
+### Private repo on Vercel — what it protects
+
+✅ Your source code is hidden (competitors can't copy your components)
+✅ Your `.env.example` structure is hidden
+✅ Your business logic is hidden
+❌ Does NOT hide the built JS from browser DevTools
+❌ Does NOT hide VITE_ variables from the final bundle
+
+**Conclusion:** Private repo on Vercel is the right choice. Use it.
+
+---
+
+## 5. First-time Git Push to GitHub
+
+Run these commands in order in your terminal:
+
+```bash
+# Navigate to project
+cd "C:\Users\Ashish jaiswal\Downloads\eliza-care-blueprint-main"
+
+# Push to GitHub (repo must exist first — create at github.com/new)
+git push -u origin main
+```
+
+If you get "Authentication failed":
+```bash
+# Use a Personal Access Token instead of password
+# GitHub → Settings → Developer settings → Personal access tokens (classic)
+# → Generate new token → check "repo" → copy token
+# When git asks for password, paste the token
+```
+
+For future updates:
+```bash
+git add .
+git commit -m "what you changed"
+git push
+```
+
+---
+
+## 6. SEO Checklist
+
+### Done automatically ✅
+- Meta title + description on every page
+- Keywords meta tag
+- Open Graph (WhatsApp/Facebook preview)
+- Twitter Card
+- Canonical URLs
+- robots.txt
+- sitemap.xml (all 14 pages)
+- Schema.org structured data (MedicalBusiness, FAQPage, MedicalProcedure)
+- Geo meta tags (Bhiwandi, Maharashtra)
+- lazy loading on images
+- Security headers (via vercel.json)
+
+### You must do these (takes 1 hour total)
+
+**1. Create favicon** (15 min)
+- Go to https://favicon.io/favicon-generator/
+- Text: "E", Background: #0E7C6E (teal), Font: any bold font
+- Download ZIP → extract → copy these to `/public/`:
+  - `favicon.ico`
+  - `favicon-32x32.png`
+  - `favicon-16x16.png`
+  - `apple-touch-icon.png`
+
+**2. Create OG image** (20 min)
+- Go to https://canva.com → New design → Custom size: 1200 × 630 px
+- Add: "Elshadai Home Healthcare" text, teal background (#0E7C6E), tagline
+- Export as JPG → save as `public/og-image.jpg`
+- This image shows when you share the link on WhatsApp
+
+**3. Submit sitemap to Google** (5 min, do after first deploy)
+- Go to https://search.google.com/search-console
+- Add property → URL prefix → `https://elshadaihealthcare.com`
+- Verify ownership → Sitemaps → submit `https://elshadaihealthcare.com/sitemap.xml`
+
+**4. Google Business Profile** (30 min)
+- Go to https://business.google.com
+- Create listing for "Elshadai Home Healthcare"
+- Address: 2nd Floor, Opp Fire Brigade, 6 Kasar Ali, Bhiwandi, Thane 421308
+- This makes you appear in Google Maps searches
+
+---
+
+## 7. Updating Content
+
+All website text is in one file: `src/content/site.ts`
+
+| What to update | Field in site.ts |
+|----------------|-----------------|
+| Phone number | `business.phone` and `business.phoneDisplay` |
+| WhatsApp number | `business.whatsapp` (no + sign, e.g. `917573923584`) |
+| Email | `business.email` |
+| Address | `business.address` |
+| Services list | `services` array |
+| Equipment list | `equipment` array |
+| Testimonials | `testimonials` array |
+| FAQs | `faqs` array |
+| Cities served | `cities` array |
+| Stats (5000+ families) | `stats` array |
+
+After editing:
+```bash
+git add .
+git commit -m "Update phone number"
+git push
+# Auto-deploys in ~90 seconds on Vercel
+```
+
+---
+
+## 8. Email & Google Sheets Setup
+
+### Brevo (Email) — sends booking confirmation to you
+
+1. Sign up free at https://app.brevo.com (300 emails/day free)
+2. Settings → SMTP & API → API Keys → Create API key
+3. Name it "Elshadai Website", permission: Transactional only
+4. Copy the key
+5. In Vercel: Project → Settings → Environment Variables → add `VITE_BREVO_API_KEY`
+6. Verify sender: Senders & IPs → Add sender → `elshadaiathome25@gmail.com`
+
+### Google Sheets (CRM) — logs every booking
+
+1. Create a new Google Sheet at https://sheets.google.com
+2. Name it "Elshadai Bookings"
+3. Extensions → Apps Script → paste this code:
 
 ```javascript
 function doPost(e) {
@@ -144,342 +360,47 @@ function doPost(e) {
   var data = JSON.parse(e.postData.contents);
   sheet.appendRow([
     new Date(),
-    data.name,
-    data.phone,
-    data.city,
-    data.service,
-    data.duration,
-    data.date,
-    data.notes
+    data.name || "",
+    data.phone || "",
+    data.city || "",
+    data.service || "",
+    data.duration || "",
+    data.date || "",
+    data.notes || ""
   ]);
-  return ContentService.createTextOutput("OK");
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "ok" }))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
-4. Click **Deploy** → **New deployment** → **Web app**
-5. Set **Execute as**: Me, **Who has access**: Anyone
-6. Copy the Web App URL → paste into `.env` as `VITE_SHEETS_WEBHOOK_URL`
-7. Add it as a GitHub Secret too
+4. Deploy → New deployment → Web app
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+5. Copy the Web App URL
+6. In Vercel: add `VITE_SHEETS_WEBHOOK_URL` with that URL
+
+### Test it works
+
+1. Go to your live site → fill the booking form → submit
+2. Check `elshadaiathome25@gmail.com` for the email
+3. Check your Google Sheet for the new row
 
 ---
 
-## 5. SEO — What's Already Done
-
-✅ Unique `<title>` and `<meta description>` on every page  
-✅ SEO keywords meta tag on all pages  
-✅ Open Graph tags (Facebook, WhatsApp preview)  
-✅ Twitter Card tags  
-✅ Canonical URLs on all pages  
-✅ `robots.txt` — allows all, blocks `/thank-you`  
-✅ `sitemap.xml` — all pages with priorities  
-✅ Schema.org structured data:
-  - `MedicalBusiness` + `LocalBusiness` on homepage
-  - `FAQPage` schema (boosts FAQ rich results in Google)
-  - `MedicalProcedure` on each service page
-  - `ItemList` on services and equipment pages
-  - `Product` schema on equipment items
-✅ `lang="en"` on `<html>`  
-✅ Geo meta tags (Mumbai, Maharashtra)  
-✅ `loading="lazy"` on non-hero images  
-✅ `alt` text on all images  
-✅ Web App Manifest (`site.webmanifest`)  
-✅ `404.html` for SPA routing on GitHub Pages  
-
----
-
-## 6. SEO — What You Must Do Next
-
-### 6.1 — Add Favicon (HIGH IMPACT — do today)
-
-Create these files and put them in `/public/`:
-
-| File | Size | Tool |
-|------|------|------|
-| `favicon.ico` | 32×32 | [favicon.io](https://favicon.io) |
-| `favicon-32x32.png` | 32×32 | [favicon.io](https://favicon.io) |
-| `favicon-16x16.png` | 16×16 | [favicon.io](https://favicon.io) |
-| `apple-touch-icon.png` | 180×180 | [favicon.io](https://favicon.io) |
-
-**How:** Go to [favicon.io/favicon-generator](https://favicon.io/favicon-generator/) → type "E" → pick teal color `#0E7C6E` → download → extract all files to `/public/`.
-
-### 6.2 — Add OG Image (HIGH IMPACT — do today)
-
-Create `/public/og-image.jpg` — size **1200×630px**
-
-This image shows when someone shares your link on WhatsApp, Facebook, LinkedIn.
-
-**How to make it free:**
-1. Go to [Canva.com](https://canva.com) → New design → Custom size 1200×630
-2. Add: ELIZA logo/name, tagline "Hospital-grade care at home", teal background
-3. Export as JPG → save as `public/og-image.jpg`
-
-### 6.3 — Google Search Console (do after first deploy)
-
-1. Go to [search.google.com/search-console](https://search.google.com/search-console)
-2. Add property → URL prefix → `https://elizahealthcare.in`
-3. Verify ownership (HTML file method — download file → put in `/public/`)
-4. Go to **Sitemaps** → submit `https://elizahealthcare.in/sitemap.xml`
-5. Check **Coverage** report after 3–5 days
-
-### 6.4 — Update Real Business Info
-
-Open `src/content/site.ts` and update:
-
-```typescript
-phone: "+91XXXXXXXXXX",        // ← your real phone number
-phoneDisplay: "+91 XXXXX XXXXX",
-whatsapp: "91XXXXXXXXXX",      // ← without + sign
-email: "care@elizahealthcare.in",
-address: "Your actual address",
-social: {
-  instagram: "https://instagram.com/YOUR_HANDLE",
-  facebook: "https://facebook.com/YOUR_PAGE",
-  // ...
-}
-```
-
-### 6.5 — Update Sitemap Domain
-
-The sitemap already uses `elizahealthcare.in`. If your domain is different, update `/public/sitemap.xml`.
-
-### 6.6 — Local SEO — City Landing Pages (HIGH IMPACT)
-
-Create files like `src/routes/services.home-nursing-mumbai.tsx` with city-specific content:
+## Summary — Recommended Setup
 
 ```
-/services/home-nursing-mumbai
-/services/home-nursing-pune
-/services/elderly-care-thane
-/services/physiotherapy-navi-mumbai
+Private GitHub repo (elsha222/elshadaiathome)
+         ↓  git push
+Vercel (free Hobby plan)
+         ↓  auto-build with VITE_ secrets injected
+elshadaihealthcare.com (GoDaddy DNS → Vercel)
+         ↓
+Users visit your site, fill form
+         ↓
+Email → elshadaiathome25@gmail.com (via Brevo)
+CRM  → Google Sheets (via Apps Script)
 ```
 
-Each page targets: "home nursing in Mumbai", "nurse at home Mumbai" etc. — these rank fast for local searches.
-
-### 6.7 — Google Business Profile
-
-1. Go to [business.google.com](https://business.google.com)
-2. Create/claim your listing for "ELIZA Healthcare"
-3. Add photos, services, hours, phone
-4. This makes you appear in Google Maps and local search results
-
----
-
-## 7. Performance Optimizations
-
-### 7.1 — Compress Images (60–80% size reduction)
-
-Run all images through [squoosh.app](https://squoosh.app):
-
-1. Open each image from `src/assets/`
-2. Set format to **WebP**, quality **80**
-3. Download and replace the original
-
-Or use the CLI:
-```bash
-npx @squoosh/cli --webp '{"quality":80}' src/assets/*.jpg
-```
-
-### 7.2 — Lazy Loading (already done)
-
-All non-hero images already have `loading="lazy"`. Hero image loads eagerly (correct).
-
-### 7.3 — Code Splitting (already done)
-
-`vite.config.ts` splits vendor/router/ui into separate chunks — faster initial load.
-
-### 7.4 — Check Performance Score
-
-After deploying, run: [pagespeed.web.dev](https://pagespeed.web.dev) with your URL.
-Target: **90+ on mobile**.
-
----
-
-## 8. Trust & Conversion Improvements
-
-### 8.1 — Replace Placeholder Phone Number
-
-In `src/content/site.ts`, replace `+91 98765 43210` with your real number.
-This appears in the navbar, footer, booking form, and all CTAs.
-
-### 8.2 — Replace Stock Images
-
-Replace files in `src/assets/` with real photos:
-- `hero-nurse.jpg` — real nurse/caregiver photo
-- `team.jpg` — actual team photo
-- `gallery-*.jpg` — real patient/care photos (with consent)
-
-Real photos increase trust and conversion by 30–40%.
-
-### 8.3 — WhatsApp Business
-
-1. Set up [WhatsApp Business](https://business.whatsapp.com/) with your number
-2. Update `whatsapp: "91XXXXXXXXXX"` in `site.ts`
-3. All WhatsApp buttons across the site auto-update
-
-### 8.4 — Google Reviews Widget
-
-After getting Google Business reviews:
-1. Go to [elfsight.com/google-reviews-widget](https://elfsight.com/google-reviews-widget/) (free tier)
-2. Get embed code
-3. Add to `src/components/home/Testimonials.tsx` below existing testimonials
-
----
-
-## 9. Alternative Hosting (Netlify / Vercel / Cloudflare Pages)
-
-All three are better than GitHub Pages for SPAs (no 404 redirect hack needed).
-
-### Netlify (Recommended — easiest)
-
-1. Go to [netlify.com](https://netlify.com) → **Add new site** → **Import from Git**
-2. Connect GitHub → select `elshadaiathome` repo
-3. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Add env vars: **Site settings** → **Environment variables** → add `VITE_BREVO_API_KEY` and `VITE_SHEETS_WEBHOOK_URL`
-5. Create `public/_redirects` file with:
-   ```
-   /*  /index.html  200
-   ```
-   This fixes SPA routing (no 404 hack needed).
-6. Free URL: `your-site.netlify.app`
-7. Custom domain: **Domain settings** → add `elizahealthcare.in`
-
-### Vercel
-
-1. Go to [vercel.com](https://vercel.com) → **New Project** → import from GitHub
-2. Framework: **Vite**
-3. Build command: `npm run build`, Output: `dist`
-4. Add env vars in **Settings** → **Environment Variables**
-5. Vercel auto-handles SPA routing — no extra config needed
-6. Free URL: `your-site.vercel.app`
-
-### Cloudflare Pages (Original target — best performance)
-
-1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → **Pages** → **Create a project**
-2. Connect GitHub → select repo
-3. Build command: `npm run build`, Output: `dist`
-4. Add env vars in **Settings** → **Environment variables**
-5. Free URL: `your-site.pages.dev`
-6. Cloudflare's CDN gives fastest global load times
-
-> **Note:** The original project used Cloudflare Workers (SSR). This version is a pure SPA — it works on all platforms above.
-
----
-
-## 10. Nice-to-Have Features
-
-### Live Chat — Tawk.to (Free, High Impact)
-
-1. Sign up at [tawk.to](https://tawk.to)
-2. Get your widget script
-3. Add to `src/routes/__root.tsx` inside a `useEffect`:
-
-```tsx
-useEffect(() => {
-  const s = document.createElement("script");
-  s.src = "https://embed.tawk.to/YOUR_PROPERTY_ID/default";
-  s.async = true;
-  document.body.appendChild(s);
-}, []);
-```
-
-### Google Analytics GA4 (Free, High Impact)
-
-1. Create property at [analytics.google.com](https://analytics.google.com)
-2. Get your Measurement ID (G-XXXXXXXXXX)
-3. Add to `index.html` before `</head>`:
-
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
-
-### Blog / Articles Section (Medium effort, High SEO impact)
-
-Create `src/routes/blog/` with articles like:
-- "How to care for elderly parents at home"
-- "What to expect from a home nurse"
-- "Hospital bed rental guide India"
-
-Each article targets long-tail keywords and builds domain authority.
-
-### Service Pricing Page
-
-Create `src/routes/pricing.tsx` with transparent pricing ranges.
-Pricing pages rank well and reduce "how much does it cost?" calls.
-
----
-
-## 11. Updating Content
-
-All website copy lives in **one file**: `src/content/site.ts`
-
-| What to change | Where in site.ts |
-|----------------|-----------------|
-| Phone / WhatsApp | `business.phone`, `business.whatsapp` |
-| Email | `business.email` |
-| Cities served | `cities` array |
-| Services list | `services` array |
-| Equipment list | `equipment` array |
-| Testimonials | `testimonials` array |
-| FAQs | `faqs` array |
-| Stats (5000+ families etc.) | `stats` array |
-| Hero text | `hero` object |
-| About page content | `aboutContent` object |
-
-After editing, run `git add . && git commit -m "Update content" && git push` — auto-deploys in ~2 min.
-
----
-
-## 12. Troubleshooting
-
-### "Page not found" on refresh after deploy to GitHub Pages
-
-The `public/404.html` handles this. If it still breaks, check that `base: "/"` is set in `vite.config.ts` (for custom domain) or `base: "/elshadaiathome/"` (for subdirectory URL).
-
-### Email not sending in production
-
-1. Check GitHub Secrets are set correctly (Settings → Secrets → Actions)
-2. Verify sender email in Brevo dashboard
-3. Check Brevo free tier limit (300 emails/day)
-
-### Build fails in GitHub Actions
-
-Check the **Actions** tab → click the failed run → expand the failing step.
-Common causes:
-- Missing `npm ci` lock file — run `npm install` locally and commit `package-lock.json`
-- TypeScript errors — run `npx tsc --noEmit` locally first
-
-### WhatsApp link not working
-
-Update `whatsapp` in `site.ts` — must be the number **without** `+` sign, e.g. `"919876543210"`.
-
-### Images not loading after deploy
-
-If using subdirectory URL (`/elshadaiathome/`), set `base: "/elshadaiathome/"` in `vite.config.ts`.
-
----
-
-## Quick Reference — Most Important Actions
-
-| Priority | Action | Time | Impact |
-|----------|--------|------|--------|
-| 🔴 Now | Push to GitHub + enable Pages | 10 min | Live website |
-| 🔴 Now | Add GitHub Secrets for email | 5 min | Email works |
-| 🔴 Now | Add real phone number in site.ts | 2 min | Trust |
-| 🔴 Now | Create favicon (favicon.io) | 15 min | SEO + trust |
-| 🔴 Now | Create OG image (Canva) | 20 min | Social sharing |
-| 🟡 Week 1 | Submit sitemap to Search Console | 10 min | Google indexing |
-| 🟡 Week 1 | Compress images (squoosh.app) | 30 min | 60–80% faster |
-| 🟡 Week 1 | Replace stock photos with real ones | varies | +30% conversion |
-| 🟡 Week 2 | Set up Google Business Profile | 30 min | Local SEO |
-| 🟡 Week 2 | Add GA4 analytics | 15 min | Track visitors |
-| 🟢 Month 1 | Add city landing pages | 2–3 hrs | Local SEO |
-| 🟢 Month 1 | Add Tawk.to live chat | 30 min | Conversions |
-| 🟢 Month 2 | Start blog (3 articles) | 3–5 hrs | SEO authority |
+**Cost: ₹0/month** (Vercel free + GoDaddy domain already paid until Oct 2026)
