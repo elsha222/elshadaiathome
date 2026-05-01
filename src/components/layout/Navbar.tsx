@@ -31,10 +31,6 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 md:h-20 lg:px-12">
         <Link to="/" className="flex items-center gap-2.5 group">
           <img src={logo} alt="Elshadai Healthcare" className="h-10 w-auto object-contain" />
-          <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-tight text-white">{business.name}</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Home Healthcare</div>
-          </div>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">

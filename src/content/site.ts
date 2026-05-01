@@ -287,39 +287,81 @@ export const howItWorks = [
 
 export const testimonials: { name: string; role: string; text: string; rating: number; image?: string }[] = [
   {
-    name: "Priya Sharma",
-    role: "Daughter • Mumbai",
-    text: "After my mother's hip surgery, ELIZA's nurse was an angel. Punctual, gentle, and genuinely caring. We finally slept through the night.",
+    name: "Gopakumar Ajith",
+    role: "Client",
+    text: "Elshadai Nursing Care provides excellent and reliable service. The nurses are well-trained, compassionate, and very patient with their work. They take great care of patients and ensure comfort, hygiene, and timely medication. Highly recommended for anyone looking for trustworthy nursing care.",
     rating: 5,
   },
   {
-    name: "Rajesh Kulkarni",
-    role: "Son • Thane",
-    text: "Booked an ICU nurse late at night. Within hours she was at our home with full equipment. Saved us a panic hospital admission.",
-    rating: 5,
-  },
-  {
-    name: "Anita Desai",
-    role: "Wife • Pune",
-    text: "Three months of physiotherapy at home helped my husband walk again after his stroke. The team felt like family.",
-    rating: 5,
-  },
-  {
-    name: "Mohammed Khan",
+    name: "Rahul Khadpe",
     role: "Grandson • Navi Mumbai",
-    text: "Honest communication, no surprises. The attendant for my grandfather is now part of our household. Highly recommend.",
+    text: "I booked home nursing care for my grandmother in seawoods, Navi Mumbai, and I’m really satisfied with the service. The staff provided were skilled, polite, and very patient. Thank you for the amazing support.",
     rating: 5,
   },
   {
-    name: "Sunita Iyer",
-    role: "Daughter-in-law • Mumbai",
-    text: "ELIZA arranged a hospital bed and oxygen concentrator the same evening we called. The setup at home felt as safe as a hospital ward.",
+    name: "Ashok Bagade",
+    role: "Grandson • Navi Mumbai",
+    text: "I availed home nursing services in Airoli, Navi Mumbai for my grandfather and was assisted by two highly experienced staff members. Their care and professionalism were exceptional. Thank you for your excellent service 🥰 I highly recommend it.",
     rating: 5,
   },
   {
-    name: "Vikram Patil",
-    role: "Son • Pune",
-    text: "The physiotherapist truly cared about my father's progress. Six weeks later, he climbs stairs again. Forever grateful.",
+    name: "Sandana Mali",
+    role: "Granddaughter • Navi Mumbai",
+    text: "Nursing care services booked for my grandmother in kalamboli, Navi Mumbai were outstanding. The nurses were well-trained, gentle, and very understanding of her needs. Really grateful for the support and the quality care provided.",
+    rating: 5,
+  },
+  {
+    name: "Deepak Suryawanshi",
+    role: "Grandson",
+    text: "I booked a nursing care taker for my grandmother and she was excellent in her work.. careful and polite . Im pleased to have a this type of worker to take care of my dear ones... I surely recommend Elshadai home health care team...",
+    rating: 5,
+  },
+  {
+    name: "Krishna Gupta",
+    role: "Son • Navi Mumbai",
+    text: "Used their home nursing service for my father here in Sanapada , Navi Mumbai. Both the nurses were well-trained and supportive. Great service and excellent coordination.",
+    rating: 5,
+  },
+  {
+    name: "Pruthvi Gulla",
+    role: "Son • Thane",
+    text: "Nursing care booked for my mother in Rabodi Thane, and I’m truly satisfied with the service. The staff provided were skilled, polite, and extremely patient. Thank you for the amazing support.",
+    rating: 5,
+  },
+  {
+    name: "Vijay Yadav",
+    role: "Grandson • Bhiwandi",
+    text: "I opted for their nursing service for my grandfather in bhiwandi , and the team did a fantastic job. The two nurses assigned were professional and experienced. Thank you for all the help. Strongly recommended",
+    rating: 5,
+  },
+  {
+    name: "Nayan Mandlik",
+    role: "Son • Navi Mumbai",
+    text: "Got nursing assistance for my father in Navi Mumbai smooth process, reliable service, and excellent caregivers. Really appreciate the support. Highly recommended",
+    rating: 5,
+  },
+  {
+    name: "Justin Mathews",
+    role: "Patient • Mumbai",
+    text: "I took physiotherapy session for myself in Andheri West. Excellent home health care service! Very caring, reliable, and professional staff. Truly thankful for the support provided. Highly recommended.",
+    rating: 5,
+  },
+  {
+    name: "Ankit Mishra",
+    role: "Grandson • Navi Mumbai",
+    text: "Took home care service for my grandmother in Kharghar . The staff was very kind, attentive, and knew their work well. Really appreciate the support.",
+    rating: 5,
+  },
+  {
+    name: "jins k john",
+    role: "Grandson • Mumbai",
+    text: "I took home nursing services for my grandfather in Andheri, and I got two experienced staff members. Thank you for your support. I recommend it!",
+    rating: 5,
+  },
+  {
+    name: "Vipin Jose Jose",
+    role: "Client • Mumbai",
+    text: "Professional nurses and timely assistance..bast home care in Mumbai",
     rating: 5,
   },
 ];
@@ -373,9 +415,8 @@ export const aboutContent = {
   mission:
     "To make hospital-grade healthcare accessible, affordable, and human — right where people heal best: at home.",
   story: [
-    "Elshadai was born from a simple, painful truth — every Indian family eventually faces a moment when a loved one needs more care than the home can provide, and the hospital feels too cold, too far, too expensive.",
-    "We built Elshadai so that families never have to choose between quality care and the comfort of home. From our base in Bhiwandi, Thane, we serve thousands of families across Mumbai, Thane, Navi Mumbai and Pune with verified nurses, doctors, attendants and full home medical equipment.",
-    "Every caregiver we send to your home is someone we'd send to our own.",
+    "✨ Elshadai home health care provides trusted nurse at home, patient care taker and physiotherapy services across mumbai,navi mumbai and thane our trained ANM/GNM and caretakers offer post surgery care injection care , elderly care catheter, rules tube and physiotherapy session at your doorstep . reliable, and affordable and available 24/7.",
+    "compassionate, and professional home health care services tailored to meet your needs. From elderly care and post-surgery support to daily assistance and nursing services, our team ensures comfort, safety, and dignity at home. With trained caregivers and a personalized approach, we bring quality health care right to your doorstep."
   ],
   values: [
     { title: "Compassion first", body: "We hire for kindness as much as skill." },
