@@ -85,21 +85,13 @@ export function EquipmentGrid({ limit, withHeader = true }: { limit?: number; wi
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 flex items-center justify-between gap-2">
-                <Link
-                  to="/equipment/$slug"
-                  params={{ slug: e.slug }}
-                  className="text-sm font-semibold text-[#0E7C6E] hover:underline"
-                  aria-label={`Learn more about ${e.title}`}
-                >
-                  Learn more
-                </Link>
+              <div className="mt-6">
                 <Link
                   to="/book"
-                  className="inline-flex items-center gap-1 rounded-full bg-[#0E7C6E] px-4 py-1.5 text-[13px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
+                  className="flex w-full items-center justify-center gap-1 rounded-full bg-[#0E7C6E] py-2.5 text-[14px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
                   aria-label={`Book ${e.title}`}
                 >
-                  Book
+                  Book appointment
                 </Link>
               </div>
             </div>

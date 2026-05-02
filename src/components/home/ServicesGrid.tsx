@@ -61,21 +61,13 @@ export function ServicesGrid({ limit }: { limit?: number }) {
                 ))}
               </ul>
               {/* footer — Book pill button stays left of floating bubble zone (right:68px) */}
-              <div className="mt-4 flex items-center justify-between gap-2">
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="text-[14px] font-semibold text-[#0E7C6E] hover:underline"
-                  aria-label={`Learn more about ${s.title}`}
-                >
-                  Learn more
-                </Link>
+              <div className="mt-5">
                 <Link
                   to="/book"
-                  className="inline-flex items-center gap-1 rounded-full bg-[#0E7C6E] px-4 py-1.5 text-[13px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
+                  className="flex w-full items-center justify-center gap-1 rounded-full bg-[#0E7C6E] py-2.5 text-[14px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
                   aria-label={`Book ${s.title}`}
                 >
-                  Book
+                  Book appointment
                 </Link>
               </div>
             </motion.article>
