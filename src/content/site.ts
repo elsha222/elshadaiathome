@@ -285,6 +285,16 @@ export const howItWorks = [
   },
 ];
 
+import ashokPhoto from "@/assets/reviews-photos/review-ashok-bagade.jpg";
+import vipinPhoto from "@/assets/reviews-photos/review-vipin-jose.jpg";
+import jinsPhoto from "@/assets/reviews-photos/review-jins-john.jpg";
+import nayanPhoto from "@/assets/reviews-photos/review-nayan-mandlik.jpg";
+import krishnaPhoto from "@/assets/reviews-photos/review-krishna-gupta.jpg";
+import rahulPhoto from "@/assets/reviews-photos/review-rahul-khadpe.jpg";
+import bhuwanPhoto from "@/assets/reviews-photos/review-bhuwan-rai.jpg";
+import vijayPhoto from "@/assets/reviews-photos/review-vijay-yadav.jpg";
+import pruthviPhoto from "@/assets/reviews-photos/review-pruthvi-gulla.jpg";
+
 export const testimonials: { name: string; role: string; text: string; rating: number; image?: string }[] = [
   {
     name: "Gopakumar Ajith",
@@ -297,12 +307,14 @@ export const testimonials: { name: string; role: string; text: string; rating: n
     role: "Grandson • Navi Mumbai",
     text: "I booked home nursing care for my grandmother in seawoods, Navi Mumbai, and I’m really satisfied with the service. The staff provided were skilled, polite, and very patient. Thank you for the amazing support.",
     rating: 5,
+    image: rahulPhoto,
   },
   {
     name: "Ashok Bagade",
     role: "Grandson • Navi Mumbai",
     text: "I availed home nursing services in Airoli, Navi Mumbai for my grandfather and was assisted by two highly experienced staff members. Their care and professionalism were exceptional. Thank you for your excellent service 🥰 I highly recommend it.",
     rating: 5,
+    image: ashokPhoto,
   },
   {
     name: "Sandana Mali",
@@ -321,24 +333,35 @@ export const testimonials: { name: string; role: string; text: string; rating: n
     role: "Son • Navi Mumbai",
     text: "Used their home nursing service for my father here in Sanapada , Navi Mumbai. Both the nurses were well-trained and supportive. Great service and excellent coordination.",
     rating: 5,
+    image: krishnaPhoto,
   },
   {
     name: "Pruthvi Gulla",
     role: "Son • Thane",
     text: "Nursing care booked for my mother in Rabodi Thane, and I’m truly satisfied with the service. The staff provided were skilled, polite, and extremely patient. Thank you for the amazing support.",
     rating: 5,
+    image: pruthviPhoto,
   },
   {
     name: "Vijay Yadav",
     role: "Grandson • Bhiwandi",
     text: "I opted for their nursing service for my grandfather in bhiwandi , and the team did a fantastic job. The two nurses assigned were professional and experienced. Thank you for all the help. Strongly recommended",
     rating: 5,
+    image: vijayPhoto,
   },
   {
     name: "Nayan Mandlik",
     role: "Son • Navi Mumbai",
     text: "Got nursing assistance for my father in Navi Mumbai smooth process, reliable service, and excellent caregivers. Really appreciate the support. Highly recommended",
     rating: 5,
+    image: nayanPhoto,
+  },
+  {
+    name: "Bhuwan Rai",
+    role: "Son • Mumbai",
+    text: "Best home nursing service provider in Mumbai. The care provided to my father was very professional and compassionate. Highly satisfied with their support.",
+    rating: 5,
+    image: bhuwanPhoto,
   },
   {
     name: "Justin Mathews",
@@ -357,12 +380,14 @@ export const testimonials: { name: string; role: string; text: string; rating: n
     role: "Grandson • Mumbai",
     text: "I took home nursing services for my grandfather in Andheri, and I got two experienced staff members. Thank you for your support. I recommend it!",
     rating: 5,
+    image: jinsPhoto,
   },
   {
     name: "Vipin Jose Jose",
     role: "Client • Mumbai",
     text: "Professional nurses and timely assistance..bast home care in Mumbai",
     rating: 5,
+    image: vipinPhoto,
   },
 ];
 
