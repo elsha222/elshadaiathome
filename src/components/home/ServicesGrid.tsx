@@ -67,7 +67,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
                   className="flex w-full items-center justify-center gap-1 rounded-full bg-[#0E7C6E] py-2.5 text-[14px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
                   aria-label={`Book ${s.title}`}
                 >
-                  Book appointment
+                  Book now
                 </Link>
               </div>
             </motion.article>
