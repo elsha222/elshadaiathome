@@ -38,7 +38,7 @@ export const Route = createFileRoute("/services/$slug")({
     return {
       meta: [
         { title: `${s.title} at Home | ELIZA Home Healthcare` },
-        { name: "description", content: `${s.long} Available in Mumbai, Pune & across India.` },
+        { name: "description", content: `${s.long} Available in Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.` },
         {
           name: "keywords",
           content: `${s.title.toLowerCase()}, ${s.title.toLowerCase()} at home, ${s.title.toLowerCase()} Mumbai, ${s.title.toLowerCase()} Pune, home healthcare India`,

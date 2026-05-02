@@ -191,7 +191,7 @@ export function Hero() {
             >
               <div className="text-[10px] font-semibold uppercase tracking-wider text-[#0E7C6E]">Coordinator online</div>
               <div className="mt-1 text-sm font-semibold text-[#0D2D4F]">24×7 callback</div>
-              <div className="text-[10px] text-[#4A5568]">Mumbai • Pune • across India</div>
+              <div className="text-[10px] text-[#4A5568]">Mumbai • Thane • Navi Mumbai • South Bombay</div>
             </motion.div>
           </motion.div>
         </div>

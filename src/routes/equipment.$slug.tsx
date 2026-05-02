@@ -21,7 +21,7 @@ export const Route = createFileRoute("/equipment/$slug")({
     return {
       meta: [
         { title: `${e.title} on Rent | ELIZA Home Healthcare` },
-        { name: "description", content: `${e.long} Available in Mumbai, Pune & across India.` },
+        { name: "description", content: `${e.long} Available in Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.` },
         {
           name: "keywords",
           content: `${e.title.toLowerCase()}, ${e.title.toLowerCase()} on rent, medical equipment rent Mumbai, home healthcare India`,

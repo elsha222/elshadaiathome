@@ -52,7 +52,7 @@ export function ImageGallery() {
             Real care, in real homes.
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            A glimpse into how our nurses, physios, and doctors deliver hospital-grade care to families across India.
+            A glimpse into how our nurses, physios, and doctors deliver hospital-grade care to families across Mumbai and Thane.
           </p>
         </motion.div>
 

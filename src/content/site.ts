@@ -10,7 +10,7 @@ export const business = {
   fullName: "Elshadai Home Healthcare",
   tagline: "Hospital-grade care, gently delivered to your home.",
   shortDescription:
-    "Certified nurses, attendants, physiotherapists and home medical equipment for compassionate at-home care across India.",
+    "Certified nurses, attendants, physiotherapists and home medical equipment for compassionate at-home care across Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.",
   phone: "+917573923584",
   phoneDisplay: "+91 75739 23584",
   whatsapp: "917573923584",
@@ -414,7 +414,7 @@ export const faqs = [
   },
   {
     q: "Which cities do you serve?",
-    a: "We currently serve Mumbai, Thane, Navi Mumbai, Pune, Nashik and Nagpur — and are expanding to more cities across India.",
+    a: "We currently serve Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay — providing 24/7 care at your doorstep.",
   },
   {
     q: "Do you handle medical emergencies?",
@@ -434,13 +434,13 @@ export const faqs = [
   },
 ];
 
-export const cities = ["Mumbai", "Thane", "Navi Mumbai", "Pune", "Nashik", "Nagpur"];
+export const cities = ["Mumbai", "Mumbai Suburban", "Thane", "Navi Mumbai", "South Bombay"];
 
 export const aboutContent = {
   mission:
     "To make hospital-grade healthcare accessible, affordable, and human — right where people heal best: at home.",
   story: [
-    "✨ Elshadai home health care provides trusted nurse at home, patient care taker and physiotherapy services across mumbai,navi mumbai and thane our trained ANM/GNM and caretakers offer post surgery care injection care , elderly care catheter, rules tube and physiotherapy session at your doorstep . reliable, and affordable and available 24/7.",
+    "✨ Elshadai home health care provides trusted nurse at home, patient care taker and physiotherapy services across Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay. Our trained ANM/GNM and caretakers offer post surgery care injection care , elderly care catheter, rules tube and physiotherapy session at your doorstep . reliable, and affordable and available 24/7.",
     "compassionate, and professional home health care services tailored to meet your needs. From elderly care and post-surgery support to daily assistance and nursing services, our team ensures comfort, safety, and dignity at home. With trained caregivers and a personalized approach, we bring quality health care right to your doorstep."
   ],
   values: [

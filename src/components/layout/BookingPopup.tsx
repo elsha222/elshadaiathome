@@ -144,7 +144,7 @@ export function BookingPopup() {
         </div>
 
         <p className="border-t border-[#EEF2F7] bg-[#F7F9FC] px-5 py-3 text-center text-[11px] text-[#4A5568]">
-          24×7 coordinator • Mumbai, Pune & across India
+          24×7 coordinator • Mumbai, Thane, Navi Mumbai, South Bombay
         </p>
       </div>
     </div>
