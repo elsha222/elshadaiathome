@@ -45,7 +45,7 @@ export const hero = {
   primaryCta: { label: "Book appointment", to: "/book" },
   secondaryCta: { label: "Book via WhatsApp" },
   trustChips: [
-    "ANM / GNM Certified",
+    "Certified Nurses",
     "24×7 Coordinator",
     "Background-Verified",
     "Free Replacement",

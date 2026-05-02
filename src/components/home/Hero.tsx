@@ -63,7 +63,7 @@ export function Hero() {
               to={hero.primaryCta.to}
               className="flex items-center justify-center gap-2 rounded-2xl bg-[#0E7C6E] py-3.5 text-sm font-semibold text-white shadow-[0_4px_16px_rgba(14,124,110,0.2)] active:scale-[0.97] transition-transform"
             >
-              Book a Nurse <ArrowRight className="h-4 w-4" />
+              {hero.primaryCta.label} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href={buildWhatsAppLink("Hi ELIZA, I'd like to enquire about home nursing.")}
@@ -71,7 +71,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 text-sm font-semibold text-white active:scale-[0.97] transition-transform"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <MessageCircle className="h-4 w-4" /> {hero.secondaryCta.label}
             </a>
           </div>
 

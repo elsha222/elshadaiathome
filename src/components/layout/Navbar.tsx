@@ -50,7 +50,7 @@ export function Navbar() {
             <Phone className="h-4 w-4" />{business.phoneDisplay}
           </a>
           <Button asChild variant="default" size="default" className="bg-[#0E7C6E] text-white hover:bg-[#1A9E8C] rounded-full px-6 font-semibold shadow-none border-0">
-            <Link to="/book">Book Now</Link>
+            <Link to="/book">Book appointment</Link>
           </Button>
         </div>
 
@@ -88,7 +88,7 @@ export function Navbar() {
           </ul>
           <div className="px-6 py-5">
             <Button asChild size="lg" className="w-full bg-[#0E7C6E] text-white hover:bg-[#1A9E8C] rounded-full font-bold border-0">
-              <Link to="/book">Book Appointment</Link>
+              <Link to="/book">Book appointment</Link>
             </Button>
           </div>
         </div>
