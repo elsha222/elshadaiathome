@@ -27,7 +27,7 @@ export function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`ELIZA on ${label}`}
+                aria-label={`ELSHADAI on ${label}`}
                 className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/60 hover:bg-[#0E7C6E] hover:text-white hover:border-[#0E7C6E] transition-all"
               >
                 <Icon className="h-4 w-4" />
@@ -86,7 +86,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={buildWhatsAppLink("Hi ELIZA, I need home nursing care.")} className="flex items-start gap-3 text-white/60 hover:text-whatsapp transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={buildWhatsAppLink("Hi ELSHADAI, I need home nursing care.")} className="flex items-start gap-3 text-white/60 hover:text-whatsapp transition-colors" target="_blank" rel="noopener noreferrer">
                 <span className="grid h-4 w-4 place-items-center rounded-full bg-whatsapp text-[8px] mt-0.5 shrink-0 text-white">W</span>
                 Chat on WhatsApp
               </a>

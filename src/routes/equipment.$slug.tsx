@@ -20,14 +20,14 @@ export const Route = createFileRoute("/equipment/$slug")({
     const img = equipmentImages[e.image];
     return {
       meta: [
-        { title: `${e.title} on Rent | ELIZA Home Healthcare` },
+        { title: `${e.title} on Rent | ELSHADAI Home Healthcare` },
         { name: "description", content: `${e.long} Available in Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.` },
         {
           name: "keywords",
           content: `${e.title.toLowerCase()}, ${e.title.toLowerCase()} on rent, medical equipment rent Mumbai, home healthcare India`,
         },
         { name: "robots", content: "index, follow" },
-        { property: "og:title", content: `${e.title} — ELIZA Home Healthcare` },
+        { property: "og:title", content: `${e.title} — ELSHADAI Home Healthcare` },
         { property: "og:description", content: e.long },
         { property: "og:image", content: img },
       ],
@@ -87,7 +87,7 @@ function EquipmentDetailPage() {
                 Book {e.title} <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={buildWhatsAppLink(`Hi ELIZA, I'd like to enquire about renting a ${e.title}.`)}
+                href={buildWhatsAppLink(`Hi ELSHADAI, I'd like to enquire about renting a ${e.title}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white shadow-soft hover:brightness-110 transition"
@@ -107,7 +107,7 @@ function EquipmentDetailPage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-elevated md:aspect-[4/5] bg-white p-8 flex items-center justify-center">
             <img
               src={img}
-              alt={`${e.title} by ELIZA — medical equipment on rent`}
+              alt={`${e.title} by ELSHADAI — medical equipment on rent`}
               className="h-auto w-full object-contain max-h-[80%]"
             />
           </div>

@@ -9,11 +9,11 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
-      { title: "Book a Home Nurse Online | Care Coordinator Callback | ELIZA" },
+      { title: "Book a Home Nurse Online | Care Coordinator Callback | ELSHADAI" },
       {
         name: "description",
         content:
-          "Book ELIZA home nursing in 60 seconds. A care coordinator calls you back to plan certified ANM/GNM caregivers, ICU nurses or medical equipment across Mumbai, Pune & India.",
+          "Book ELSHADAI home nursing in 60 seconds. A care coordinator calls you back to plan certified ANM/GNM caregivers, ICU nurses or medical equipment across Mumbai, Pune & India.",
       },
       {
         name: "keywords",
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/book")({
           "book home nurse, online nurse appointment, hire home nurse Mumbai, nurse booking Pune, ICU nurse booking, elderly care booking, home medical equipment booking",
       },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "Book ELIZA Home Healthcare" },
+      { property: "og:title", content: "Book ELSHADAI Home Healthcare" },
       { property: "og:description", content: "Book a certified home nurse — coordinator calls you back fast." },
       { property: "og:url", content: SITE_URL + "/book" },
     ],
@@ -62,7 +62,7 @@ function BookPage() {
                 icon={MessageCircle}
                 label="WhatsApp instantly"
                 value="Click to chat"
-                href={buildWhatsAppLink("Hi ELIZA, I need home nursing care.")}
+                href={buildWhatsAppLink("Hi ELSHADAI, I need home nursing care.")}
                 accent="whatsapp"
               />
               <ContactRow icon={Mail} label="Email" value={business.email} href={`mailto:${business.email}`} />

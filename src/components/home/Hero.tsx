@@ -15,7 +15,7 @@ export function Hero() {
           <div className="relative h-[60vw] min-h-[220px] max-h-[320px] overflow-hidden">
             <img
               src={heroImg}
-              alt="ELIZA home nurse caring for a patient"
+              alt="ELSHADAI home nurse caring for a patient"
               fetchPriority="high"
               className="h-full w-full object-cover object-center"
             />
@@ -66,7 +66,7 @@ export function Hero() {
               {hero.primaryCta.label} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href={buildWhatsAppLink("Hi ELIZA, I'd like to enquire about home nursing.")}
+              href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home nursing.")}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 text-sm font-semibold text-white active:scale-[0.97] transition-transform"
@@ -124,7 +124,7 @@ export function Hero() {
                 {hero.primaryCta.label} <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={buildWhatsAppLink("Hi ELIZA, I'd like to enquire about home nursing.")}
+                href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home nursing.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-semibold text-white hover:brightness-110 hover:-translate-y-0.5 transition-all"
@@ -159,7 +159,7 @@ export function Hero() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_8px_32px_rgba(13,45,79,0.12)]">
               <img
                 src={heroImg}
-                alt="Certified ELIZA home nurse caring for an elderly patient at home in India"
+                alt="Certified ELSHADAI home nurse caring for an elderly patient at home in India"
                 width={1600}
                 height={1200}
                 fetchPriority="high"

@@ -37,7 +37,7 @@ export const Route = createFileRoute("/services/$slug")({
     const img = serviceImageMap[s.slug] || g1;
     return {
       meta: [
-        { title: `${s.title} at Home | ELIZA Home Healthcare` },
+        { title: `${s.title} at Home | ELSHADAI Home Healthcare` },
         { name: "description", content: `${s.long} Available in Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.` },
         {
           name: "keywords",
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/services/$slug")({
         },
         { name: "robots", content: "index, follow" },
         { property: "og:type", content: "article" },
-        { property: "og:title", content: `${s.title} — ELIZA Home Healthcare` },
+        { property: "og:title", content: `${s.title} — ELSHADAI Home Healthcare` },
         { property: "og:description", content: s.long },
         { property: "og:image", content: img },
         { property: "og:url", content: `${SITE_URL}/services/${s.slug}` },
@@ -61,7 +61,7 @@ export const Route = createFileRoute("/services/$slug")({
             "@type": "MedicalProcedure",
             name: s.title,
             description: s.long,
-            provider: { "@type": "MedicalBusiness", name: "ELIZA Home Healthcare" },
+            provider: { "@type": "MedicalBusiness", name: "ELSHADAI Home Healthcare" },
           }),
         },
       ],
@@ -121,7 +121,7 @@ function ServiceDetailPage() {
                 Book {s.title} <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={buildWhatsAppLink(`Hi ELIZA, I'd like to enquire about ${s.title}.`)}
+                href={buildWhatsAppLink(`Hi ELSHADAI, I'd like to enquire about ${s.title}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-white shadow-soft hover:brightness-110 transition"
@@ -141,7 +141,7 @@ function ServiceDetailPage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-elevated md:aspect-[4/5]">
             <img
               src={img}
-              alt={`${s.title} by ELIZA — certified caregivers in India`}
+              alt={`${s.title} by ELSHADAI — certified caregivers in India`}
               width={1280}
               height={1600}
               className="h-full w-full object-cover"

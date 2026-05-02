@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { X, Phone, MessageCircle, ArrowRight, ShieldCheck, Clock } from "lucide-react";
 import { business, buildWhatsAppLink } from "@/content/site";
 
-const SESSION_KEY = "eliza_book_modal_seen";
+const SESSION_KEY = "elshadai_book_modal_seen";
 const SCROLL_THRESHOLD = 5;
 
 /**
@@ -111,7 +111,7 @@ export function BookingPopup() {
           </Link>
 
           <a
-            href={buildWhatsAppLink("Hi ELIZA, I'd like to enquire about home care.")}
+            href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home care.")}
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}

@@ -11,7 +11,7 @@ export function WhyUs() {
     <section className="bg-[#F7F9FC] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-[0.8125rem] font-semibold uppercase tracking-[0.04em] text-[#0E7C6E]">Why ELIZA</span>
+          <span className="text-[0.8125rem] font-semibold uppercase tracking-[0.04em] text-[#0E7C6E]">Why ELSHADAI</span>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance text-[#0D2D4F] md:text-[2.25rem]">
             The care you'd want for your own family.
           </h2>

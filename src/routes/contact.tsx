@@ -10,19 +10,19 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact ELIZA Home Healthcare | Call, WhatsApp, Email 24×7" },
+      { title: "Contact ELSHADAI Home Healthcare | Call, WhatsApp, Email 24×7" },
       {
         name: "description",
         content:
-          "Reach ELIZA Home Healthcare 24×7 by phone, WhatsApp or email. Coordinators respond within 30 minutes for home nursing, elderly care and medical services in Mumbai, Pune & India.",
+          "Reach ELSHADAI Home Healthcare 24×7 by phone, WhatsApp or email. Coordinators respond within 30 minutes for home nursing, elderly care and medical services in Mumbai, Pune & India.",
       },
       {
         name: "keywords",
         content:
-          "contact home nurse, ELIZA contact, home nursing helpline, WhatsApp nurse Mumbai, 24x7 nursing contact India",
+          "contact home nurse, ELSHADAI contact, home nursing helpline, WhatsApp nurse Mumbai, 24x7 nursing contact India",
       },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "Contact ELIZA Home Healthcare" },
+      { property: "og:title", content: "Contact ELSHADAI Home Healthcare" },
       { property: "og:description", content: "Talk to a real coordinator in minutes — call, WhatsApp or email." },
       { property: "og:url", content: SITE_URL + "/contact" },
     ],
@@ -61,7 +61,7 @@ function ContactPage() {
             title="WhatsApp"
             value="Instant chat"
             cta="Open WhatsApp"
-            href={buildWhatsAppLink("Hi ELIZA, I'd like to enquire.")}
+            href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire.")}
             theme="whatsapp"
           />
           <ChannelCard
@@ -88,7 +88,7 @@ function ContactPage() {
           </div>
 
           <div className="rounded-[20px] border border-[#EEF2F7] bg-white p-6 shadow-[0_2px_16px_rgba(13,45,79,0.06)]">
-            <h3 className="font-display text-[1.125rem] font-semibold text-[#0D2D4F]">Follow ELIZA</h3>
+            <h3 className="font-display text-[1.125rem] font-semibold text-[#0D2D4F]">Follow ELSHADAI</h3>
             <p className="mt-1.5 text-sm text-[#4A5568]">
               Care tips, family stories and updates from our nurses.
             </p>
@@ -103,7 +103,7 @@ function ContactPage() {
 
           <div className="overflow-hidden rounded-3xl shadow-card border border-border">
             <iframe
-              title="ELIZA Mumbai location"
+              title="ELSHADAI Mumbai location"
               src="https://www.google.com/maps?q=2nd+floor,+Kasar+ali,+6,+Thane+Rd,+opp.+Fire+bridge,+Kamatghar,+Bhiwandi,+Maharashtra+421308&output=embed"
               loading="lazy"
               className="block h-72 w-full border-0"
@@ -163,7 +163,7 @@ function SocialBtn({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`ELIZA on ${label}`}
+      aria-label={`ELSHADAI on ${label}`}
       title={label}
       className="grid aspect-square place-items-center rounded-2xl border border-[#EEF2F7] bg-white text-[#4A5568] hover:bg-[#0E7C6E] hover:text-white hover:border-[#0E7C6E] hover:scale-105 transition-all"
     >

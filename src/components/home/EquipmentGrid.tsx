@@ -66,7 +66,7 @@ export function EquipmentGrid({ limit, withHeader = true }: { limit?: number; wi
             <div className="relative aspect-[4/3] overflow-hidden bg-[#F7F9FC]">
               <img
                 src={equipmentImages[e.image]}
-                alt={`${e.title} — home medical equipment by ELIZA`}
+                alt={`${e.title} — home medical equipment by ELSHADAI`}
                 width={1024}
                 height={768}
                 loading="lazy"

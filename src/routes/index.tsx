@@ -20,16 +20,16 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ELIZA — Home Nursing & Medical Equipment in Mumbai, Thane & Navi Mumbai" },
+      { title: "ELSHADAI — Home Nursing & Medical Equipment in Mumbai, Thane & Navi Mumbai" },
       {
         name: "description",
         content:
-          "ELIZA delivers hospital-grade home nursing, ICU nurses, elderly care, physiotherapy, doctor visits and medical equipment rental across Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay. Certified caregivers, 24×7 coordinator.",
+          "ELSHADAI delivers hospital-grade home nursing, ICU nurses, elderly care, physiotherapy, doctor visits and medical equipment rental across Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay. Certified caregivers, 24×7 coordinator.",
       },
       {
         name: "keywords",
         content:
-          "home nursing care, home nurse near me, ICU nurse at home, elderly care at home, patient attendant, home physiotherapy, doctor home visit, wound care at home, newborn care, hospital bed on rent, oxygen concentrator rent, BiPAP rent, home medical equipment, home healthcare Mumbai, home nursing Thane, nursing services Navi Mumbai, South Bombay nursing, Mumbai Suburban home care, ELIZA healthcare",
+          "home nursing care, home nurse near me, ICU nurse at home, elderly care at home, patient attendant, home physiotherapy, doctor home visit, wound care at home, newborn care, hospital bed on rent, oxygen concentrator rent, BiPAP rent, home medical equipment, home healthcare Mumbai, home nursing Thane, nursing services Navi Mumbai, South Bombay nursing, Mumbai Suburban home care, ELSHADAI healthcare",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "googlebot", content: "index, follow" },
@@ -37,12 +37,12 @@ export const Route = createFileRoute("/")({
       { name: "geo.placename", content: "Mumbai" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
-      { property: "og:title", content: "ELIZA — Hospital-grade Home Healthcare in Mumbai & Thane" },
+      { property: "og:title", content: "ELSHADAI — Hospital-grade Home Healthcare in Mumbai & Thane" },
       { property: "og:description", content: business.shortDescription },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "ELIZA — Home Nursing & Healthcare" },
+      { name: "twitter:title", content: "ELSHADAI — Home Nursing & Healthcare" },
       { name: "twitter:description", content: business.shortDescription },
       { name: "twitter:image", content: heroImg },
     ],

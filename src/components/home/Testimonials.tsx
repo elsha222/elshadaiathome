@@ -32,7 +32,7 @@ export function Testimonials() {
           Trusted by thousands of Indian families.
         </h2>
         <p className="mt-4 text-base text-[#4A5568] leading-[1.75] md:text-lg">
-          Real reviews from families who chose ELIZA for home nursing and elder care.
+          Real reviews from families who chose ELSHADAI for home nursing and elder care.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">

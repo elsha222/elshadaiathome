@@ -82,7 +82,7 @@ export const whyUs = [
   {
     icon: "ShieldCheck",
     title: "Verified & Certified",
-    body: "Every caregiver is ANM/GNM/B.Sc qualified, police-verified, and Nursing Council registered.",
+    body: "Every caregiver is ANM/GNM/B.Sc qualified and Nursing Council registered.",
   },
   {
     icon: "Clock",

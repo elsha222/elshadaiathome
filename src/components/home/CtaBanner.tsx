@@ -28,7 +28,7 @@ export function CtaBanner() {
               </a>
             </Button>
             <Button asChild size="lg" className="bg-whatsapp text-white hover:brightness-110 rounded-full font-semibold border-0 shadow-soft hover:-translate-y-0.5 transition-all">
-              <a href={buildWhatsAppLink("Hi ELIZA, I need home care.")} target="_blank" rel="noopener noreferrer">
+              <a href={buildWhatsAppLink("Hi ELSHADAI, I need home care.")} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" /> WhatsApp Us
               </a>
             </Button>

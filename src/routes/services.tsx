@@ -11,11 +11,11 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Home Nursing Services | ICU Nurse, Elderly Care, Physio | ELIZA" },
+      { title: "Home Nursing Services | ICU Nurse, Elderly Care, Physio | ELSHADAI" },
       {
         name: "description",
         content:
-          "Explore ELIZA's full range of home healthcare services — ICU nurses, elderly care, physiotherapy, doctor visits, wound care & newborn care across Mumbai, Pune & India.",
+          "Explore ELSHADAI's full range of home healthcare services — ICU nurses, elderly care, physiotherapy, doctor visits, wound care & newborn care across Mumbai, Pune & India.",
       },
       {
         name: "keywords",
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/services")({
           "home nursing services, ICU nurse home, elderly care, patient attendant, home physiotherapy, doctor visit at home, wound dressing, newborn care, home healthcare India",
       },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "ELIZA Home Healthcare Services" },
+      { property: "og:title", content: "ELSHADAI Home Healthcare Services" },
       { property: "og:description", content: "Complete home healthcare services from certified professionals." },
       { property: "og:image", content: serviceImg },
       { property: "og:url", content: SITE_URL + "/services" },

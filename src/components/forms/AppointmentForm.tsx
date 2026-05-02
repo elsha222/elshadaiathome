@@ -8,7 +8,7 @@ import { cities, services, equipment, buildWhatsAppLink, business } from "@/cont
 const BREVO_API_KEY = (import.meta as any).env?.VITE_BREVO_API_KEY ?? "";
 const SHEETS_URL    = (import.meta as any).env?.VITE_SHEETS_WEBHOOK_URL ?? "";
 const RATE_LIMIT_MS = 60_000;
-const LS_KEY        = "eliza_last_submit";
+const LS_KEY        = "elshadai_last_submit";
 
 const schema = z.object({
   name:     z.string().trim().min(2, "Enter patient name").max(80),
@@ -38,7 +38,7 @@ function buildEmailHtml(data: F) {
   return `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
       <div style="background:#0D2D4F;padding:24px 32px;border-radius:12px 12px 0 0">
-        <h1 style="color:#ffffff;margin:0;font-size:20px">🏥 New Booking — ELIZA Healthcare</h1>
+        <h1 style="color:#ffffff;margin:0;font-size:20px">🏥 New Booking — ELSHADAI Healthcare</h1>
         <p style="color:#E8F5F3;margin:6px 0 0;font-size:14px">${data.service} · ${data.city}</p>
       </div>
       <div style="background:#ffffff;padding:24px 32px;border:1px solid #EEF2F7;border-top:none">
@@ -51,7 +51,7 @@ function buildEmailHtml(data: F) {
         </table>
       </div>
       <div style="background:#E8F5F3;padding:16px 32px;border-radius:0 0 12px 12px;border:1px solid #EEF2F7;border-top:none">
-        <p style="margin:0;font-size:12px;color:#4A5568">Submitted via elizahealthcare.in · Reply to this email or call the patient directly.</p>
+        <p style="margin:0;font-size:12px;color:#4A5568">Submitted via elshadaihealthcare.in · Reply to this email or call the patient directly.</p>
       </div>
     </div>
   `;
@@ -108,8 +108,8 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
         method: "POST",
         headers: { "api-key": BREVO_API_KEY, "Content-Type": "application/json" },
         body: JSON.stringify({
-          sender:      { name: "ELIZA Website", email: "elshadaiathome25@gmail.com" },
-          to:          [{ email: "elshadaiathome25@gmail.com", name: "ELIZA Care Team" }],
+          sender:      { name: "ELSHADAI Website", email: "elshadaiathome25@gmail.com" },
+          to:          [{ email: "elshadaiathome25@gmail.com", name: "ELSHADAI Care Team" }],
           subject:     `New booking — ${data.service} — ${data.city}`,
           htmlContent: buildEmailHtml(data),
         }),
@@ -139,9 +139,9 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
 
   // ── success ──────────────────────────────────────────────────────────────
   if (status === "success") {
-    let whatsappText = "Hi ELIZA, I just booked an appointment on your website.";
+    let whatsappText = "Hi ELSHADAI, I just booked an appointment on your website.";
     if (submittedData) {
-      whatsappText = `Hi ELIZA, I just booked an appointment on your website.\n\n*Name:* ${submittedData.name}\n*Phone:* ${submittedData.phone}\n*City:* ${submittedData.city}\n*Service:* ${submittedData.service}\n*Duration:* ${submittedData.duration}`;
+      whatsappText = `Hi ELSHADAI, I just booked an appointment on your website.\n\n*Name:* ${submittedData.name}\n*Phone:* ${submittedData.phone}\n*City:* ${submittedData.city}\n*Service:* ${submittedData.service}\n*Duration:* ${submittedData.duration}`;
     }
 
     return (
@@ -281,7 +281,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             : <><Send className="h-5 w-5" /> Book Appointment</>}
         </button>
         <a href={buildWhatsAppLink(
-            `Hi ELIZA, I'm connecting to book an appointment.\n\n` +
+            `Hi ELSHADAI, I'm connecting to book an appointment.\n\n` +
             (watch("name") ? `*Name:* ${watch("name")}\n` : "") +
             (watch("phone") ? `*Phone:* ${watch("phone")}\n` : "") +
             (watch("city") ? `*City:* ${watch("city")}\n` : "") +

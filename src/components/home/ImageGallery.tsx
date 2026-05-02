@@ -46,7 +46,7 @@ export function ImageGallery() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-coral">
-            Inside ELIZA care
+            Inside ELSHADAI care
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance md:text-5xl">
             Real care, in real homes.
@@ -66,7 +66,7 @@ export function ImageGallery() {
                 <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl shadow-card hover:shadow-elevated transition-all">
                   <img
                     src={s.src}
-                    alt={`${s.title} — ELIZA home healthcare in India`}
+                    alt={`${s.title} — ELSHADAI home healthcare in India`}
                     width={1280}
                     height={896}
                     loading="lazy"

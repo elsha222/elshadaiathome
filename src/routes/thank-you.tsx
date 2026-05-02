@@ -4,7 +4,7 @@ import { z } from "zod";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { business, buildWhatsAppLink } from "@/content/site";
 
-const SITE_URL = "https://elizahealthcare.in";
+const SITE_URL = "https://elshadaihealthcare.in";
 
 const searchSchema = z.object({ name: z.string().optional() });
 
@@ -12,11 +12,11 @@ export const Route = createFileRoute("/thank-you")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Thank You — We'll Call You Back Shortly | ELIZA" },
+      { title: "Thank You — We'll Call You Back Shortly | ELSHADAI" },
       {
         name: "description",
         content:
-          "Your home nursing request is received. ELIZA's care coordinator will call you back as soon as possible to design the right care plan.",
+          "Your home nursing request is received. ELSHADAI's care coordinator will call you back as soon as possible to design the right care plan.",
       },
       { name: "robots", content: "noindex, follow" },
     ],
@@ -59,7 +59,7 @@ function ThankYouPage() {
               <Phone className="h-4 w-4" /> Call us
             </a>
             <a
-              href={buildWhatsAppLink("Hi ELIZA, I just submitted a booking request.")}
+              href={buildWhatsAppLink("Hi ELSHADAI, I just submitted a booking request.")}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-2xl bg-whatsapp px-4 py-3.5 text-sm font-semibold text-white shadow-soft hover:brightness-110 transition"

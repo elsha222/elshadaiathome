@@ -11,7 +11,7 @@ export function FloatingActions() {
     >
       {/* WhatsApp — top */}
       <a
-        href={buildWhatsAppLink("Hi ELIZA, I need home nursing care.")}
+        href={buildWhatsAppLink("Hi ELSHADAI, I need home nursing care.")}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
@@ -28,7 +28,7 @@ export function FloatingActions() {
       {/* Phone — below, with pulse ring via CSS animation */}
       <a
         href={`tel:${business.phone}`}
-        aria-label={`Call ELIZA at ${business.phoneDisplay}`}
+        aria-label={`Call ELSHADAI at ${business.phoneDisplay}`}
         className="pulse-phone-ring"
         style={{
           width: 52, height: 52, borderRadius: "50%",

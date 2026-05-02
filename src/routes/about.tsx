@@ -11,19 +11,19 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ELIZA — India's Trusted Home Healthcare Team" },
+      { title: "About ELSHADAI — India's Trusted Home Healthcare Team" },
       {
         name: "description",
         content:
-          "ELIZA is on a mission to make hospital-grade healthcare accessible at home. Meet the team behind 5,000+ family success stories across Mumbai, Pune and India.",
+          "ELSHADAI is on a mission to make hospital-grade healthcare accessible at home. Meet the team behind 5,000+ family success stories across Mumbai, Pune and India.",
       },
       {
         name: "keywords",
         content:
-          "about ELIZA healthcare, home nursing company India, certified caregivers, Mumbai home nursing team, healthcare mission",
+          "about ELSHADAI healthcare, home nursing company India, certified caregivers, Mumbai home nursing team, healthcare mission",
       },
       { name: "robots", content: "index, follow" },
-      { property: "og:title", content: "About ELIZA Home Healthcare" },
+      { property: "og:title", content: "About ELSHADAI Home Healthcare" },
       { property: "og:description", content: "Compassionate, certified home healthcare across India." },
       { property: "og:image", content: teamImg },
       { property: "og:url", content: SITE_URL + "/about" },
@@ -61,7 +61,7 @@ function AboutPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             src={teamImg}
-            alt="ELIZA healthcare team"
+            alt="ELSHADAI healthcare team"
             width={1280}
             height={800}
             loading="lazy"
@@ -72,7 +72,7 @@ function AboutPage() {
 
       <section className="mx-auto max-w-4xl px-5 py-20 sm:px-8 lg:px-12">
         <span className="text-[0.8125rem] font-semibold uppercase tracking-[0.04em] text-[#0E7C6E]">Our story</span>
-        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0D2D4F] md:text-4xl">Why ELIZA exists.</h2>
+        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0D2D4F] md:text-4xl">Why ELSHADAI exists.</h2>
         <div className="mt-6 space-y-5 text-base leading-[1.75] text-[#4A5568] md:text-lg">
           {aboutContent.story.map((p, i) => (
             <p key={i}>{p}</p>

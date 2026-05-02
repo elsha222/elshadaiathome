@@ -14,7 +14,7 @@ export const Route = createFileRoute("/equipment")({
     meta: [
       {
         title:
-          "Home Medical Equipment Rental | Hospital Bed, Oxygen, BiPAP | ELIZA",
+          "Home Medical Equipment Rental | Hospital Bed, Oxygen, BiPAP | ELSHADAI",
       },
       {
         name: "description",
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/equipment")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Home Medical Equipment by ELIZA" },
+      { property: "og:title", content: "Home Medical Equipment by ELSHADAI" },
       {
         property: "og:description",
         content: "ICU-grade equipment delivered, installed and supported at home.",
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/equipment")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Home Medical Equipment by ELIZA",
+          name: "Home Medical Equipment by ELSHADAI",
           itemListElement: equipment.map((e, i) => ({
             "@type": "ListItem",
             position: i + 1,
