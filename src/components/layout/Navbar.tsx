@@ -30,7 +30,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-[#0D2D4F] transition-shadow duration-300" style={{ boxShadow: scrolled ? "0 2px 16px rgba(13,45,79,0.22)" : "none" }}>
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 md:h-20 lg:px-12">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <img src={logo} alt="Elshadai Healthcare" className="h-10 w-auto object-contain" />
+          <img src={logo} alt="Elshadai Healthcare" width="160" height="40" className="h-10 w-auto object-contain" />
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -50,7 +50,7 @@ export function Navbar() {
             <Phone className="h-4 w-4" />{business.phoneDisplay}
           </a>
           <Button asChild variant="default" size="default" className="bg-[#0E7C6E] text-white hover:bg-[#1A9E8C] rounded-full px-6 font-semibold shadow-none border-0">
-            <Link to="/book">Book appointment</Link>
+            <Link to="/book" hash="appointment-form">Book appointment</Link>
           </Button>
         </div>
 
@@ -88,7 +88,7 @@ export function Navbar() {
           </ul>
           <div className="px-6 py-5">
             <Button asChild size="lg" className="w-full bg-[#0E7C6E] text-white hover:bg-[#1A9E8C] rounded-full font-bold border-0">
-              <Link to="/book">Book appointment</Link>
+              <Link to="/book" hash="appointment-form">Book appointment</Link>
             </Button>
           </div>
         </div>

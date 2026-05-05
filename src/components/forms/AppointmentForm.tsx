@@ -208,29 +208,29 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
       )}
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Patient name" error={errors.name?.message}>
-          <input placeholder="e.g. Mrs. Sharma" autoComplete="name"
+        <Field id="field-name" label="Patient name" error={errors.name?.message}>
+          <input id="field-name" placeholder="e.g. Mrs. Sharma" autoComplete="name"
             className={inputCls(!!errors.name)} {...register("name")} />
         </Field>
 
-        <Field label="Phone number" error={errors.phone?.message}>
+        <Field id="field-phone" label="Phone number" error={errors.phone?.message}>
           <div className="relative">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-medium text-[#4A5568]">+91</span>
-            <input type="tel" inputMode="numeric" maxLength={10} placeholder="98xxxxxxxx"
+            <input id="field-phone" type="tel" inputMode="numeric" maxLength={10} placeholder="98xxxxxxxx"
               autoComplete="tel" className={inputCls(!!errors.phone) + " pl-12"} {...register("phone")} />
           </div>
         </Field>
 
-        <Field label="City" error={errors.city?.message}>
-          <select className={selectCls(!!errors.city)} defaultValue="" {...register("city")}>
+        <Field id="field-city" label="City" error={errors.city?.message}>
+          <select id="field-city" className={selectCls(!!errors.city)} defaultValue="" {...register("city")}>
             <option value="" disabled>Select your city</option>
             {cities.map((c) => <option key={c}>{c}</option>)}
             <option value="Other">Other city</option>
           </select>
         </Field>
 
-        <Field label="Service or equipment" error={errors.service?.message}>
-          <select className={selectCls(!!errors.service)} defaultValue="" {...register("service")}>
+        <Field id="field-service" label="Service or equipment" error={errors.service?.message}>
+          <select id="field-service" className={selectCls(!!errors.service)} defaultValue="" {...register("service")}>
             <option value="" disabled>Select what you need</option>
             <optgroup label="Nursing & Care">
               {services.map((s) => <option key={s.slug}>{s.title}</option>)}
@@ -259,14 +259,14 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
       </div>
 
       <div className="mt-4">
-        <Field label="Preferred date (optional)">
-          <input type="date" className={inputCls(false)} {...register("date")} />
+        <Field id="field-date" label="Preferred date (optional)">
+          <input id="field-date" type="date" className={inputCls(false)} {...register("date")} />
         </Field>
       </div>
 
       <div className="mt-4">
-        <Field label="Brief health condition (optional)" error={errors.notes?.message}>
-          <textarea rows={3} placeholder="E.g. Post-knee replacement, needs nursing for 2 weeks…"
+        <Field id="field-notes" label="Brief health condition (optional)" error={errors.notes?.message}>
+          <textarea id="field-notes" rows={3} placeholder="E.g. Post-knee replacement, needs nursing for 2 weeks…"
             className={`w-full rounded-xl border px-4 py-3 text-sm text-[#0D2D4F] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#0E7C6E]/40 resize-none ${
               errors.notes ? "border-red-400" : "border-[#EEF2F7]"
             }`} {...register("notes")} />
@@ -314,12 +314,12 @@ const selectCls = (err: boolean) =>
     err ? "border-red-400" : "border-[#EEF2F7]"
   }`;
 
-function Field({ label, error, children, className }: {
-  label: string; error?: string; children: React.ReactNode; className?: string;
+function Field({ label, error, children, className, id }: {
+  label: string; error?: string; children: React.ReactNode; className?: string; id?: string;
 }) {
   return (
     <div className={className}>
-      <label className="mb-1.5 block text-sm font-semibold text-[#0D2D4F]">{label}</label>
+      <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-[#0D2D4F]">{label}</label>
       {children}
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>

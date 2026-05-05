@@ -87,7 +87,7 @@ export function EquipmentGrid({ limit, withHeader = true }: { limit?: number; wi
               </ul>
               <div className="mt-6">
                 <Link
-                  to="/book"
+                  to="/book" hash="appointment-form"
                   className="flex w-full items-center justify-center gap-1 rounded-full bg-[#0E7C6E] py-2.5 text-[14px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
                   aria-label={`Book ${e.title}`}
                 >

@@ -33,7 +33,7 @@ export function CtaBanner() {
               </a>
             </Button>
             <Button asChild size="lg" className="bg-white text-[#0D2D4F] hover:bg-[#E8F5F3] rounded-full font-semibold border-0 hover:-translate-y-0.5 transition-all">
-              <Link to="/book">
+              <Link to="/book" hash="appointment-form">
                 Book Online <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

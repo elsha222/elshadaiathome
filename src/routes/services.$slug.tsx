@@ -115,7 +115,7 @@ function ServiceDetailPage() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                to="/book"
+                to="/book" hash="appointment-form"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-3 text-sm font-semibold text-coral-foreground shadow-coral hover:brightness-110 transition"
               >
                 Book {s.title} <ArrowRight className="h-4 w-4" />

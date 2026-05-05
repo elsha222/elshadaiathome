@@ -79,7 +79,7 @@ function BookPage() {
             </div>
           </div>
 
-          <div className="md:col-span-3">
+          <div id="appointment-form" className="md:col-span-3">
             <AppointmentForm />
           </div>
         </div>

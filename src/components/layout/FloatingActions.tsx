@@ -64,7 +64,7 @@ export function MobileStickyCTA() {
         </a>
         {/* Book — solid teal */}
         <Link
-          to="/book"
+          to="/book" hash="appointment-form"
           className="flex flex-1 items-center justify-center gap-2 font-bold text-white transition-colors active:bg-[#1A9E8C]"
           style={{
             height: 48, borderRadius: 100,

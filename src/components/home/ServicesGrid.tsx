@@ -63,7 +63,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
               {/* footer — Book pill button stays left of floating bubble zone (right:68px) */}
               <div className="mt-5">
                 <Link
-                  to="/book"
+                  to="/book" hash="appointment-form"
                   className="flex w-full items-center justify-center gap-1 rounded-full bg-[#0E7C6E] py-2.5 text-[14px] font-semibold text-white hover:bg-[#1A9E8C] transition-colors"
                   aria-label={`Book ${s.title}`}
                 >

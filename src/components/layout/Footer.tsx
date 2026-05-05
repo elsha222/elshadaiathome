@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:px-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Elshadai Healthcare" className="h-10 w-auto object-contain" />
+            <img src={logo} alt="Elshadai Healthcare" width="160" height="40" className="h-10 w-auto object-contain" />
           </Link>
           <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
             {business.shortDescription}
@@ -44,7 +44,7 @@ export function Footer() {
                 <Link to={n.to} className="hover:text-[#0E7C6E] transition-colors">{n.label}</Link>
               </li>
             ))}
-            <li><Link to="/book" className="hover:text-[#0E7C6E] transition-colors">Book Appointment</Link></li>
+            <li><Link to="/book" hash="appointment-form" className="hover:text-[#0E7C6E] transition-colors">Book Appointment</Link></li>
           </ul>
         </div>
 

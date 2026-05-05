@@ -102,7 +102,7 @@ export function BookingPopup() {
 
         <div className="space-y-2.5 p-5">
           <Link
-            to="/book"
+            to="/book" hash="appointment-form"
             onClick={close}
             className="flex items-center justify-between rounded-2xl bg-[#0E7C6E] px-4 py-3.5 text-sm font-semibold text-white shadow-[0_4px_16px_rgba(14,124,110,0.2)] hover:bg-[#1A9E8C] active:scale-[0.99] transition"
           >
