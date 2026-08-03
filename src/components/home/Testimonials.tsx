@@ -123,17 +123,21 @@ export function Testimonials() {
       </div>
 
       {snapCount > 1 && (
-        <div className="mt-8 flex justify-center gap-2">
+        <div className="mt-8 flex justify-center">
           {Array.from({ length: snapCount }).map((_, i) => (
             <button
               key={i}
               type="button"
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => emblaApi?.scrollTo(i)}
-              className={`h-2 rounded-full transition-all ${
-                selected === i ? "w-8 bg-[#0E7C6E]" : "w-2 bg-[#0E7C6E]/25 hover:bg-[#0E7C6E]/50"
-              }`}
-            />
+              className="group flex h-12 w-12 items-center justify-center -mx-2"
+            >
+              <span
+                className={`h-2 rounded-full transition-all ${
+                  selected === i ? "w-8 bg-[#0E7C6E]" : "w-2 bg-[#0E7C6E]/25 group-hover:bg-[#0E7C6E]/50"
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}

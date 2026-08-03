@@ -11,7 +11,7 @@ export function Footer() {
           <Link to="/" className="flex items-center gap-2.5">
             <img src={logo} alt="Elshadai Healthcare" width="160" height="40" className="h-10 w-auto object-contain" />
           </Link>
-          <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
+          <p className="mt-4 text-sm text-white/75 max-w-xs leading-relaxed">
             {business.shortDescription}
           </p>
           <div className="mt-6 flex flex-wrap gap-2.5">
@@ -28,7 +28,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`ELSHADAI on ${label}`}
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/60 hover:bg-[#0E7C6E] hover:text-white hover:border-[#0E7C6E] transition-all"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/75 hover:bg-[#0E7C6E] hover:text-white hover:border-[#0E7C6E] transition-all"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -37,8 +37,8 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/40">Company</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/60">
+          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/75">Company</h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             {nav.map((n) => (
               <li key={n.to}>
                 <Link to={n.to} className="hover:text-[#0E7C6E] transition-colors">{n.label}</Link>
@@ -49,8 +49,8 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-3">
-          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/40">Services</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/60">
+          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/75">Services</h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             {services.slice(0, 6).map((s) => (
               <li key={s.slug}>
                 <Link
@@ -64,8 +64,8 @@ export function Footer() {
             ))}
           </ul>
 
-          <h3 className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-white/40">Equipment</h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/60">
+          <h3 className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-white/75">Equipment</h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             {equipment.slice(0, 4).map((e) => (
               <li key={e.slug}>
                 <Link to="/equipment" className="hover:text-[#0E7C6E] transition-colors">
@@ -77,31 +77,31 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-3">
-          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/40">Reach Us</h3>
+          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-white/75">Reach Us</h3>
           <ul className="mt-4 space-y-3.5 text-sm">
             <li>
-              <a href={`tel:${business.phone}`} className="flex items-start gap-3 text-white/60 hover:text-[#0E7C6E] transition-colors">
+              <a href={`tel:${business.phone}`} className="flex items-start gap-3 text-white/75 hover:text-[#0E7C6E] transition-colors">
                 <Phone className="h-4 w-4 mt-0.5 text-[#0E7C6E] shrink-0" />
                 {business.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={buildWhatsAppLink("Hi ELSHADAI, I need home nursing care.")} className="flex items-start gap-3 text-white/60 hover:text-whatsapp transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={buildWhatsAppLink("Hi ELSHADAI, I need home nursing care.")} className="flex items-start gap-3 text-white/75 hover:text-whatsapp transition-colors" target="_blank" rel="noopener noreferrer">
                 <span className="grid h-4 w-4 place-items-center rounded-full bg-whatsapp text-[8px] mt-0.5 shrink-0 text-white">W</span>
                 Chat on WhatsApp
               </a>
             </li>
             <li>
-              <a href={`mailto:${business.email}`} className="flex items-start gap-3 text-white/60 hover:text-[#0E7C6E] transition-colors">
+              <a href={`mailto:${business.email}`} className="flex items-start gap-3 text-white/75 hover:text-[#0E7C6E] transition-colors">
                 <Mail className="h-4 w-4 mt-0.5 text-[#0E7C6E] shrink-0" />
                 {business.email}
               </a>
             </li>
-            <li className="flex items-start gap-3 text-white/60">
+            <li className="flex items-start gap-3 text-white/75">
               <MapPin className="h-4 w-4 mt-0.5 text-[#0E7C6E] shrink-0" />
               {business.address}
             </li>
-            <li className="flex items-start gap-3 text-white/60">
+            <li className="flex items-start gap-3 text-white/75">
               <Clock className="h-4 w-4 mt-0.5 text-[#0E7C6E] shrink-0" />
               {business.hours}
             </li>
@@ -110,7 +110,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-white/40 sm:px-8 lg:px-12 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-white/75 sm:px-8 lg:px-12 md:flex-row">
           <p>© {new Date().getFullYear()} {business.fullName}. All rights reserved.</p>
           <p>Compassionate care, delivered home.</p>
         </div>

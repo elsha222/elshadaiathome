@@ -88,17 +88,21 @@ export function ImageGallery() {
         </div>
 
         {snapCount > 1 && (
-          <div className="mt-8 flex justify-center gap-2">
+          <div className="mt-8 flex justify-center">
             {Array.from({ length: snapCount }).map((_, i) => (
               <button
                 key={i}
                 type="button"
                 aria-label={`Go to gallery slide ${i + 1}`}
                 onClick={() => emblaApi?.scrollTo(i)}
-                className={`h-2 rounded-full transition-all ${
-                  selected === i ? "w-8 bg-primary" : "w-2 bg-primary/25 hover:bg-primary/50"
-                }`}
-              />
+                className="group flex h-12 w-12 items-center justify-center -mx-2"
+              >
+                <span
+                  className={`h-2 rounded-full transition-all ${
+                    selected === i ? "w-8 bg-primary" : "w-2 bg-primary/25 group-hover:bg-primary/50"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

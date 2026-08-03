@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { hero, business, buildWhatsAppLink } from "@/content/site";
-import heroImg from "@/assets/hero-nurse.jpg";
+const heroImg = "/hero-nurse.jpg";
 
 export function Hero() {
   return (
@@ -27,7 +27,7 @@ export function Hero() {
             {/* trust badge — white text on dark gradient */}
             <div className="absolute bottom-3 left-4">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 px-3 py-1 text-[11px] font-semibold text-white">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] pulse-ring" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#075E54] pulse-ring" />
                 Trusted by 5,000+ families
               </span>
             </div>
@@ -69,7 +69,7 @@ export function Hero() {
               href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home nursing.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 text-sm font-semibold text-white active:scale-[0.97] transition-transform"
+              className="flex items-center justify-center gap-2 rounded-2xl bg-[#075E54] py-3.5 text-sm font-semibold text-white active:scale-[0.97] transition-transform"
             >
               <MessageCircle className="h-4 w-4" /> {hero.secondaryCta.label}
             </a>
@@ -127,7 +127,7 @@ export function Hero() {
                 href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home nursing.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-semibold text-white hover:brightness-110 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 rounded-full bg-[#075E54] px-7 py-3.5 text-base font-semibold text-white hover:brightness-110 hover:-translate-y-0.5 transition-all"
               >
                 <MessageCircle className="h-4 w-4" /> {hero.secondaryCta.label}
               </a>

@@ -156,7 +156,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
         <a
           href={buildWhatsAppLink(whatsappText)}
           target="_blank" rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white"
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#075E54] px-6 py-3 text-sm font-semibold text-white"
         >
           <MessageCircle className="h-4 w-4" /> Also confirm on WhatsApp
         </a>
@@ -289,7 +289,7 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             (watch("duration") ? `*Duration:* ${watch("duration")}` : "")
           )}
           target="_blank" rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#25D366] bg-white py-3.5 text-sm font-semibold text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all">
+          className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#075E54] bg-white py-3.5 text-sm font-semibold text-[#075E54] hover:bg-[#075E54] hover:text-white transition-all">
           <MessageCircle className="h-4 w-4" /> Or book via WhatsApp
         </a>
       </div>

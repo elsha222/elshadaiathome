@@ -17,6 +17,7 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
+import { Route as EquipmentSlugRouteImport } from './routes/equipment.$slug'
 
 const ThankYouRoute = ThankYouRouteImport.update({
   id: '/thank-you',
@@ -58,15 +59,21 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ServicesRoute,
 } as any)
+const EquipmentSlugRoute = EquipmentSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EquipmentRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/equipment': typeof EquipmentRoute
+  '/equipment': typeof EquipmentRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
   '/thank-you': typeof ThankYouRoute
+  '/equipment/$slug': typeof EquipmentSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
@@ -74,9 +81,10 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/equipment': typeof EquipmentRoute
+  '/equipment': typeof EquipmentRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
   '/thank-you': typeof ThankYouRoute
+  '/equipment/$slug': typeof EquipmentSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
@@ -85,9 +93,10 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/equipment': typeof EquipmentRoute
+  '/equipment': typeof EquipmentRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
   '/thank-you': typeof ThankYouRoute
+  '/equipment/$slug': typeof EquipmentSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/equipment'
     | '/services'
     | '/thank-you'
+    | '/equipment/$slug'
     | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/equipment'
     | '/services'
     | '/thank-you'
+    | '/equipment/$slug'
     | '/services/$slug'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/equipment'
     | '/services'
     | '/thank-you'
+    | '/equipment/$slug'
     | '/services/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -128,7 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
   ContactRoute: typeof ContactRoute
-  EquipmentRoute: typeof EquipmentRoute
+  EquipmentRoute: typeof EquipmentRouteWithChildren
   ServicesRoute: typeof ServicesRouteWithChildren
   ThankYouRoute: typeof ThankYouRoute
 }
@@ -191,8 +203,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSlugRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/equipment/$slug': {
+      id: '/equipment/$slug'
+      path: '/$slug'
+      fullPath: '/equipment/$slug'
+      preLoaderRoute: typeof EquipmentSlugRouteImport
+      parentRoute: typeof EquipmentRoute
+    }
   }
 }
+
+interface EquipmentRouteChildren {
+  EquipmentSlugRoute: typeof EquipmentSlugRoute
+}
+
+const EquipmentRouteChildren: EquipmentRouteChildren = {
+  EquipmentSlugRoute: EquipmentSlugRoute,
+}
+
+const EquipmentRouteWithChildren = EquipmentRoute._addFileChildren(
+  EquipmentRouteChildren,
+)
 
 interface ServicesRouteChildren {
   ServicesSlugRoute: typeof ServicesSlugRoute
@@ -211,7 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
   ContactRoute: ContactRoute,
-  EquipmentRoute: EquipmentRoute,
+  EquipmentRoute: EquipmentRouteWithChildren,
   ServicesRoute: ServicesRouteWithChildren,
   ThankYouRoute: ThankYouRoute,
 }

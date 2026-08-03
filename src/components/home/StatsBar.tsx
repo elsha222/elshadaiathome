@@ -14,8 +14,8 @@ export function StatsBar() {
         >
           {stats.map((s) => (
             <div key={s.label} className="bg-[#0D2D4F] px-4 py-7 text-center md:py-10">
-              <div className="font-display text-[2rem] font-extrabold text-[#0E7C6E] md:text-[2.5rem]">{s.value}</div>
-              <div className="mt-1 text-xs font-medium text-white/60 md:text-sm">{s.label}</div>
+              <div className="font-display text-[2rem] font-extrabold text-[#2DD4BF] md:text-[2.5rem]">{s.value}</div>
+              <div className="mt-1 text-xs font-medium text-white/80 md:text-sm">{s.label}</div>
             </div>
           ))}
         </motion.div>

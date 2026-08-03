@@ -13,7 +13,7 @@ import { Faq } from "@/components/home/Faq";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { business, faqs } from "@/content/site";
-import heroImg from "@/assets/hero-nurse.jpg";
+const heroImg = "/hero-nurse.jpg";
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
