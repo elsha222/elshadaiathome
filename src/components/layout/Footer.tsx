@@ -109,6 +109,37 @@ export function Footer() {
         </div>
       </div>
 
+      <div className="border-t border-white/10 bg-gradient-to-b from-transparent to-black/20">
+        <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:px-12 space-y-6">
+          <div className="text-center">
+            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Our Services</h4>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {["Home Nursing Care Mumbai", "Home Nurse Near Me", "ICU Nurse at Home Mumbai", "Elderly Care at Home Mumbai", "Patient Attendant Service Mumbai", "Home Healthcare Services Mumbai", "Nursing Bureau in Mumbai", "24 Hour Nurse at Home Mumbai", "Physiotherapist at Home Mumbai", "Doctor Home Visit Mumbai", "Newborn Baby Care Nurse at Home", "Post Surgery Care at Home Mumbai", "Bedridden Patient Care at Home", "Hospital Bed on Rent Mumbai", "Oxygen Concentrator on Rent Mumbai", "Wheelchair on Rent Mumbai", "BiPAP Machine on Rent Mumbai", "Nursing Bureau Near Me"].map((s) => (
+                <span key={s} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{s}</span>
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="text-center">
+            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Areas We Serve</h4>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {["Home Nurse in Churchgate", "Home Nurse in Marine Lines", "Home Nurse in Charni Road", "Home Nurse in Grant Road", "Home Nurse in Mumbai Central", "Home Nurse in Mahalaxmi", "Home Nurse in Lower Parel", "Home Nurse in Prabhadevi", "Home Nurse in Dadar", "Home Nurse in Matunga Road", "Home Nurse in Mahim", "Home Nurse in Bandra", "Home Nurse in Khar Road", "Home Nurse in Santacruz", "Home Nurse in Vile Parle"].map((a) => (
+                <span key={a} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{a}</span>
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="text-center">
+            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Search Near You</h4>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {["Nurse at Home Near Me", "Home Nurse for Elderly Near Me", "ICU Nurse Near Me", "Patient Care Attendant Near Me", "Physiotherapist at Home Near Me", "24 Hour Nurse Near Me", "Baby Care Nurse Near Me", "Hospital Bed on Rent Near Me", "Oxygen Concentrator on Rent Near Me", "Home Healthcare Near Me"].map((n) => (
+                <span key={n} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{n}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-white/75 sm:px-8 lg:px-12 md:flex-row">
           <p>© {new Date().getFullYear()} {business.fullName}. All rights reserved.</p>
