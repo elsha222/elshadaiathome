@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://elshadaihealthcare.com/</loc>
+    <loc>https://elshadaihealthcare.com</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/services/home-nursing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/services/icu-nurse</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/services/elderly-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/services/patient-attendant</loc>
+    <loc>https://elshadaihealthcare.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/services/physiotherapy</loc>
+    <loc>https://elshadaihealthcare.com/services</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/services/doctor-visit</loc>
+    <loc>https://elshadaihealthcare.com/equipment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/blog</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/book</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/24-hour-nursing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/home-icu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/elderly-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/post-surgery-care</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -46,34 +61,69 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/services/newborn-care</loc>
+    <loc>https://elshadaihealthcare.com/services/physiotherapy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/equipment</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/book</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://elshadaihealthcare.com/contact</loc>
+    <loc>https://elshadaihealthcare.com/services/baby-mother-care</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elshadaihealthcare.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://elshadaihealthcare.com/services/doctor-visit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/dementia-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/stroke-rehabilitation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/services/palliative-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/hospital-bed</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/oxygen-concentrator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/bipap-cpap</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/wheelchair-walker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/suction-machine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/patient-monitor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elshadaihealthcare.com/equipment/nebulizer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://elshadaihealthcare.com/blog/home-nursing-care-mumbai</loc>
