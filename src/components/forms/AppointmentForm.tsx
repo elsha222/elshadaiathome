@@ -5,6 +5,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Send, MessageCircle, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { cities, services, equipment, buildWhatsAppLink, business } from "@/content/site";
 
+// Google Analytics helper — safe to call even if gtag isn't loaded
+declare global { interface Window { gtag?: (...args: any[]) => void } }
+const trackEvent = (event: string, params?: Record<string, string>) => {
+  window.gtag?.("event", event, params);
+};
+
 const BREVO_API_KEY = (import.meta as any).env?.VITE_BREVO_API_KEY ?? "";
 const SHEETS_URL    = (import.meta as any).env?.VITE_SHEETS_WEBHOOK_URL ?? "";
 const RATE_LIMIT_MS = 60_000;
@@ -131,6 +137,18 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
       localStorage.setItem(LS_KEY, String(Date.now()));
       setSubmittedData(data);
       setStatus("success");
+      trackEvent("generate_lead", {
+        event_category: "form",
+        event_label: data.service,
+        service: data.service,
+        city: data.city,
+        duration: data.duration,
+      });
+      trackEvent("form_submit", {
+        form_name: "appointment_booking",
+        service: data.service,
+        city: data.city,
+      });
       reset();
     } else {
       setStatus("error");

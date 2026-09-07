@@ -41,7 +41,7 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "description", content: `${s.long} Available in Mumbai, Mumbai Suburban, Thane, Navi Mumbai and South Bombay.` },
         {
           name: "keywords",
-          content: `${s.title.toLowerCase()}, ${s.title.toLowerCase()} at home, ${s.title.toLowerCase()} Mumbai, ${s.title.toLowerCase()} Pune, home healthcare India`,
+          content: `${s.title.toLowerCase()}, ${s.title.toLowerCase()} at home, ${s.title.toLowerCase()} Mumbai, ${s.title.toLowerCase()} Thane, home healthcare Mumbai`,
         },
         { name: "robots", content: "index, follow" },
         { property: "og:type", content: "article" },
@@ -105,7 +105,7 @@ function ServiceDetailPage() {
             <p className="mt-5 text-base text-muted-foreground md:text-lg">{s.long}</p>
 
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {s.highlights.map((h) => (
+              {s.highlights.map((h: string) => (
                 <li key={h} className="flex items-center gap-2 text-sm font-medium text-foreground/85">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
                   {h}

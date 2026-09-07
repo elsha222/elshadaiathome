@@ -14,17 +14,17 @@ export const Route = createFileRoute("/equipment")({
     meta: [
       {
         title:
-          "Home Medical Equipment Rental | Hospital Bed, Oxygen, BiPAP | ELSHADAI",
+          "Medical Equipment Rental | Bed, Oxygen, BiPAP | ELSHADAI",
       },
       {
         name: "description",
         content:
-          "Rent or buy hospital beds, oxygen concentrators, BiPAP/CPAP, patient monitors, wheelchairs, walkers, suction & nebulizers — delivered, installed and supported across Mumbai, Pune & India.",
+          "Rent hospital beds, oxygen concentrators, BiPAP/CPAP, monitors, wheelchairs & more — delivered and installed across Mumbai, Thane & Navi Mumbai.",
       },
       {
         name: "keywords",
         content:
-          "home medical equipment rental, hospital bed on rent Mumbai, oxygen concentrator rent Pune, BiPAP machine rent India, patient monitor home, wheelchair rental, walker for elderly, suction machine home, nebulizer home, ICU setup at home",
+          "home medical equipment rental, hospital bed on rent Mumbai, oxygen concentrator rent Mumbai, BiPAP machine rent Mumbai, patient monitor home, wheelchair rental, walker for elderly, suction machine home, nebulizer home, ICU setup at home",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },

@@ -9,16 +9,16 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
-      { title: "Book a Home Nurse Online | Care Coordinator Callback | ELSHADAI" },
+      { title: "Book a Home Nurse Online | Coordinator Callback | ELSHADAI" },
       {
         name: "description",
         content:
-          "Book ELSHADAI home nursing in 60 seconds. A care coordinator calls you back to plan certified ANM/GNM caregivers, ICU nurses or medical equipment across Mumbai, Pune & India.",
+          "Book ELSHADAI home nursing in 60 seconds. A coordinator calls you back to plan certified caregivers, ICU nurses or equipment across Mumbai.",
       },
       {
         name: "keywords",
         content:
-          "book home nurse, online nurse appointment, hire home nurse Mumbai, nurse booking Pune, ICU nurse booking, elderly care booking, home medical equipment booking",
+          "book home nurse, online nurse appointment, hire home nurse Mumbai, nurse booking Mumbai, ICU nurse booking, elderly care booking, home medical equipment booking",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Book ELSHADAI Home Healthcare" },

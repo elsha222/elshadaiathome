@@ -11,16 +11,16 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Home Nursing Services | ICU Nurse, Elderly Care, Physio | ELSHADAI" },
+      { title: "Home Healthcare Services | ELSHADAI Mumbai" },
       {
         name: "description",
         content:
-          "Explore ELSHADAI's full range of home healthcare services — ICU nurses, elderly care, physiotherapy, doctor visits, wound care & newborn care across Mumbai, Pune & India.",
+          "ELSHADAI's home healthcare services — ICU nurses, elderly care, physiotherapy, doctor visits, wound care & newborn care across Mumbai & Thane.",
       },
       {
         name: "keywords",
         content:
-          "home nursing services, ICU nurse home, elderly care, patient attendant, home physiotherapy, doctor visit at home, wound dressing, newborn care, home healthcare India",
+          "home nursing services, ICU nurse home, elderly care, patient attendant, home physiotherapy, doctor visit at home, wound dressing, newborn care, home healthcare Mumbai",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "ELSHADAI Home Healthcare Services" },

@@ -11,16 +11,16 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ELSHADAI — India's Trusted Home Healthcare Team" },
+      { title: "About ELSHADAI — Mumbai's Trusted Home Healthcare Team" },
       {
         name: "description",
         content:
-          "ELSHADAI is on a mission to make hospital-grade healthcare accessible at home. Meet the team behind 5,000+ family success stories across Mumbai, Pune and India.",
+          "ELSHADAI makes hospital-grade healthcare accessible at home. Meet the team behind 5,000+ family success stories across Mumbai, Thane & Navi Mumbai.",
       },
       {
         name: "keywords",
         content:
-          "about ELSHADAI healthcare, home nursing company India, certified caregivers, Mumbai home nursing team, healthcare mission",
+          "about ELSHADAI healthcare, home nursing company Mumbai, certified caregivers, Mumbai home nursing team, healthcare mission",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "About ELSHADAI Home Healthcare" },

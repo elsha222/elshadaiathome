@@ -123,7 +123,7 @@ export function Footer() {
           <div className="text-center">
             <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Areas We Serve</h4>
             <div className="mt-3 flex flex-wrap justify-center gap-2">
-              {["Home Nurse in Churchgate", "Home Nurse in Marine Lines", "Home Nurse in Charni Road", "Home Nurse in Grant Road", "Home Nurse in Mumbai Central", "Home Nurse in Mahalaxmi", "Home Nurse in Lower Parel", "Home Nurse in Prabhadevi", "Home Nurse in Dadar", "Home Nurse in Matunga Road", "Home Nurse in Mahim", "Home Nurse in Bandra", "Home Nurse in Khar Road", "Home Nurse in Santacruz", "Home Nurse in Vile Parle"].map((a) => (
+              {["Home Nurse in Churchgate", "Home Nurse in Marine Lines", "Home Nurse in Charni Road", "Home Nurse in Grant Road", "Home Nurse in Mumbai Central", "Home Nurse in Mahalaxmi", "Home Nurse in Lower Parel", "Home Nurse in Prabhadevi", "Home Nurse in Dadar", "Home Nurse in Matunga Road", "Home Nurse in Mahim", "Home Nurse in Bandra", "Home Nurse in Khar Road", "Home Nurse in Santacruz", "Home Nurse in Vile Parle", "Home Nurse in Andheri", "Home Nurse in Jogeshwari", "Home Nurse in Goregaon", "Home Nurse in Malad", "Home Nurse in Kandivali", "Home Nurse in Borivali", "Home Nurse in Dahisar", "Home Nurse in Mira Road", "Home Nurse in Bhayandar", "Home Nurse in Naigaon", "Home Nurse in Vasai Road", "Home Nurse in Nallasopara", "Home Nurse in Virar"].map((a) => (
                 <span key={a} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{a}</span>
               ))}
             </div>

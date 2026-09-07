@@ -10,16 +10,16 @@ const SITE_URL = "https://elshadaihealthcare.com";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact ELSHADAI Home Healthcare | Call, WhatsApp, Email 24×7" },
+      { title: "Contact ELSHADAI | Call, WhatsApp, Email 24×7" },
       {
         name: "description",
         content:
-          "Reach ELSHADAI Home Healthcare 24×7 by phone, WhatsApp or email. Coordinators respond within 30 minutes for home nursing, elderly care and medical services in Mumbai, Pune & India.",
+          "Reach ELSHADAI 24×7 by phone, WhatsApp or email. Coordinators respond fast for home nursing, elderly care & medical services in Mumbai & Thane.",
       },
       {
         name: "keywords",
         content:
-          "contact home nurse, ELSHADAI contact, home nursing helpline, WhatsApp nurse Mumbai, 24x7 nursing contact India",
+          "contact home nurse, ELSHADAI contact, home nursing helpline, WhatsApp nurse Mumbai, 24x7 nursing contact Mumbai",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Contact ELSHADAI Home Healthcare" },
