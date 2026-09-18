@@ -677,5 +677,232 @@ export const blogPosts: BlogPost[] = [
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
     image: "/blog-images/equipment-monitor.jpg",
     faqs: [{ q: "How long does it take to set up a Home ICU?", a: "Once the assessment is done and the doctor approves the discharge, we can deliver the equipment and deploy the nurses within 12 to 24 hours." }]
+  },
+
+  {
+    slug: "home-nurse-elderly-near-me",
+    title: "Find a Caring Home Nurse for Elderly Near Me",
+    metaTitle: "Home Nurse for Elderly Near Me | Senior Care in Mumbai",
+    metaDescription: "Looking for a home nurse for elderly near me? We provide compassionate, trained caregivers for senior citizens in your area. Contact us for 12/24-hour support.",
+    excerpt: "Ensure your aging parents receive the best care without leaving home. Discover how our nearby elderly care nurses provide companionship, medical monitoring, and daily assistance.",
+    content: [
+      "Finding a trusted 'home nurse for elderly near me' is a priority for families balancing work and senior care. Proximity matters because it guarantees that your loved one has immediate support during health fluctuations.",
+      "Our localized team of elder care nurses specializes in geriatric needs. From assisting with daily activities (ADLs) to monitoring vitals and ensuring medications are taken on time, our caregivers offer complete peace of mind.",
+      "Companionship is a core part of our service. Our nurses don't just provide medical support; they engage seniors in conversation, help with light mobility exercises, and prevent feelings of isolation.",
+      "Because our caregivers live close to your neighborhood, you don't have to worry about delays or inconsistent shift timings.",
+      "Contact Elshadai Home Healthcare today to find a compassionate elder care nurse right in your vicinity."
+    ],
+    category: "Elderly Care",
+    keywords: ["Home Nurse for Elderly Near Me", "Elderly Care Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-02",
+    readTime: "4 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/elderly_care_near_me.jpg",
+    faqs: [
+      { q: "Do your elderly care nurses help with personal hygiene?", a: "Yes, our trained nurses and attendants assist with sponge baths, diaper changes, and other personal hygiene routines with utmost dignity." }
+    ]
+  },
+  {
+    slug: "icu-nurse-near-me",
+    title: "Highly Trained ICU Nurse Near Me for Critical Care",
+    metaTitle: "ICU Nurse Near Me | Critical Care at Home",
+    metaDescription: "Searching for an ICU nurse near me? Get 24/7 critical care at home with our experienced ICU-trained nurses. Experts in ventilator & BiPAP management.",
+    excerpt: "Transitioning a critical patient home requires expert supervision. Find a certified ICU nurse near you for advanced medical support, ventilator management, and 24/7 monitoring.",
+    content: [
+      "When a family member is discharged from the Intensive Care Unit but still requires continuous monitoring, finding an 'ICU nurse near me' becomes critical.",
+      "A nearby ICU-trained nurse ensures that your home ICU setup operates flawlessly. Our nurses are highly experienced in managing ventilators, CPAP/BiPAP machines, oxygen concentrators, and cardiac monitors.",
+      "Emergencies require immediate, skilled intervention. Having a critical care nurse stationed in your home, sourced from your local area, minimizes response times during critical drops in oxygen levels or cardiac anomalies.",
+      "They also maintain strict sterile protocols for tracheostomy care, PEG tube feeding, and central line management to prevent hospital-acquired infections at home.",
+      "Get in touch with us to deploy a qualified ICU nurse near your location in Mumbai today."
+    ],
+    category: "Critical Care",
+    keywords: ["ICU Nurse Near Me", "Critical Care Nurse Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-04",
+    readTime: "5 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/icu_nurse_near_me.jpg",
+    faqs: [
+      { q: "Can the ICU nurse manage a home ventilator?", a: "Absolutely. Our ICU nurses are specially trained to operate, monitor, and troubleshoot home ventilators." }
+    ]
+  },
+  {
+    slug: "patient-care-attendant-near-me",
+    title: "Reliable Patient Care Attendant Near Me",
+    metaTitle: "Patient Care Attendant Near Me | Trusted Caregivers",
+    metaDescription: "Find a reliable patient care attendant near me. Our trained attendants assist with mobility, feeding, and hygiene for bedridden and recovering patients.",
+    excerpt: "Need help with a bedridden or recovering family member? Discover how our nearby patient care attendants provide compassionate physical support and daily hygiene care.",
+    content: [
+      "Not every patient requires a medical nurse; many simply need a 'patient care attendant near me' to assist with the physical demands of recovery or aging.",
+      "Our trained attendants, available across Mumbai neighborhoods, focus on the patient's daily comfort. This includes safe wheelchair transfers, preventing bedsores by turning bedridden patients, and assisting with oral feeding.",
+      "Having a caregiver from a nearby locality ensures that shift transitions are seamless, providing 12-hour or 24-hour uninterrupted support.",
+      "They also maintain the patient's hygiene through regular sponge baths and grooming, allowing family members to focus on spending quality time rather than burning out from caregiving duties.",
+      "Reach out to us to hire a background-verified patient attendant right in your area."
+    ],
+    category: "Elderly Care",
+    keywords: ["Patient Care Attendant Near Me", "Attendant Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-06",
+    readTime: "4 min read",
+    featured: false,
+    areas: ["Mumbai", "Navi Mumbai"],
+    image: "/blog-images/patient_attendant_near_me.jpg",
+    faqs: [
+      { q: "What is the difference between a nurse and an attendant?", a: "Nurses handle medical tasks like IV injections and wound dressing, while attendants handle physical support, hygiene, and mobility assistance." }
+    ]
+  },
+  {
+    slug: "physiotherapist-at-home-near-me",
+    title: "Expert Physiotherapist at Home Near Me",
+    metaTitle: "Physiotherapist at Home Near Me | Rehab Experts",
+    metaDescription: "Looking for a physiotherapist at home near me? Get expert rehabilitation for stroke, surgery, or orthopedic issues delivered right to your doorstep.",
+    excerpt: "Skip the painful travel to clinics. Find a certified physiotherapist near you who delivers personalized rehabilitation exercises in the comfort of your home.",
+    content: [
+      "Traveling to a clinic with an injury or after surgery can delay your recovery. Searching for a 'physiotherapist at home near me' solves this problem by bringing the clinic to your living room.",
+      "Our licensed physiotherapists are distributed across Mumbai, ensuring that you get prompt, regular sessions without the hassle of traffic.",
+      "We provide specialized home rehab for post-operative joint replacements, sports injuries, stroke recovery (neuro-rehabilitation), and geriatric mobility issues.",
+      "Our therapists bring their own portable equipment, including resistance bands and pain-relief modalities like TENS machines, to ensure a comprehensive session.",
+      "Accelerate your healing process with one-on-one attention from a top-rated physiotherapist near your location."
+    ],
+    category: "Rehabilitation",
+    keywords: ["Physiotherapist at Home Near Me", "Home Physiotherapy Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-08",
+    readTime: "4 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/physio_home_near_me.jpg",
+    faqs: [
+      { q: "How long is a typical home physiotherapy session?", a: "Sessions typically last between 45 to 60 minutes, depending on the patient's stamina and the prescribed treatment plan." }
+    ]
+  },
+  {
+    slug: "24-hour-nurse-near-me",
+    title: "Dependable 24 Hour Nurse Near Me",
+    metaTitle: "24 Hour Nurse Near Me | Round-the-Clock Home Care",
+    metaDescription: "Need continuous care? Find a 24 hour nurse near me. We offer certified nursing staff for day and night shifts to monitor and care for your loved ones.",
+    excerpt: "Ensure your loved one is never left unattended. Learn how our 24-hour nursing service provides continuous, localized medical care for critical and recovering patients.",
+    content: [
+      "When a medical condition demands constant vigilance, finding a '24 hour nurse near me' provides immense relief to exhausted family members.",
+      "Elshadai coordinates round-the-clock care by deploying dedicated day and night shift nurses from locations near you. This local pairing ensures that nurses arrive fresh and on time for their shifts.",
+      "Our 24-hour nurses monitor vital signs, administer timely medications (including night-time doses), manage oxygen therapy, and respond immediately to any sudden changes in the patient's condition.",
+      "Whether it is post-surgery recovery or palliative care, having a trained professional nearby at 2 AM brings unparalleled peace of mind.",
+      "Contact us to set up 24/7 nursing care tailored to your exact neighborhood."
+    ],
+    category: "Nursing",
+    keywords: ["24 Hour Nurse Near Me", "Round the Clock Nurse Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-10",
+    readTime: "4 min read",
+    featured: true,
+    areas: ["Mumbai", "Thane"],
+    image: "/blog-images/24hr_nurse_near_me.jpg",
+    faqs: [
+      { q: "Is 24-hour care provided by one nurse or two?", a: "To ensure maximum alertness and quality of care, we typically assign two nurses who work back-to-back 12-hour shifts." }
+    ]
+  },
+  {
+    slug: "baby-care-nurse-near-me",
+    title: "Trusted Baby Care Nurse Near Me (NICU Trained)",
+    metaTitle: "Baby Care Nurse Near Me | Newborn & Mother Care",
+    metaDescription: "Looking for a baby care nurse near me? Get NICU-trained nurses for newborn care, premature babies, and postnatal mother support in your area.",
+    excerpt: "Bring your newborn home with confidence. Find a nearby NICU-trained baby care nurse for feeding support, sleep training, and infant vitals monitoring.",
+    content: [
+      "Bringing a newborn home, especially a premature baby, requires specialized care. Searching for a 'baby care nurse near me' connects you with experts who can make this transition smooth.",
+      "Our NICU-trained pediatric nurses are stationed locally, allowing us to provide rapid deployment for anxious new parents. They assist with infant hygiene, umbilical cord care, and monitoring for neonatal jaundice.",
+      "Sleep deprivation is a major challenge for new mothers. Our nearby nurses handle night-time feeding routines and help establish healthy infant sleep patterns.",
+      "We also focus on postnatal mother care, offering lactation support and monitoring C-section recovery to prevent infections.",
+      "Give your baby the best start in life with an expert pediatric nurse located near your home."
+    ],
+    category: "Nursing",
+    keywords: ["Baby Care Nurse Near Me", "Newborn Nurse Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-12",
+    readTime: "4 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/baby_nurse_near_me.jpg",
+    faqs: [
+      { q: "Do the nurses provide lactation advice?", a: "Yes, our nurses are trained to help new mothers with proper latching techniques and lactation support." }
+    ]
+  },
+  {
+    slug: "hospital-bed-on-rent-near-me",
+    title: "Quick Delivery: Hospital Bed on Rent Near Me",
+    metaTitle: "Hospital Bed on Rent Near Me | Fast Home Delivery",
+    metaDescription: "Need a hospital bed on rent near me? We deliver and install electric and manual ICU beds quickly in your area. Affordable monthly rentals.",
+    excerpt: "Set up your home care environment quickly. Find out how to rent an electric or manual hospital bed near your location with same-day delivery and installation.",
+    content: [
+      "When a patient is abruptly discharged, getting the right furniture is urgent. Searching for a 'hospital bed on rent near me' is the fastest way to prepare your home.",
+      "By renting from our local medical equipment hubs, you ensure fast, often same-day delivery. We provide fully electric ICU beds, semi-electric beds, and standard manual Fowler beds.",
+      "Our nearby technicians do more than just drop off the equipment. They assemble the bed in your chosen room, sanitize it, and train the family on how to use the adjustment controls safely.",
+      "Renting locally also means that if you face any mechanical issues, our support team can reach your address swiftly to repair or replace the unit.",
+      "Call us to book a hospital bed rental near you and ensure maximum comfort for your recovering loved one."
+    ],
+    category: "Medical Equipment",
+    keywords: ["Hospital Bed on Rent Near Me", "ICU Bed Rent Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-14",
+    readTime: "3 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/hospital_bed_rent_near_me.jpg",
+    faqs: [
+      { q: "Is delivery and installation included?", a: "Yes, our technicians handle the complete delivery, setup, and demonstration at your home." }
+    ]
+  },
+  {
+    slug: "oxygen-concentrator-on-rent-near-me",
+    title: "Emergency Oxygen Concentrator on Rent Near Me",
+    metaTitle: "Oxygen Concentrator on Rent Near Me | 5L & 10L",
+    metaDescription: "Emergency oxygen concentrator on rent near me. Get 5L and 10L oxygen machines delivered quickly to your home for COPD and respiratory support.",
+    excerpt: "Don't wait during a respiratory emergency. Rent a reliable 5L or 10L oxygen concentrator near your location with 24/7 fast delivery and setup.",
+    content: [
+      "In respiratory distress scenarios like severe asthma or COPD exacerbation, oxygen supply cannot wait. Looking for an 'oxygen concentrator on rent near me' is the most efficient way to secure this life-saving equipment.",
+      "Because our equipment inventory is distributed across local zones in Mumbai, we can dispatch 5-Liter and 10-Liter oxygen concentrators to your doorstep rapidly.",
+      "Unlike heavy oxygen cylinders, concentrators are easy to use and provide an endless supply of medical-grade oxygen by purifying room air.",
+      "Our delivery technicians will set up the machine, explain the flow rate adjustments, and provide a fresh, sterile nasal cannula or oxygen mask.",
+      "Ensure continuous breathing support by renting a high-quality oxygen concentrator from a reliable local provider today."
+    ],
+    category: "Medical Equipment",
+    keywords: ["Oxygen Concentrator on Rent Near Me", "Oxygen Machine Rent Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-16",
+    readTime: "4 min read",
+    featured: true,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/oxygen_rent_near_me.jpg",
+    faqs: [
+      { q: "Do these machines need to be refilled?", a: "No, oxygen concentrators draw oxygen from the ambient room air, so they never need to be 'refilled' like a cylinder." }
+    ]
+  },
+  {
+    slug: "home-healthcare-near-me",
+    title: "Comprehensive Home Healthcare Near Me",
+    metaTitle: "Home Healthcare Near Me | Best Medical Care at Home",
+    metaDescription: "Looking for complete home healthcare near me? From nursing and doctor visits to medical equipment rentals, get premium healthcare delivered to your door.",
+    excerpt: "Why travel to the hospital when the hospital can come to you? Discover the benefits of choosing a comprehensive home healthcare provider in your neighborhood.",
+    content: [
+      "Managing an illness or recovery usually involves coordinating multiple services—nurses, doctors, physiotherapists, and medical equipment. Searching for 'home healthcare near me' allows you to find an all-in-one provider.",
+      "At Elshadai, our localized infrastructure means your neighborhood has access to our complete suite of medical services. We act as a single point of contact for your family's health needs.",
+      "By choosing a nearby provider, you benefit from integrated care. Our home nurses communicate seamlessly with our visiting doctors and physiotherapists to execute a unified care plan.",
+      "From setting up a Home ICU with rented equipment to deploying a 24-hour caregiver, having a local healthcare partner ensures speed, accountability, and clinical excellence.",
+      "Contact us today to experience the highest standard of holistic home healthcare near you."
+    ],
+    category: "Guides",
+    keywords: ["Home Healthcare Near Me", "Home Care Near Me"],
+    author: { name: "Elshadai Health Team", role: "Care Experts", url: "https://elshadaihealthcare.com/about" },
+    date: "2024-05-18",
+    readTime: "4 min read",
+    featured: false,
+    areas: ["Mumbai", "Thane", "Navi Mumbai"],
+    image: "/blog-images/home_healthcare_near_me.jpg",
+    faqs: [
+      { q: "Do you coordinate all the services simultaneously?", a: "Yes, your dedicated care coordinator manages the scheduling of nurses, doctors, and equipment deliveries so you don't have to." }
+    ]
   }
+
 ];
