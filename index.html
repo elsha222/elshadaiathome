@@ -64,8 +64,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" />
   </noscript>
 
-  <!-- Preload LCP Image -->
-  <link rel="preload" as="image" href="/hero-nurse.webp" fetchpriority="high" />
+  <!-- Preload LCP Image (Responsive) -->
+  <link rel="preload" as="image" imagesrcset="/hero-nurse-sm.webp 640w, /hero-nurse-md.webp 1024w, /hero-nurse.webp 1920w" imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw" fetchpriority="high" />
 
   <!-- Structured Data — Organization + LocalBusiness -->
   <script type="application/ld+json">
@@ -151,8 +151,8 @@
       }
       events.forEach(function(e) { window.addEventListener(e, onInteraction, { passive: true }) });
       
-      // Fallback: load after 3.5 seconds if no interaction
-      setTimeout(loadGtag, 3500);
+      // Fallback: load after 8 seconds if no interaction
+      setTimeout(loadGtag, 8000);
     })();
   </script>
 </head>
