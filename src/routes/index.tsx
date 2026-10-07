@@ -1,19 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/layout/PageLayout";
-import React, { Suspense } from "react";
 import { Hero } from "@/components/home/Hero";
 import { StatsBar } from "@/components/home/StatsBar";
 import { PainPoints } from "@/components/home/PainPoints";
-
-const ServicesGrid = React.lazy(() => import("@/components/home/ServicesGrid").then((m) => ({ default: m.ServicesGrid })));
-const EquipmentGrid = React.lazy(() => import("@/components/home/EquipmentGrid").then((m) => ({ default: m.EquipmentGrid })));
-const WhyUs = React.lazy(() => import("@/components/home/WhyUs").then((m) => ({ default: m.WhyUs })));
-const HowItWorks = React.lazy(() => import("@/components/home/HowItWorks").then((m) => ({ default: m.HowItWorks })));
-const ImageGallery = React.lazy(() => import("@/components/home/ImageGallery").then((m) => ({ default: m.ImageGallery })));
-const Testimonials = React.lazy(() => import("@/components/home/Testimonials").then((m) => ({ default: m.Testimonials })));
-const Faq = React.lazy(() => import("@/components/home/Faq").then((m) => ({ default: m.Faq })));
-const CtaBanner = React.lazy(() => import("@/components/home/CtaBanner").then((m) => ({ default: m.CtaBanner })));
-const AppointmentForm = React.lazy(() => import("@/components/forms/AppointmentForm").then((m) => ({ default: m.AppointmentForm })));
+import { WhyUs } from "@/components/home/WhyUs";
+import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { EquipmentGrid } from "@/components/home/EquipmentGrid";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { ImageGallery } from "@/components/home/ImageGallery";
+import { Testimonials } from "@/components/home/Testimonials";
+import { Faq } from "@/components/home/Faq";
+import { CtaBanner } from "@/components/home/CtaBanner";
+import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { business, faqs } from "@/content/site";
 const heroImg = "/hero-nurse.webp";
 
@@ -101,37 +99,35 @@ function HomePage() {
       <Hero />
       <StatsBar />
       <PainPoints />
-      <Suspense fallback={<div className="h-96" />}>
-        <ServicesGrid limit={8} />
-        <EquipmentGrid limit={4} />
-        <WhyUs />
-        <HowItWorks />
-        <ImageGallery />
+      <ServicesGrid limit={8} />
+      <EquipmentGrid limit={4} />
+      <WhyUs />
+      <HowItWorks />
+      <ImageGallery />
 
-        <section
-          id="book"
-          className="mx-auto grid max-w-7xl gap-10 px-4 py-20 md:grid-cols-5 md:px-8"
-        >
-          <div className="md:col-span-2">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-coral">
-              Book in 60 seconds
-            </span>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance md:text-5xl">
-              Tell us what you need.
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Share a few details — a care coordinator will call you back to design the right care plan for your family.
-            </p>
-          </div>
-          <div className="md:col-span-3">
-            <AppointmentForm compact />
-          </div>
-        </section>
+      <section
+        id="book"
+        className="mx-auto grid max-w-7xl gap-10 px-4 py-20 md:grid-cols-5 md:px-8"
+      >
+        <div className="md:col-span-2">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-coral">
+            Book in 60 seconds
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance md:text-5xl">
+            Tell us what you need.
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Share a few details — a care coordinator will call you back to design the right care plan for your family.
+          </p>
+        </div>
+        <div className="md:col-span-3">
+          <AppointmentForm compact />
+        </div>
+      </section>
 
-        <Testimonials />
-        <Faq />
-        <CtaBanner />
-      </Suspense>
+      <Testimonials />
+      <Faq />
+      <CtaBanner />
     </PageLayout>
   );
 }
