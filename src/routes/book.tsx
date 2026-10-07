@@ -26,6 +26,21 @@ export const Route = createFileRoute("/book")({
       { property: "og:url", content: SITE_URL + "/book" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/book" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Book a Home Nurse Online",
+          provider: {
+            "@type": "MedicalBusiness",
+            name: business.fullName,
+            telephone: business.phone,
+          },
+        }),
+      },
+    ],
   }),
   component: BookPage,
 });

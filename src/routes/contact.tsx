@@ -27,6 +27,28 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: SITE_URL + "/contact" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          mainEntity: {
+            "@type": "MedicalBusiness",
+            name: business.fullName,
+            url: SITE_URL,
+            telephone: business.phone,
+            email: business.email,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Mumbai",
+              addressRegion: "MH",
+              addressCountry: "IN",
+            },
+          },
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });

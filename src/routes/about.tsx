@@ -31,6 +31,22 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:image", content: teamImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          mainEntity: {
+            "@type": "MedicalBusiness",
+            name: business.fullName,
+            description: aboutContent.mission,
+            url: SITE_URL,
+            image: SITE_URL + teamImg,
+          },
+        }),
+      },
+    ],
   }),
   component: AboutPage,
 });
