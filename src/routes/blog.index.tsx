@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Calendar, Clock, MapPin } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
@@ -106,7 +107,7 @@ function BlogIndexPage() {
           <div className="mb-16 rounded-3xl border border-border bg-card overflow-hidden shadow-soft group hover:shadow-lg transition-all duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-64 md:h-auto overflow-hidden bg-muted">
-                <img 
+                <ResponsiveImage 
                   src={featuredPost.image} 
                   alt={featuredPost.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -148,7 +149,7 @@ function BlogIndexPage() {
               className="group flex flex-col rounded-3xl border border-border bg-card overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative h-48 overflow-hidden bg-muted">
-                <img 
+                <ResponsiveImage 
                   src={post.image} 
                   alt={post.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

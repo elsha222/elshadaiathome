@@ -4,7 +4,7 @@ import { Heart, Shield, Sparkles, HandHeart, type LucideIcon } from "lucide-reac
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { aboutContent, business, cities } from "@/content/site";
-import teamImg from "@/assets/team.jpg";
+const teamImg = "/assets/team.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
 

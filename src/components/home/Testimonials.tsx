@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote, ArrowRight } from "lucide-react";
@@ -105,7 +106,7 @@ export function Testimonials() {
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3 border-t border-[#EEF2F7] pt-4">
                   {t.image ? (
-                    <img src={t.image} alt={t.name} className="h-11 w-11 rounded-full object-cover border-2 border-[#E8F5F3]" />
+                    <ResponsiveImage src={t.image} alt={t.name} className="h-11 w-11 rounded-full object-cover border-2 border-[#E8F5F3]" />
                   ) : (
                     <div className="grid h-11 w-11 place-items-center rounded-full bg-[#0E7C6E] font-display text-sm font-bold text-white shrink-0">
                       {t.name.charAt(0)}

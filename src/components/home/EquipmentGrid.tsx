@@ -1,16 +1,17 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { equipment } from "@/content/site";
 
-import bed from "@/assets/equipment-bed.jpg";
-import oxygen from "@/assets/equipment-oxygen.jpg";
-import bipap from "@/assets/equipment-bipap.jpg";
-import monitor from "@/assets/equipment-monitor.jpg";
-import wheelchair from "@/assets/equipment-wheelchair.jpg";
-import walker from "@/assets/equipment-walker.jpg";
-import suction from "@/assets/equipment-suction.jpg";
-import nebulizer from "@/assets/equipment-nebulizer.jpg";
+const bed = "/assets/equipment-bed.webp";
+const oxygen = "/assets/equipment-oxygen.webp";
+const bipap = "/assets/equipment-bipap.webp";
+const monitor = "/assets/equipment-monitor.webp";
+const wheelchair = "/assets/equipment-wheelchair.webp";
+const walker = "/assets/equipment-walker.webp";
+const suction = "/assets/equipment-suction.webp";
+const nebulizer = "/assets/equipment-nebulizer.webp";
 
 export const equipmentImages: Record<string, string> = {
   bed,
@@ -64,7 +65,7 @@ export function EquipmentGrid({ limit, withHeader = true }: { limit?: number; wi
             className="group flex flex-col overflow-hidden rounded-[20px] border border-[#EEF2F7] bg-white shadow-[0_2px_16px_rgba(13,45,79,0.06)] hover:shadow-[0_8px_32px_rgba(13,45,79,0.12)] hover:border-[#0E7C6E] hover:-translate-y-1 transition-all duration-[250ms]"
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-[#F7F9FC]">
-              <img
+              <ResponsiveImage
                 src={equipmentImages[e.image]}
                 alt={`${e.title} — home medical equipment by ELSHADAI`}
                 width={1024}

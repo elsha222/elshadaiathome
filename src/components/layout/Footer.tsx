@@ -1,7 +1,8 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { Link } from "@tanstack/react-router";
 import { HeartPulse, Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin, Youtube, Twitter } from "lucide-react";
 import { business, nav, services, equipment, buildWhatsAppLink } from "@/content/site";
-import logo from "@/assets/logo.png";
+const logo = "/assets/logo.webp";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:px-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Elshadai Healthcare" width="160" height="40" className="h-10 w-auto object-contain" />
+            <ResponsiveImage src={logo} alt="Elshadai Healthcare" width="160" height="40" className="h-10 w-auto object-contain" />
           </Link>
           <p className="mt-4 text-sm text-white/75 max-w-xs leading-relaxed">
             {business.shortDescription}

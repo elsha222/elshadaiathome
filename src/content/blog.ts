@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: true,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/home-nursing.jpg",
+    image: "/blog-images/home-nursing.webp",
     faqs: [
       { q: "How quickly can a home nurse reach me in Mumbai?", a: "Our coordinator dispatches a matched caregiver as soon as the assessment is complete, often within 4 to 12 hours depending on your exact location in Mumbai." },
       { q: "Are the nurses qualified?", a: "Yes, all our nurses are ANM or GNM certified and registered with the State Nursing Council." }
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/icu-nursing.jpg",
+    image: "/blog-images/icu-nursing.webp",
     faqs: [
       { q: "Can ICU nurses operate ventilators at home?", a: "Yes, our ICU-trained nurses are fully proficient in operating and monitoring home ventilators, as well as managing tracheostomies." }
     ]
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: true,
     areas: ["Mumbai", "Thane", "Navi Mumbai", "South Bombay"],
-    image: "/blog-images/elderly-care.jpg",
+    image: "/blog-images/elderly-care.webp",
     faqs: [
       { q: "Do the attendants cook for the elderly?", a: "Our attendants assist with feeding and basic meal preparation specific to the patient's dietary needs, but they do not function as full-time household cooks." }
     ]
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Navi Mumbai"],
-    image: "/blog-images/post_surgery.jpg",
+    image: "/blog-images/post_surgery.webp",
     faqs: [{ q: "Do you provide wound care?", a: "Yes, our trained nurses handle sterile dressing and suture removal." }]
   },
   {
@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/24_hour_nursing.jpg",
+    image: "/blog-images/24_hour_nursing.webp",
     faqs: [{ q: "How do shifts work for 24-hour care?", a: "We typically assign two nurses working 12-hour shifts or one nurse on a live-in basis depending on the care intensity." }]
   },
   {
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane"],
-    image: "/blog-images/newborn_care.jpg",
+    image: "/blog-images/newborn_care.webp",
     faqs: [{ q: "Do the nurses help with sleep training?", a: "Our nurses establish healthy sleep and feeding routines suitable for the baby's developmental stage." }]
   },
   {
@@ -172,7 +172,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Navi Mumbai"],
-    image: "/blog-images/patient_attendant.jpg"
+    image: "/blog-images/patient_attendant.webp"
   },
   {
     slug: "physiotherapy-at-home-faster-recovery",
@@ -193,7 +193,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "South Bombay"],
-    image: "/blog-images/physiotherapy.jpg",
+    image: "/blog-images/physiotherapy.webp",
     faqs: [{ q: "Do physiotherapists bring their own equipment?", a: "Yes, our therapists carry essential portable equipment like resistance bands, TENS machines, and ultrasound therapy devices." }]
   },
   {
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Navi Mumbai"],
-    image: "/blog-images/doctor_home_visit.jpg",
+    image: "/blog-images/doctor_home_visit.webp",
     faqs: [{ q: "Can doctors prescribe medications during the visit?", a: "Yes, our visiting doctors will provide a formal prescription which can be used at any pharmacy." }]
   },
   {
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/wound_care.jpg"
+    image: "/blog-images/wound_care.webp"
   },
   {
     slug: "home-nurse-churchgate-south-mumbai",
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Churchgate", "Marine Lines", "Charni Road", "Grant Road", "Mumbai Central"],
-    image: "/blog-images/south_mumbai_nurse.jpg",
+    image: "/blog-images/south_mumbai_nurse.webp",
     faqs: [{ q: "How fast can you deploy a nurse to Colaba?", a: "For South Mumbai locations, we typically complete assessment and deployment within 4 to 8 hours depending on caregiver availability." }]
   },
   {
@@ -280,7 +280,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Dadar", "Matunga Road", "Prabhadevi", "Mahalaxmi", "Lower Parel"],
-    image: "/blog-images/dadar_nurse.jpg",
+    image: "/blog-images/dadar_nurse.webp",
     faqs: [{ q: "Do you supply oxygen cylinders in Dadar?", a: "Yes, we deliver and install oxygen concentrators and cylinders across Central Mumbai." }]
   },
   {
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Bandra", "Khar Road", "Santacruz", "Vile Parle"],
-    image: "/blog-images/bandra_nurse.jpg",
+    image: "/blog-images/bandra_nurse.webp",
     faqs: [{ q: "Are your nurses comfortable with pets in the home?", a: "Yes, we match caregivers to your household environment, including pet-friendly staff if needed." }]
   },
   {
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Andheri", "Jogeshwari", "Goregaon"],
-    image: "/blog-images/hero-nurse.jpg",
+    image: "/blog-images/hero-nurse.webp",
     faqs: [{ q: "Can I interview the nurse before they start?", a: "We conduct a thorough assessment and assign the most qualified nurse. You can speak with them on the first day to ensure compatibility." }]
   },
   {
@@ -346,7 +346,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Malad", "Kandivali", "Borivali", "Dahisar"],
-    image: "/blog-images/gallery-1.jpg",
+    image: "/blog-images/gallery-1.webp",
     faqs: [{ q: "Do you deliver hospital beds to Borivali?", a: "Yes, we deliver, install, and provide training for electric hospital beds across the northern suburbs." }]
   },
   {
@@ -368,7 +368,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mira Road", "Bhayandar", "Naigaon"],
-    image: "/blog-images/gallery-2.jpg",
+    image: "/blog-images/gallery-2.webp",
     faqs: [{ q: "Are your caregivers trained for dementia care?", a: "Yes, we have specialized attendants trained in handling the behavioral and safety needs of dementia patients." }]
   },
   {
@@ -390,7 +390,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Vasai Road", "Nallasopara", "Virar"],
-    image: "/blog-images/gallery-3.jpg",
+    image: "/blog-images/gallery-3.webp",
     faqs: [{ q: "Do you offer physiotherapy in Virar?", a: "Yes, our certified physiotherapists provide home visits across the Vasai-Virar region." }]
   },
   {
@@ -412,7 +412,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Thane", "Navi Mumbai", "Kalyan", "Bhiwandi"],
-    image: "/blog-images/service-elderly.jpg",
+    image: "/blog-images/service-elderly.webp",
     faqs: [{ q: "Do you provide ICU setups at home in Thane?", a: "Absolutely. We supply ventilators, monitors, and ICU-trained nurses to replicate hospital care at home." }]
   },
   {
@@ -434,7 +434,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-bed.jpg",
+    image: "/blog-images/equipment-bed.webp",
     faqs: [{ q: "Is a mattress included with the bed rental?", a: "Yes, a standard medical-grade foam mattress is included. Air mattresses for bedsore prevention are available at an additional cost." }]
   },
   {
@@ -456,7 +456,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-oxygen.jpg",
+    image: "/blog-images/equipment-oxygen.webp",
     faqs: [{ q: "What happens if the machine breaks down?", a: "We offer 24/7 technical support. If a machine malfunctions, we will replace it immediately at no extra cost." }]
   },
   {
@@ -478,7 +478,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-bipap.jpg",
+    image: "/blog-images/equipment-bipap.webp",
     faqs: [{ q: "Do I need to buy my own mask?", a: "For hygiene reasons, masks and tubing (the patient circuit) are typically sold separately as new items, while the machine itself is rented." }]
   },
   {
@@ -500,7 +500,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-wheelchair.jpg"
+    image: "/blog-images/equipment-wheelchair.webp"
   },
   {
     slug: "suction-machine-rent",
@@ -521,7 +521,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mumbai", "Thane"],
-    image: "/blog-images/equipment-suction.jpg"
+    image: "/blog-images/equipment-suction.webp"
   },
   {
     slug: "nebulizer-on-rent",
@@ -542,7 +542,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-nebulizer.jpg"
+    image: "/blog-images/equipment-nebulizer.webp"
   },
   {
     slug: "home-healthcare-vs-hospital-cost",
@@ -563,7 +563,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/gallery-4.jpg",
+    image: "/blog-images/gallery-4.webp",
     faqs: [{ q: "Does health insurance cover home nursing?", a: "Many modern health insurance policies now cover domiciliary (home) hospitalization and nursing. We recommend checking your specific policy terms." }]
   },
   {
@@ -586,7 +586,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/team.jpg",
+    image: "/blog-images/team.webp",
     faqs: [{ q: "Are Elshadai caregivers background verified?", a: "Yes, every single nurse and attendant undergoes rigorous background checks and medical clearance before deployment." }]
   },
   {
@@ -609,7 +609,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/gallery-5.jpg",
+    image: "/blog-images/gallery-5.webp",
     faqs: [{ q: "How do I bathe a bedridden patient?", a: "Sponge baths using warm water and mild soap, cleaning one section of the body at a time while keeping the rest covered, is the safest method." }]
   },
   {
@@ -631,7 +631,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/service-physio.jpg"
+    image: "/blog-images/service-physio.webp"
   },
   {
     slug: "dementia-care-at-home-guide",
@@ -653,7 +653,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/gallery-6.jpg"
+    image: "/blog-images/gallery-6.webp"
   },
   {
     slug: "setting-up-home-icu",
@@ -675,7 +675,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/equipment-monitor.jpg",
+    image: "/blog-images/equipment-monitor.webp",
     faqs: [{ q: "How long does it take to set up a Home ICU?", a: "Once the assessment is done and the doctor approves the discharge, we can deliver the equipment and deploy the nurses within 12 to 24 hours." }]
   },
 
@@ -699,7 +699,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/elderly_care_near_me.jpg",
+    image: "/blog-images/elderly_care_near_me.webp",
     faqs: [
       { q: "Do your elderly care nurses help with personal hygiene?", a: "Yes, our trained nurses and attendants assist with sponge baths, diaper changes, and other personal hygiene routines with utmost dignity." }
     ]
@@ -724,7 +724,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/icu_nurse_near_me.jpg",
+    image: "/blog-images/icu_nurse_near_me.webp",
     faqs: [
       { q: "Can the ICU nurse manage a home ventilator?", a: "Absolutely. Our ICU nurses are specially trained to operate, monitor, and troubleshoot home ventilators." }
     ]
@@ -749,7 +749,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Navi Mumbai"],
-    image: "/blog-images/patient_attendant_near_me.jpg",
+    image: "/blog-images/patient_attendant_near_me.webp",
     faqs: [
       { q: "What is the difference between a nurse and an attendant?", a: "Nurses handle medical tasks like IV injections and wound dressing, while attendants handle physical support, hygiene, and mobility assistance." }
     ]
@@ -774,7 +774,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/physio_home_near_me.jpg",
+    image: "/blog-images/physio_home_near_me.webp",
     faqs: [
       { q: "How long is a typical home physiotherapy session?", a: "Sessions typically last between 45 to 60 minutes, depending on the patient's stamina and the prescribed treatment plan." }
     ]
@@ -799,7 +799,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: true,
     areas: ["Mumbai", "Thane"],
-    image: "/blog-images/24hr_nurse_near_me.jpg",
+    image: "/blog-images/24hr_nurse_near_me.webp",
     faqs: [
       { q: "Is 24-hour care provided by one nurse or two?", a: "To ensure maximum alertness and quality of care, we typically assign two nurses who work back-to-back 12-hour shifts." }
     ]
@@ -824,7 +824,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/baby_nurse_near_me.jpg",
+    image: "/blog-images/baby_nurse_near_me.webp",
     faqs: [
       { q: "Do the nurses provide lactation advice?", a: "Yes, our nurses are trained to help new mothers with proper latching techniques and lactation support." }
     ]
@@ -849,7 +849,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "3 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/hospital_bed_rent_near_me.jpg",
+    image: "/blog-images/hospital_bed_rent_near_me.webp",
     faqs: [
       { q: "Is delivery and installation included?", a: "Yes, our technicians handle the complete delivery, setup, and demonstration at your home." }
     ]
@@ -874,7 +874,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: true,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/oxygen_rent_near_me.jpg",
+    image: "/blog-images/oxygen_rent_near_me.webp",
     faqs: [
       { q: "Do these machines need to be refilled?", a: "No, oxygen concentrators draw oxygen from the ambient room air, so they never need to be 'refilled' like a cylinder." }
     ]
@@ -899,7 +899,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     featured: false,
     areas: ["Mumbai", "Thane", "Navi Mumbai"],
-    image: "/blog-images/home_healthcare_near_me.jpg",
+    image: "/blog-images/home_healthcare_near_me.webp",
     faqs: [
       { q: "Do you coordinate all the services simultaneously?", a: "Yes, your dedicated care coordinator manages the scheduling of nurses, doctors, and equipment deliveries so you don't have to." }
     ]

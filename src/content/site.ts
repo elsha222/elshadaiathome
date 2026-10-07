@@ -198,7 +198,7 @@ export type Equipment = {
 };
 
 /**
- * Equipment list — images live in src/assets/equipment-*.jpg
+ * Equipment list — images live in src/assets/equipment-*.webp
  * The component maps slug -> imported image at build time.
  */
 export const equipment: Equipment[] = [
@@ -286,15 +286,15 @@ export const howItWorks = [
   },
 ];
 
-import ashokPhoto from "@/assets/reviews-photos/review-ashok-bagade.jpg";
-import vipinPhoto from "@/assets/reviews-photos/review-vipin-jose.jpg";
-import jinsPhoto from "@/assets/reviews-photos/review-jins-john.jpg";
-import nayanPhoto from "@/assets/reviews-photos/review-nayan-mandlik.jpg";
-import krishnaPhoto from "@/assets/reviews-photos/review-krishna-gupta.jpg";
-import rahulPhoto from "@/assets/reviews-photos/review-rahul-khadpe.jpg";
-import bhuwanPhoto from "@/assets/reviews-photos/review-bhuwan-rai.jpg";
-import vijayPhoto from "@/assets/reviews-photos/review-vijay-yadav.jpg";
-import pruthviPhoto from "@/assets/reviews-photos/review-pruthvi-gulla.jpg";
+const ashokPhoto = "/assets/reviews-photos/review-ashok-bagade.webp";
+const vipinPhoto = "/assets/reviews-photos/review-vipin-jose.webp";
+const jinsPhoto = "/assets/reviews-photos/review-jins-john.webp";
+const nayanPhoto = "/assets/reviews-photos/review-nayan-mandlik.webp";
+const krishnaPhoto = "/assets/reviews-photos/review-krishna-gupta.webp";
+const rahulPhoto = "/assets/reviews-photos/review-rahul-khadpe.webp";
+const bhuwanPhoto = "/assets/reviews-photos/review-bhuwan-rai.webp";
+const vijayPhoto = "/assets/reviews-photos/review-vijay-yadav.webp";
+const pruthviPhoto = "/assets/reviews-photos/review-pruthvi-gulla.webp";
 
 export const testimonials: { name: string; role: string; text: string; rating: number; image?: string }[] = [
   {

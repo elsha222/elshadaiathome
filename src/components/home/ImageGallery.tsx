@@ -1,13 +1,14 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+const g1 = "/assets/gallery-1.webp";
+const g2 = "/assets/gallery-2.webp";
+const g3 = "/assets/gallery-3.webp";
+const g4 = "/assets/gallery-4.webp";
+const g5 = "/assets/gallery-5.webp";
+const g6 = "/assets/gallery-6.webp";
 
 const slides = [
   { src: g1, title: "Bedside Nursing", caption: "Vitals, medication & gentle bedside care" },
@@ -64,7 +65,7 @@ export function ImageGallery() {
                 className="relative min-w-0 flex-[0_0_85%] sm:flex-[0_0_55%] md:flex-[0_0_40%] lg:flex-[0_0_32%]"
               >
                 <div className="group relative aspect-[4/5] overflow-hidden rounded-3xl shadow-card hover:shadow-elevated transition-all">
-                  <img
+                  <ResponsiveImage
                     src={s.src}
                     alt={`${s.title} — ELSHADAI home healthcare in India`}
                     width={1280}

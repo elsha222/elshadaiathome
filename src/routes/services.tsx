@@ -4,7 +4,7 @@ import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services } from "@/content/site";
-import serviceImg from "@/assets/service-nursing.jpg";
+const serviceImg = "/assets/service-nursing.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
 

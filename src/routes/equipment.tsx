@@ -5,7 +5,7 @@ import { EquipmentGrid } from "@/components/home/EquipmentGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { equipment, business } from "@/content/site";
-import bedImg from "@/assets/equipment-bed.jpg";
+const bedImg = "/assets/equipment-bed.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
 

@@ -36,7 +36,7 @@
   <meta property="og:title" content="Elshadai — Hospital-grade Home Healthcare in Mumbai" />
   <meta property="og:description"
     content="Certified nurses, attendants, physiotherapists and home medical equipment for compassionate at-home care across Mumbai, Thane and Navi Mumbai." />
-  <meta property="og:image" content="https://elshadaihealthcare.com/og-image.jpg" />
+  <meta property="og:image" content="https://elshadaihealthcare.com/og-image.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Elshadai Home Healthcare — Certified nurses at your doorstep" />
@@ -48,7 +48,7 @@
   <meta name="twitter:title" content="Elshadai — Home Nursing &amp; Healthcare Mumbai" />
   <meta name="twitter:description"
     content="Certified nurses, ICU caregivers, elderly care, physiotherapy and doctor home visits across Mumbai, Thane and Navi Mumbai." />
-  <meta name="twitter:image" content="https://elshadaihealthcare.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://elshadaihealthcare.com/og-image.webp" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -65,7 +65,7 @@
   </noscript>
 
   <!-- Preload LCP Image -->
-  <link rel="preload" as="image" href="/hero-nurse.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="/hero-nurse.webp" fetchpriority="high" />
 
   <!-- Structured Data — Organization + LocalBusiness -->
   <script type="application/ld+json">
@@ -80,7 +80,7 @@
             "url": "https://elshadaihealthcare.com",
             "telephone": "+917573923584",
             "email": "elshadaiathome25@gmail.com",
-            "image": "https://elshadaihealthcare.com/og-image.jpg",
+            "image": "https://elshadaihealthcare.com/og-image.webp",
             "logo": "https://elshadaihealthcare.com/favicon.png",
             "priceRange": "₹₹",
             "address": {
@@ -124,14 +124,36 @@
       }
     })();
   </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-THNV9XMFL3"></script>
+  <!-- Delayed Google tag (gtag.js) to improve performance -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function() {
+      var gtagLoaded = false;
+      function loadGtag() {
+        if (gtagLoaded) return;
+        gtagLoaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-THNV9XMFL3';
+        document.head.appendChild(script);
 
-    gtag('config', 'G-THNV9XMFL3');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag; // Make it global just in case
+        gtag('js', new Date());
+        gtag('config', 'G-THNV9XMFL3');
+      }
+      
+      // Load on first interaction or after a delay
+      var events = ['scroll', 'mousemove', 'touchstart', 'keydown'];
+      function onInteraction() {
+        loadGtag();
+        events.forEach(function(e) { window.removeEventListener(e, onInteraction) });
+      }
+      events.forEach(function(e) { window.addEventListener(e, onInteraction, { passive: true }) });
+      
+      // Fallback: load after 3.5 seconds if no interaction
+      setTimeout(loadGtag, 3500);
+    })();
   </script>
 </head>
 

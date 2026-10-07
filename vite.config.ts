@@ -9,7 +9,11 @@ export default defineConfig({
   // Set base to "/" for custom domain; change to "/repo-name/" if using username.github.io/repo-name
   base: "/",
   plugins: [
-    TanStackRouterVite({ routesDirectory: "./src/routes", generatedRouteTree: "./src/routeTree.gen.ts" }),
+    TanStackRouterVite({ 
+      routesDirectory: "./src/routes", 
+      generatedRouteTree: "./src/routeTree.gen.ts",
+      autoCodeSplitting: true
+    }),
     react(),
     tailwindcss(),
     tsconfigPaths({ projects: ["./tsconfig.json"] }),

@@ -1,8 +1,9 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { hero, business, buildWhatsAppLink } from "@/content/site";
-const heroImg = "/hero-nurse.jpg";
+const heroImg = "/hero-nurse.webp";
 
 export function Hero() {
   return (
@@ -13,10 +14,11 @@ export function Hero() {
         {/* Hero image — pt-16 offsets fixed navbar, zero gap */}
         <div className="relative w-full pt-16">
           <div className="relative h-[60vw] min-h-[220px] max-h-[320px] overflow-hidden">
-            <img
+            <ResponsiveImage
               src={heroImg}
               alt="ELSHADAI home nurse caring for a patient"
               fetchPriority="high"
+              loading="eager"
               className="h-full w-full object-cover object-center"
             />
             {/* gradient: light top, heavy bottom for chip legibility */}
@@ -157,7 +159,7 @@ export function Hero() {
             className="relative"
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_8px_32px_rgba(13,45,79,0.12)]">
-              <img
+              <ResponsiveImage
                 src={heroImg}
                 alt="Certified ELSHADAI home nurse caring for an elderly patient at home in India"
                 width={1600}

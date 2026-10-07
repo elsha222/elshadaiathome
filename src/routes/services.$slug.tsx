@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Phone, MessageCircle } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
@@ -5,12 +6,12 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services, business, buildWhatsAppLink, equipment } from "@/content/site";
 import { equipmentImages } from "@/components/home/EquipmentGrid";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+const g1 = "/assets/gallery-1.webp";
+const g2 = "/assets/gallery-2.webp";
+const g3 = "/assets/gallery-3.webp";
+const g4 = "/assets/gallery-4.webp";
+const g5 = "/assets/gallery-5.webp";
+const g6 = "/assets/gallery-6.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
@@ -139,7 +140,7 @@ function ServiceDetailPage() {
           </div>
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-elevated md:aspect-[4/5]">
-            <img
+            <ResponsiveImage
               src={img}
               alt={`${s.title} by ELSHADAI — certified caregivers in India`}
               width={1280}
@@ -183,7 +184,7 @@ function ServiceDetailPage() {
                 className="group flex gap-4 rounded-3xl border border-border bg-card p-4 shadow-soft hover:shadow-elevated transition"
               >
                 <div className="aspect-square h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-primary-soft/40">
-                  <img
+                  <ResponsiveImage
                     src={equipmentImages[e.image]}
                     alt={`${e.title} for ${s.title}`}
                     width={200}

@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Phone, MessageCircle } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
@@ -105,7 +106,7 @@ function EquipmentDetailPage() {
           </div>
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-elevated md:aspect-[4/5] bg-white p-8 flex items-center justify-center">
-            <img
+            <ResponsiveImage
               src={img}
               alt={`${e.title} by ELSHADAI — medical equipment on rent`}
               className="h-auto w-full object-contain max-h-[80%]"
@@ -125,7 +126,7 @@ function EquipmentDetailPage() {
               className="group rounded-3xl border border-border bg-card p-5 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all"
             >
               <div className="aspect-video w-full overflow-hidden rounded-2xl bg-primary-soft/30 p-4 mb-4 flex items-center justify-center">
-                <img src={equipmentImages[r.image]} alt={r.title} className="h-full w-auto object-contain" />
+                <ResponsiveImage src={equipmentImages[r.image]} alt={r.title} className="h-full w-auto object-contain" />
               </div>
               <h3 className="font-display text-lg font-bold">{r.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{r.short}</p>

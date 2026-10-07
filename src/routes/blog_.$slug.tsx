@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Calendar, Clock, MapPin, User, CheckCircle2 } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
@@ -30,7 +31,7 @@ export const Route = createFileRoute("/blog_/$slug")({
       publisher: {
         "@type": "Organization",
         name: "Elshadai Home Healthcare",
-        logo: { "@type": "ImageObject", url: SITE_URL + "/logo.png" }
+        logo: { "@type": "ImageObject", url: SITE_URL + "/logo.webp" }
       },
       datePublished: post.date,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL + "/blog/" + post.slug }
@@ -133,7 +134,7 @@ function BlogPostPage() {
         {/* Hero Image */}
         <div className="mx-auto max-w-5xl px-4 md:px-8 mb-16">
           <div className="relative aspect-[16/9] md:aspect-[21/9] w-full rounded-2xl md:rounded-[2rem] overflow-hidden bg-muted shadow-xl ring-1 ring-border/50">
-            <img 
+            <ResponsiveImage 
               src={post.image} 
               alt={post.title}
               className="absolute inset-0 w-full h-full object-cover"
