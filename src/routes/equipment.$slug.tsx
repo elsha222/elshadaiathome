@@ -75,7 +75,7 @@ function EquipmentDetailPage() {
             <p className="mt-5 text-base text-muted-foreground md:text-lg">{e.long}</p>
 
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {e.uses.map((use) => (
+              {e.uses.map((use: string) => (
                 <li key={use} className="flex items-center gap-2 text-sm font-medium text-foreground/85">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
                   {use}
