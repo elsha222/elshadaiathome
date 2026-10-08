@@ -16,7 +16,7 @@ export function Navbar() {
 
   // lock body scroll when drawer open
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open) { document.body.style.overflow = "hidden"; }
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 

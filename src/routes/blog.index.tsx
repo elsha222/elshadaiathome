@@ -105,13 +105,13 @@ function BlogIndexPage() {
         {/* Featured Post (Only show if 'All' is selected and there is a featured post) */}
         {activeCategory === "All" && featuredPost && (
           <div className="mb-16 rounded-3xl border border-border bg-card overflow-hidden shadow-soft group hover:shadow-lg transition-all duration-300">
-            <div className="grid md:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 md:min-h-[400px]">
               <div className="relative h-64 md:h-auto overflow-hidden bg-muted">
                 <ResponsiveImage 
                   src={featuredPost.image} 
                   alt={featuredPost.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
+                  loading="eager" fetchPriority="high"
                 />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
