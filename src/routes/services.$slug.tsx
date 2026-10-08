@@ -56,7 +56,7 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "twitter:image", content: img },
       ],
       links: [{ rel: "canonical", href: `${SITE_URL}/services/${s.slug}` }],
-      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalServiceSchema(service), getWebPageSchema(service.title, "/services/" + service.slug, service.shortDescription, "ItemPage"), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: service.title, path: "/services/" + service.slug }])]) }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalServiceSchema(s), getWebPageSchema(s.title, "/services/" + s.slug, s.long, "ItemPage"), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: s.title, path: "/services/" + s.slug }])]) }],
     };
   },
   notFoundComponent: () => (

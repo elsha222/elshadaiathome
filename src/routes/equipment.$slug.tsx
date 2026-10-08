@@ -35,6 +35,7 @@ export const Route = createFileRoute("/equipment/$slug")({
         { property: "og:image", content: img },
       ],
       links: [{ rel: "canonical", href: `${SITE_URL}/equipment/${e.slug}` }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalDeviceSchema(e), getWebPageSchema(e.title, "/equipment/" + e.slug, e.long, "ItemPage"), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Equipment", path: "/equipment" }, { name: e.title, path: "/equipment/" + e.slug }])]) }],
     };
   },
   notFoundComponent: () => (

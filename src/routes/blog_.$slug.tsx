@@ -36,7 +36,7 @@ export const Route = createFileRoute("/blog_/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: SITE_URL + "/blog/" + post.slug }],
-      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getArticleSchema(post), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: "/blog/" + post.slug }]), getFAQSchema(post.faqs)]) }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getArticleSchema(post), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: "/blog/" + post.slug }]), getFAQSchema(post.faqs ?? [])]) }],
     };
   },
   component: BlogPostPage,
