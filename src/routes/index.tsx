@@ -1,17 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Hero } from "@/components/home/Hero";
-import { StatsBar } from "@/components/home/StatsBar";
-import { PainPoints } from "@/components/home/PainPoints";
-import { WhyUs } from "@/components/home/WhyUs";
-import { ServicesGrid } from "@/components/home/ServicesGrid";
-import { EquipmentGrid } from "@/components/home/EquipmentGrid";
-import { HowItWorks } from "@/components/home/HowItWorks";
-import { ImageGallery } from "@/components/home/ImageGallery";
-import { Testimonials } from "@/components/home/Testimonials";
-import { Faq } from "@/components/home/Faq";
-import { CtaBanner } from "@/components/home/CtaBanner";
-import { AppointmentForm } from "@/components/forms/AppointmentForm";
+import { lazy, Suspense } from "react";
+const StatsBar = lazy(() => import("@/components/home/StatsBar").then(m => ({ default: m.StatsBar })));
+const PainPoints = lazy(() => import("@/components/home/PainPoints").then(m => ({ default: m.PainPoints })));
+const WhyUs = lazy(() => import("@/components/home/WhyUs").then(m => ({ default: m.WhyUs })));
+const ServicesGrid = lazy(() => import("@/components/home/ServicesGrid").then(m => ({ default: m.ServicesGrid })));
+const EquipmentGrid = lazy(() => import("@/components/home/EquipmentGrid").then(m => ({ default: m.EquipmentGrid })));
+const HowItWorks = lazy(() => import("@/components/home/HowItWorks").then(m => ({ default: m.HowItWorks })));
+const ImageGallery = lazy(() => import("@/components/home/ImageGallery").then(m => ({ default: m.ImageGallery })));
+const Testimonials = lazy(() => import("@/components/home/Testimonials").then(m => ({ default: m.Testimonials })));
+const Faq = lazy(() => import("@/components/home/Faq").then(m => ({ default: m.Faq })));
+const CtaBanner = lazy(() => import("@/components/home/CtaBanner").then(m => ({ default: m.CtaBanner })));
+const AppointmentForm = lazy(() => import("@/components/forms/AppointmentForm").then(m => ({ default: m.AppointmentForm })));
 import { business, faqs } from "@/content/site";
 const heroImg = "/hero-nurse.webp";
 
@@ -97,7 +98,8 @@ function HomePage() {
   return (
     <PageLayout>
       <Hero />
-      <StatsBar />
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <StatsBar />
       <PainPoints />
       <ServicesGrid limit={8} />
       <EquipmentGrid limit={4} />
@@ -128,6 +130,7 @@ function HomePage() {
       <Testimonials />
       <Faq />
       <CtaBanner />
+      </Suspense>
     </PageLayout>
   );
 }
