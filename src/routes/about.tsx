@@ -4,6 +4,8 @@ import { Heart, Shield, Sparkles, HandHeart, type LucideIcon } from "lucide-reac
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { aboutContent, business, cities } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 const teamImg = "/assets/team.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
@@ -31,22 +33,7 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:image", content: teamImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/about" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          mainEntity: {
-            "@type": "MedicalBusiness",
-            name: business.fullName,
-            description: aboutContent.mission,
-            url: SITE_URL,
-            image: SITE_URL + teamImg,
-          },
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("About ELSHADAI", "/about", "Compassionate, certified home healthcare across India.", "AboutPage")]) }],
   }),
   component: AboutPage,
 });

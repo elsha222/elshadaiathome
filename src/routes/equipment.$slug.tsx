@@ -6,6 +6,8 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { equipment, business, buildWhatsAppLink, services } from "@/content/site";
 import { equipmentImages } from "@/components/home/EquipmentGrid";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 
 const SITE_URL = "https://elshadaihealthcare.com";
 

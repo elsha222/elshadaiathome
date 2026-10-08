@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, MapPin, User, CheckCircle2 } fr
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { blogPosts, BlogPost } from "@/content/blog";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
@@ -17,50 +19,6 @@ export const Route = createFileRoute("/blog_/$slug")({
     if (!loaderData) return {};
     const { post } = loaderData;
     
-    // Generate Schema.org JSON-LD
-    const schemas = [];
-
-    // 1. BlogPosting Schema
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: post.title,
-      description: post.metaDescription,
-      image: SITE_URL + post.image,
-      author: { "@type": "Organization", name: post.author.name, url: post.author.url },
-      publisher: {
-        "@type": "Organization",
-        name: "Elshadai Home Healthcare",
-        logo: { "@type": "ImageObject", url: SITE_URL + "/logo.webp" }
-      },
-      datePublished: post.date,
-      mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL + "/blog/" + post.slug }
-    });
-
-    // 2. BreadcrumbList Schema
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Blog", item: SITE_URL + "/blog" },
-        { "@type": "ListItem", position: 3, name: post.title, item: SITE_URL + "/blog/" + post.slug }
-      ]
-    });
-
-    // 3. FAQPage Schema (if FAQS exist)
-    if (post.faqs && post.faqs.length > 0) {
-      schemas.push({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: post.faqs.map((faq: { q: string; a: string }) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: { "@type": "Answer", text: faq.a }
-        }))
-      });
-    }
-
     return {
       meta: [
         { title: post.metaTitle },
@@ -78,10 +36,7 @@ export const Route = createFileRoute("/blog_/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: SITE_URL + "/blog/" + post.slug }],
-      scripts: schemas.map(schema => ({
-        type: "application/ld+json",
-        children: JSON.stringify(schema)
-      })),
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getArticleSchema(post), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: "/blog/" + post.slug }]), getFAQSchema(post.faqs)]) }],
     };
   },
   component: BlogPostPage,

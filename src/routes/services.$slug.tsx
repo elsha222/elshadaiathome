@@ -6,6 +6,8 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services, business, buildWhatsAppLink, equipment } from "@/content/site";
 import { equipmentImages } from "@/components/home/EquipmentGrid";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 const g1 = "/assets/gallery-1.webp";
 const g2 = "/assets/gallery-2.webp";
 const g3 = "/assets/gallery-3.webp";
@@ -54,18 +56,7 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "twitter:image", content: img },
       ],
       links: [{ rel: "canonical", href: `${SITE_URL}/services/${s.slug}` }],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            name: s.title,
-            description: s.long,
-            provider: { "@type": "MedicalBusiness", name: "ELSHADAI Home Healthcare" },
-          }),
-        },
-      ],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalServiceSchema(service), getWebPageSchema(service.title, "/services/" + service.slug, service.shortDescription, "ItemPage"), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: service.title, path: "/services/" + service.slug }])]) }],
     };
   },
   notFoundComponent: () => (

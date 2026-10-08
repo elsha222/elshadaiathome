@@ -4,6 +4,8 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { Faq } from "@/components/home/Faq";
 import { business, buildWhatsAppLink } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
@@ -27,28 +29,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: SITE_URL + "/contact" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/contact" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ContactPage",
-          mainEntity: {
-            "@type": "MedicalBusiness",
-            name: business.fullName,
-            url: SITE_URL,
-            telephone: business.phone,
-            email: business.email,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Mumbai",
-              addressRegion: "MH",
-              addressCountry: "IN",
-            },
-          },
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Contact Us", "/contact", "Get in touch with our healthcare coordinators 24x7.", "ContactPage")]) }],
   }),
   component: ContactPage,
 });

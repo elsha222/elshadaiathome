@@ -5,6 +5,8 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { blogPosts, blogCategories } from "@/content/blog";
 import { useState, useMemo } from "react";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
@@ -33,25 +35,7 @@ export const Route = createFileRoute("/blog/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/blog" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "Home Healthcare Blog",
-          description: "Articles and guides on home nursing and elderly care.",
-          url: SITE_URL + "/blog",
-          hasPart: blogPosts.map((post) => ({
-            "@type": "BlogPosting",
-            headline: post.title,
-            url: SITE_URL + "/blog/" + post.slug,
-            datePublished: post.date,
-            author: { "@type": "Organization", name: post.author },
-          })),
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Healthcare Blog", "/blog", "Read our latest healthcare insights and home care guides.", "CollectionPage")]) }],
   }),
   component: BlogIndexPage,
 });

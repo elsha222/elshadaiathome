@@ -3,6 +3,8 @@ import { Phone, MessageCircle, Mail, Clock, ShieldCheck } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { business, buildWhatsAppLink } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 
 const SITE_URL = "https://elshadaihealthcare.com";
 
@@ -26,21 +28,7 @@ export const Route = createFileRoute("/book")({
       { property: "og:url", content: SITE_URL + "/book" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/book" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Book a Home Nurse Online",
-          provider: {
-            "@type": "MedicalBusiness",
-            name: business.fullName,
-            telephone: business.phone,
-          },
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Book a Nurse", "/book", "Book home nursing services instantly.")]) }],
   }),
   component: BookPage,
 });

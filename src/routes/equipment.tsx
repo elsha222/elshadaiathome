@@ -5,6 +5,8 @@ import { EquipmentGrid } from "@/components/home/EquipmentGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { equipment, business } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 const bedImg = "/assets/equipment-bed.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
@@ -39,25 +41,7 @@ export const Route = createFileRoute("/equipment")({
       { name: "twitter:image", content: bedImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/equipment" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          name: "Home Medical Equipment by ELSHADAI",
-          itemListElement: equipment.map((e, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            item: {
-              "@type": "Product",
-              name: e.title,
-              description: e.long,
-            },
-          })),
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Medical Equipment", "/equipment", "Rent or buy hospital beds, BiPAP, oxygen concentrators.", "CollectionPage")]) }],
   }),
   component: EquipmentPage,
 });

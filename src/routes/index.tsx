@@ -14,6 +14,8 @@ const Faq = lazy(() => import("@/components/home/Faq").then(m => ({ default: m.F
 const CtaBanner = lazy(() => import("@/components/home/CtaBanner").then(m => ({ default: m.CtaBanner })));
 const AppointmentForm = lazy(() => import("@/components/forms/AppointmentForm").then(m => ({ default: m.AppointmentForm })));
 import { business, faqs } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 const heroImg = "/hero-nurse.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
@@ -48,48 +50,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "MedicalBusiness",
-              "@id": SITE_URL + "/#org",
-              name: business.fullName,
-              alternateName: business.name,
-              url: SITE_URL,
-              telephone: business.phone,
-              email: business.email,
-              image: SITE_URL + heroImg,
-              priceRange: "₹₹",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Mumbai",
-                addressRegion: "MH",
-                addressCountry: "IN",
-              },
-              areaServed: ["Mumbai", "Mumbai Suburban", "Thane", "Navi Mumbai", "South Bombay"],
-              openingHours: "Mo-Su 00:00-23:59",
-              sameAs: [
-                business.social.instagram,
-                business.social.facebook,
-                business.social.linkedin,
-              ],
-            },
-            {
-              "@type": "FAQPage",
-              mainEntity: faqs.map((f) => ({
-                "@type": "Question",
-                name: f.q,
-                acceptedAnswer: { "@type": "Answer", text: f.a },
-              })),
-            },
-          ],
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebSiteSchema(), getWebPageSchema("ELSHADAI — Home Nursing & Medical Equipment in Mumbai", "/", business.shortDescription), getFAQSchema(faqs)]) }],
   }),
   component: HomePage,
 });

@@ -4,6 +4,8 @@ import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services } from "@/content/site";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+
 const serviceImg = "/assets/service-nursing.webp";
 
 const SITE_URL = "https://elshadaihealthcare.com";
@@ -31,24 +33,7 @@ export const Route = createFileRoute("/services")({
       { name: "twitter:image", content: serviceImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/services" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          itemListElement: services.map((s, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            item: {
-              "@type": "MedicalProcedure",
-              name: s.title,
-              description: s.long,
-            },
-          })),
-        }),
-      },
-    ],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Home Healthcare Services", "/services", "Comprehensive home nursing and care services.", "CollectionPage")]) }],
   }),
   component: ServicesPage,
 });
