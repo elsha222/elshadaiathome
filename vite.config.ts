@@ -27,10 +27,13 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["@tanstack/react-router"],
-          ui: ["framer-motion", "lucide-react"],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('scheduler')) return 'vendor';
+            if (id.includes('@tanstack')) return 'router';
+            if (id.includes('framer-motion') || id.includes('lucide-react')) return 'ui';
+            return 'modules';
+          }
         },
       },
     },
