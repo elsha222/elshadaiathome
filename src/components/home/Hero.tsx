@@ -1,7 +1,6 @@
 import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
-
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 import { hero, business, buildWhatsAppLink } from "@/content/site";
 const heroImg = "/hero-nurse.webp";
 
@@ -94,6 +93,63 @@ export function Hero() {
       {/* ── DESKTOP (≥ md) ── */}
       <div className="hidden md:block">
         <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-8 pt-20 pb-28 lg:px-12 md:grid-cols-2">
+
+          {/* TEXT COLUMN */}
+          <div className="animate-fade-in">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0E7C6E]/20 bg-[#E8F5F3] px-4 py-1.5 text-xs font-semibold text-[#0E7C6E]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2D7A4F] pulse-ring" />
+              {hero.eyebrow}
+            </span>
+
+            <h1 className="mt-5 font-display text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-balance text-[#0D2D4F] lg:text-6xl xl:text-7xl">
+              Hospital-grade care,{" "}
+              <span className="relative whitespace-nowrap text-[#0E7C6E]">
+                gently
+                <svg aria-hidden="true" viewBox="0 0 200 14" className="absolute -bottom-1 left-0 w-full text-[#0E7C6E]/30" preserveAspectRatio="none">
+                  <path d="M2 10 Q 50 2 100 8 T 198 6" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" />
+                </svg>
+              </span>{" "}at home.
+            </h1>
+
+            <p className="mt-5 max-w-xl text-base text-[#4A5568] leading-[1.75] lg:text-lg">
+              {hero.subtitle}
+            </p>
+
+            <div className="mt-8 flex gap-3">
+              <Link
+                to={hero.primaryCta.to}
+                className="inline-flex items-center gap-2 rounded-full bg-[#0E7C6E] px-7 py-3.5 text-base font-semibold text-white shadow-[0_8px_32px_rgba(14,124,110,0.15)] hover:bg-[#1A9E8C] hover:-translate-y-0.5 transition-all"
+              >
+                {hero.primaryCta.label} <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
+                href={buildWhatsAppLink("Hi ELSHADAI, I'd like to enquire about home nursing.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#075E54] px-7 py-3.5 text-base font-semibold text-white hover:brightness-110 hover:-translate-y-0.5 transition-all"
+              >
+                <MessageCircle className="h-4 w-4" /> {hero.secondaryCta.label}
+              </a>
+            </div>
+
+            <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2">
+              {hero.trustChips.map((c) => (
+                <li key={c} className="flex items-center gap-1.5 text-sm font-medium text-[#4A5568]">
+                  <CheckCircle2 className="h-4 w-4 text-[#2D7A4F]" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={`tel:${business.phone}`}
+              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#4A5568] hover:text-[#0E7C6E] transition-colors"
+            >
+              Or call us 24×7 — <span className="font-bold text-[#0D2D4F]">{business.phoneDisplay}</span>
+            </a>
+          </div>
+
+          {/* IMAGE COLUMN */}
           <div className="relative animate-fade-in">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_8px_32px_rgba(13,45,79,0.12)]">
               <ResponsiveImage
@@ -107,7 +163,8 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D2D4F]/30 via-transparent to-transparent" />
             </div>
 
-            <div className="relative">
+            {/* Floating badge — rating */}
+            <div className="absolute -left-8 top-10 max-w-[200px] rounded-2xl bg-white/95 p-3 shadow-card backdrop-blur border border-[#EEF2F7]">
               <div className="flex items-center gap-2">
                 <div className="grid h-9 w-9 place-items-center rounded-full bg-[#2D7A4F]/10 text-[#2D7A4F]">★</div>
                 <div>
@@ -117,12 +174,14 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative">
+            {/* Floating badge — coordinator */}
+            <div className="absolute -right-8 bottom-10 max-w-[220px] rounded-2xl bg-white/95 p-3 shadow-card backdrop-blur animate-float border border-[#EEF2F7]">
               <div className="text-[10px] font-semibold uppercase tracking-wider text-[#0E7C6E]">Coordinator online</div>
               <div className="mt-1 text-sm font-semibold text-[#0D2D4F]">24×7 callback</div>
               <div className="text-[10px] text-[#4A5568]">Mumbai • Thane • Navi Mumbai • South Bombay</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
