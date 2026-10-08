@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, splitVendorChunkPlugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -9,6 +9,7 @@ export default defineConfig({
   // Set base to "/" for custom domain; change to "/repo-name/" if using username.github.io/repo-name
   base: "/",
   plugins: [
+    splitVendorChunkPlugin(),
     TanStackRouterVite({ 
       routesDirectory: "./src/routes", 
       generatedRouteTree: "./src/routeTree.gen.ts",
