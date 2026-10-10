@@ -228,6 +228,7 @@ export type Equipment = {
   long: string;
   image: string; // import key handled in component
   uses: string[];
+  faqs?: { q: string; a: string }[];
 };
 
 /**
@@ -242,6 +243,10 @@ export const equipment: Equipment[] = [
     long: "Multi-function electric beds with side rails, head/foot adjustment and pressure-relief mattresses — perfect for bed-ridden, post-op and elderly patients.",
     image: "bed",
     uses: ["Post-surgical recovery", "Bed-ridden patients", "Pressure-sore prevention"],
+    faqs: [
+      { q: "What types of hospital beds do you rent?", a: "We provide fully electric and semi-electric ICU beds with adjustable head, foot, and height functions." },
+      { q: "Is the mattress included with the bed?", a: "Yes, an alpha mattress (anti-decubitus) or standard medical foam mattress is included with the rental." }
+    ],
   },
   {
     slug: "oxygen-concentrator",
@@ -250,6 +255,10 @@ export const equipment: Equipment[] = [
     long: "Continuous oxygen therapy at home for COPD, post-COVID and respiratory patients. Fully serviced units with on-site demo and 24×7 support.",
     image: "oxygen",
     uses: ["COPD & asthma", "Post-COVID recovery", "Continuous O₂ therapy"],
+    faqs: [
+      { q: "What capacity oxygen concentrators do you have?", a: "We provide both 5-Litre and 10-Litre medical-grade oxygen concentrators depending on the patient's oxygen requirement." },
+      { q: "What if there is a power cut?", a: "Oxygen concentrators require continuous electricity. For backup, we can also provide an oxygen cylinder upon request." }
+    ],
   },
   {
     slug: "bipap-cpap",
@@ -258,6 +267,10 @@ export const equipment: Equipment[] = [
     long: "Hospital-grade BiPAP/CPAP machines with humidifier and full mask kit — set up and titrated by a respiratory technician.",
     image: "bipap",
     uses: ["Sleep apnoea", "Type 2 respiratory failure", "Post-extubation"],
+    faqs: [
+      { q: "Is the BiPAP mask included?", a: "Yes, a brand new sealed BiPAP mask and tubing are provided (usually purchased separately for hygiene reasons)." },
+      { q: "Will someone set up the machine?", a: "Yes, our respiratory technician will deliver, install, and titrate the settings according to your doctor's prescription." }
+    ],
   },
   {
     slug: "patient-monitor",
@@ -266,6 +279,10 @@ export const equipment: Equipment[] = [
     long: "Bedside multi-parameter monitors for ICU-at-home setups, with alarm settings and remote viewing for treating physicians.",
     image: "monitor",
     uses: ["Home ICU setup", "Cardiac monitoring", "High-dependency care"],
+    faqs: [
+      { q: "What parameters does the monitor track?", a: "Our multi-para monitors track ECG, SpO2 (oxygen saturation), NIBP (blood pressure), respiration rate, and temperature." },
+      { q: "Does the monitor have alarms?", a: "Yes, customizable visual and audible alarms can be set for abnormal heart rates, low oxygen, or blood pressure changes." }
+    ],
   },
   {
     slug: "wheelchair",
@@ -274,6 +291,10 @@ export const equipment: Equipment[] = [
     long: "Standard, reclining and commode wheelchairs available — with cushioning, brakes and removable footrests for comfort and safety.",
     image: "wheelchair",
     uses: ["Mobility support", "Hospital visits", "Outdoor outings"],
+    faqs: [
+      { q: "Do you have commode wheelchairs?", a: "Yes, we rent both standard folding wheelchairs and commode-style wheelchairs with reclining features." },
+      { q: "Are the wheelchairs easy to transport?", a: "Yes, our wheelchairs are lightweight and foldable, making them easy to fit in a standard car trunk." }
+    ],
   },
   {
     slug: "walker",
@@ -282,6 +303,10 @@ export const equipment: Equipment[] = [
     long: "Adjustable walkers, four-wheel rollators with seat, and crutches/canes — sized correctly for the patient's height and grip.",
     image: "walker",
     uses: ["Post-fracture", "Geriatric mobility", "Stroke rehabilitation"],
+    faqs: [
+      { q: "Are the walkers adjustable?", a: "Yes, all our walkers and walking aids have height-adjustable legs to suit the patient's specific height." },
+      { q: "Do you provide walkers with wheels?", a: "Yes, we have standard walkers, two-wheel walkers, and four-wheel rollators equipped with a seat and brakes." }
+    ],
   },
   {
     slug: "suction-machine",
@@ -290,6 +315,10 @@ export const equipment: Equipment[] = [
     long: "Quiet, foot-pedal and electric suction machines with disposable jars and catheters — essential for tracheostomy and stroke patients.",
     image: "suction",
     uses: ["Tracheostomy care", "Stroke patients", "Secretion clearance"],
+    faqs: [
+      { q: "What type of suction machines do you offer?", a: "We provide electric suction machines, which are quiet and powerful, perfect for home tracheostomy care and secretion clearance." },
+      { q: "Are suction catheters included?", a: "Suction catheters and jars are consumable items. Jars are provided, and sterile catheters can be supplied at cost." }
+    ],
   },
   {
     slug: "nebulizer",
@@ -298,6 +327,10 @@ export const equipment: Equipment[] = [
     long: "Compressor and ultrasonic nebulizers with full kit — ideal for asthma, bronchitis and paediatric respiratory care at home.",
     image: "nebulizer",
     uses: ["Asthma & bronchitis", "Paediatric care", "Post-viral cough"],
+    faqs: [
+      { q: "Can this be used for children?", a: "Yes, our nebulizers come with both adult and pediatric mask sizes, making them safe for children and infants." },
+      { q: "Is the machine noisy?", a: "We provide high-quality compressor and ultrasonic nebulizers that are designed for quiet, efficient home use." }
+    ],
   },
 ];
 

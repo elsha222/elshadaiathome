@@ -35,7 +35,7 @@ export const Route = createFileRoute("/equipment/$slug")({
         { property: "og:image", content: img },
       ],
       links: [{ rel: "canonical", href: `${SITE_URL}/equipment/${e.slug}` }],
-      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalDeviceSchema(e), getWebPageSchema(`${e.title} on Rent`, "/equipment/" + e.slug, e.long, "ItemPage", img ? img.toString() : undefined), getAggregateRatingSchema(), getFAQSchema([{q:`How do I rent a ${e.title}?`,a:`Call or WhatsApp us. Our team delivers and installs the ${e.title} at your home in Mumbai, Thane or Navi Mumbai.`},{q:`Is the ${e.title} sanitised?`,a:"Yes, all equipment is fully sanitised and quality-checked before every delivery."}]), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Equipment",path:"/equipment"},{name:e.title,path:"/equipment/"+e.slug}])]) }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalDeviceSchema(e), getWebPageSchema(`${e.title} on Rent`, "/equipment/" + e.slug, e.long, "ItemPage", img ? img.toString() : undefined), getAggregateRatingSchema(), getFAQSchema(e.faqs || [{q:`How do I rent a ${e.title}?`,a:`Call or WhatsApp us. Our team delivers and installs the ${e.title} at your home in Mumbai, Thane or Navi Mumbai.`},{q:`Is the ${e.title} sanitised?`,a:"Yes, all equipment is fully sanitised and quality-checked before every delivery."}]), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Equipment",path:"/equipment"},{name:e.title,path:"/equipment/"+e.slug}])]) }],
     };
   },
   notFoundComponent: () => (
