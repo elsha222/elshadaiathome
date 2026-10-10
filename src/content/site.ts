@@ -119,6 +119,7 @@ export type Service = {
   short: string;
   long: string;
   highlights: string[];
+  faqs?: { q: string; a: string }[];
 };
 
 export const services: Service[] = [
