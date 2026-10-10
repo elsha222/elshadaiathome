@@ -28,7 +28,10 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-hook-form", "zod", "framer-motion"],
+          ui: ["lucide-react", "embla-carousel-react", "date-fns"],
+        },
       },
     },
   },
