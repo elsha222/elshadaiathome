@@ -45,9 +45,14 @@ export function getMedicalBusinessSchema() {
       longitude: 72.8777,
     },
     hasMap: "https://maps.google.com/?q=Elshadai+Home+Healthcare+Bhiwandi",
-    areaServed: ["Mumbai", "Thane", "Navi Mumbai", "South Bombay", "Mumbai Suburban"].map(
-      (city) => ({ "@type": "City", name: city })
-    ),
+    areaServed: [
+      "Mumbai", "Navi Mumbai", "Thane", "Bhiwandi",
+      "Mulund", "Ghatkopar", "Vikhroli", "Kurla",
+      "Dadar", "Mahim", "Bandra", "Khar", "Santacruz", "Andheri", "Jogeshwari", "Goregaon", "Malad", "Kandivali", "Borivali", "Dahisar",
+      "Mira Road", "Bhayandar", "Naigaon", "Vasai", "Nalasopara", "Virar",
+      "Churchgate", "Colaba", "Fort", "Nariman Point", "Marine Lines", "Charni Road", "Girgaon", "Grant Road", "Malabar Hill", "Tardeo", "Mahalaxmi", "Mumbai Central", "Lower Parel", "Prabhadevi",
+      "Kalher", "Kashimira", "Vashi"
+    ].map((city) => ({ "@type": "City", name: city })),
     priceRange: "₹₹",
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, Online Transfer, UPI",
