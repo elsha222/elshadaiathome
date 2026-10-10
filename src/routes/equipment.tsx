@@ -9,7 +9,7 @@ import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSch
 
 const bedImg = "/assets/equipment-bed.webp";
 
-const SITE_URL = "https://elshadaihealthcare.com";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 export const Route = createFileRoute("/equipment")({
   head: () => ({

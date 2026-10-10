@@ -1,6 +1,6 @@
 import { business } from "@/content/site";
 
-const SITE_URL = "https://elshadaihealthcare.com";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 export function getMedicalBusinessSchema() {
   return {

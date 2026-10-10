@@ -8,7 +8,7 @@ import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSch
 
 const serviceImg = "/assets/service-nursing.webp";
 
-const SITE_URL = "https://elshadaihealthcare.com";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 export const Route = createFileRoute("/services")({
   head: () => ({

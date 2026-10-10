@@ -9,7 +9,7 @@ import { equipmentImages } from "@/components/home/EquipmentGrid";
 import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
 
 
-const SITE_URL = "https://elshadaihealthcare.com";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 export const Route = createFileRoute("/equipment/$slug")({
   loader: ({ params }) => {

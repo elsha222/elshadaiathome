@@ -4,7 +4,7 @@ import { z } from "zod";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { business, buildWhatsAppLink } from "@/content/site";
 
-const SITE_URL = "https://elshadaihealthcare.in";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 const searchSchema = z.object({ name: z.string().optional() });
 

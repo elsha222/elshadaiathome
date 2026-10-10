@@ -15,7 +15,7 @@ const g4 = "/assets/gallery-4.webp";
 const g5 = "/assets/gallery-5.webp";
 const g6 = "/assets/gallery-6.webp";
 
-const SITE_URL = "https://elshadaihealthcare.com";
+const SITE_URL = "https://www.elshadaihealthcare.com";
 
 const serviceImageMap: Record<string, string> = {
   "home-nursing": g1,

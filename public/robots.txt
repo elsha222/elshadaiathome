@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you
 
-Sitemap: https://elshadaihealthcare.com/sitemap.xml
+Sitemap: https://www.elshadaihealthcare.com/sitemap.xml
