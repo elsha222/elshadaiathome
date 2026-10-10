@@ -130,6 +130,10 @@ export const services: Service[] = [
     short: "Short or long-term nursing for post-op, chronic, and recovering patients.",
     long: "Trained ANM/GNM nurses provide medication management, IV administration, vitals monitoring, and round-the-clock care in the comfort of your home.",
     highlights: ["12 / 24 hour shifts", "Post-surgical recovery", "Vitals & medication"],
+    faqs: [
+      { q: "What duties do home nurses perform?", a: "Our nurses handle medication, IV administration, vital signs monitoring, wound care, and personal hygiene assistance." },
+      { q: "Can I book a nurse for just 12 hours?", a: "Yes, we offer flexible 12-hour (day or night) and 24-hour nursing shifts to suit your needs." }
+    ],
   },
   {
     slug: "icu-nurse",
@@ -138,6 +142,10 @@ export const services: Service[] = [
     short: "Critical care nurses for ventilator, tracheostomy, and high-dependency cases.",
     long: "Hospital-experienced ICU nurses bring intensive-care skills home — for ventilator support, tracheostomy care, and complex monitoring.",
     highlights: ["Ventilator support", "Tracheostomy care", "Cardiac monitoring"],
+    faqs: [
+      { q: "Are your ICU nurses experienced?", a: "Yes, all our ICU-trained nurses have prior experience working in hospital intensive care units and are proficient with complex life support systems." },
+      { q: "Do you provide ICU equipment as well?", a: "Yes, we can set up a complete home ICU, including ventilators, BiPAP, patient monitors, and suction machines." }
+    ],
   },
   {
     slug: "elderly-care",
@@ -146,6 +154,10 @@ export const services: Service[] = [
     short: "Compassionate companions and trained attendants for daily living support.",
     long: "From mobility help and meals to medication reminders and emotional companionship — dignified care that lets seniors stay home, safely.",
     highlights: ["Mobility assistance", "Meal & medication", "Companionship"],
+    faqs: [
+      { q: "Is this service for medical care?", a: "Elderly care primarily focuses on companionship, daily living assistance, and medication reminders. For medical procedures, we recommend our home nursing service." },
+      { q: "Can the caretaker help with bathing?", a: "Yes, our attendants are fully trained to assist seniors with bathing, grooming, and toileting with the utmost dignity." }
+    ],
   },
   {
     slug: "patient-attendant",
@@ -154,6 +166,10 @@ export const services: Service[] = [
     short: "Trained attendants for hygiene, mobility, and daily routines.",
     long: "Patient care attendants assist with bathing, feeding, mobility, and basic daily care — perfect for non-medical support needs.",
     highlights: ["Bathing & hygiene", "Feeding support", "Mobility help"],
+    faqs: [
+      { q: "What is the difference between a nurse and an attendant?", a: "Attendants assist with non-medical daily tasks like bathing, feeding, and mobility. Nurses are qualified professionals who can administer medications, IVs, and monitor vitals." },
+      { q: "Are the attendants background-verified?", a: "Yes, every patient care attendant goes through a strict background check and training process before being assigned." }
+    ],
   },
   {
     slug: "physiotherapy",
@@ -162,6 +178,10 @@ export const services: Service[] = [
     short: "Personalized rehabilitation by licensed physiotherapists.",
     long: "Recover from surgery, stroke, or injury with personalised in-home physiotherapy from licensed BPT/MPT specialists.",
     highlights: ["Post-stroke rehab", "Orthopaedic recovery", "Mobility restoration"],
+    faqs: [
+      { q: "How long is each physiotherapy session?", a: "A typical home physiotherapy session lasts between 45 to 60 minutes, depending on the patient's condition and tolerance." },
+      { q: "Do the physiotherapists bring their own equipment?", a: "Yes, our therapists bring necessary portable equipment like resistance bands, TENS machines, or ultrasound devices as required by the treatment plan." }
+    ],
   },
   {
     slug: "doctor-visit",
@@ -170,6 +190,10 @@ export const services: Service[] = [
     short: "MBBS and specialist consultations at your doorstep.",
     long: "Skip the waiting room. Qualified physicians and specialists visit your home for consultations, prescriptions, and follow-ups.",
     highlights: ["GP & specialist", "Prescriptions", "Follow-up care"],
+    faqs: [
+      { q: "Can the visiting doctor write prescriptions?", a: "Yes, our registered physicians can diagnose conditions and provide valid medical prescriptions." },
+      { q: "How fast can a doctor visit be arranged?", a: "Doctor visits are typically scheduled within 2 to 6 hours depending on your location in Mumbai and doctor availability." }
+    ],
   },
   {
     slug: "wound-care",
@@ -178,6 +202,10 @@ export const services: Service[] = [
     short: "Sterile wound dressing, suture removal, and post-op wound management.",
     long: "Trained nurses provide sterile dressing, suture removal, and ongoing wound assessment to prevent infection and speed healing.",
     highlights: ["Sterile dressing", "Suture removal", "Diabetic wounds"],
+    faqs: [
+      { q: "Do you treat diabetic ulcers?", a: "Yes, our nurses are experienced in advanced wound care, including diabetic foot ulcers and bedsores." },
+      { q: "Do I need to buy dressing materials?", a: "Our nurses can bring standard sterile dressing kits. If specific medicated dressings are prescribed by your doctor, you can provide them or we can arrange them at actual cost." }
+    ],
   },
   {
     slug: "newborn-care",
@@ -186,6 +214,10 @@ export const services: Service[] = [
     short: "NICU-trained nurses for newborns and post-natal mothers.",
     long: "Specialized care for newborns, premature babies, and post-natal mothers from NICU-experienced nursing professionals.",
     highlights: ["Premature newborns", "Lactation support", "Post-natal mom care"],
+    faqs: [
+      { q: "Are the nurses trained for premature babies?", a: "Yes, we provide specialized NICU-trained nurses for premature or low-birth-weight babies." },
+      { q: "Do you provide lactation support for the mother?", a: "Absolutely. Our newborn care nurses also assist and guide new mothers with lactation, feeding, and post-natal recovery." }
+    ],
   },
 ];
 
