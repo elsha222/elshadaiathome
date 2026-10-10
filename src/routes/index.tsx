@@ -14,7 +14,7 @@ const Faq = lazy(() => import("@/components/home/Faq").then(m => ({ default: m.F
 const CtaBanner = lazy(() => import("@/components/home/CtaBanner").then(m => ({ default: m.CtaBanner })));
 const AppointmentForm = lazy(() => import("@/components/forms/AppointmentForm").then(m => ({ default: m.AppointmentForm })));
 import { business, faqs } from "@/content/site";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getHowToSchema, getAggregateRatingSchema, getReviewSchema } from "@/utils/schema";
 
 const heroImg = "/hero-nurse.webp";
 
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/" }],
-    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebSiteSchema(), getWebPageSchema("ELSHADAI — Home Nursing & Medical Equipment in Mumbai", "/", business.shortDescription), getFAQSchema(faqs)]) }],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebSiteSchema(), getWebPageSchema("ELSHADAI — Home Nursing & Medical Equipment in Mumbai", "/", business.shortDescription, "WebPage", `${SITE_URL}/og-image.webp`), getFAQSchema(faqs), getHowToSchema(), getAggregateRatingSchema(), ...getReviewSchema(), getBreadcrumbSchema([{ name: "Home", path: "/" }])]) }],
   }),
   component: HomePage,
 });

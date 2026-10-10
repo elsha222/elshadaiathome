@@ -5,7 +5,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { blogPosts, blogCategories } from "@/content/blog";
 import { useState, useMemo } from "react";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebPageSchema, buildAdvancedSchema, getBreadcrumbSchema, getBlogListSchema } from "@/utils/schema";
 
 
 const SITE_URL = "https://www.elshadaihealthcare.com";
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/blog/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/blog" }],
-    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Healthcare Blog", "/blog", "Read our latest healthcare insights and home care guides.", "CollectionPage")]) }],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Healthcare Blog", "/blog", "Read our latest healthcare insights and home care guides.", "CollectionPage"), getBlogListSchema(blogPosts), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Blog",path:"/blog"}])]) }],
   }),
   component: BlogIndexPage,
 });

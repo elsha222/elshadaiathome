@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, MapPin, User, CheckCircle2 } fr
 import { PageLayout } from "@/components/layout/PageLayout";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { blogPosts, BlogPost } from "@/content/blog";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getAggregateRatingSchema, getReviewSchema } from "@/utils/schema";
 
 
 const SITE_URL = "https://www.elshadaihealthcare.com";
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/blog_/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: SITE_URL + "/blog/" + post.slug }],
-      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getArticleSchema(post), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: "/blog/" + post.slug }]), getFAQSchema(post.faqs ?? [])]) }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getArticleSchema(post), getWebPageSchema(post.metaTitle, "/blog/" + post.slug, post.metaDescription, "Article", SITE_URL + post.image, post.date, post.date), getAggregateRatingSchema(), getFAQSchema(post.faqs ?? []), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Blog",path:"/blog"},{name:post.title,path:"/blog/"+post.slug}])]) }],
     };
   },
   component: BlogPostPage,

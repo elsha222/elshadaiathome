@@ -4,7 +4,7 @@ import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services } from "@/content/site";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getServiceListSchema, getAggregateRatingSchema } from "@/utils/schema";
 
 const serviceImg = "/assets/service-nursing.webp";
 
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/services")({
       { name: "twitter:image", content: serviceImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/services" }],
-    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Home Healthcare Services", "/services", "Comprehensive home nursing and care services.", "CollectionPage")]) }],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Home Healthcare Services", "/services", "Comprehensive home nursing and care services.", "CollectionPage", `${SITE_URL}/assets/service-nursing.webp`), getServiceListSchema(services), getFAQSchema([{q:"What services do you offer?",a:"We offer home nursing, ICU nurses, elderly care, physiotherapy, doctor visits, wound care and newborn care across Mumbai."},{q:"How do I book a service?",a:"Call us, WhatsApp or fill the booking form — a coordinator calls back within 30 minutes."}]), getAggregateRatingSchema(), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Services",path:"/services"}])]) }],
   }),
   component: ServicesPage,
 });

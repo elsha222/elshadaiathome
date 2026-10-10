@@ -6,7 +6,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { services, business, buildWhatsAppLink, equipment } from "@/content/site";
 import { equipmentImages } from "@/components/home/EquipmentGrid";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getMedicalServiceSchema, getAggregateRatingSchema } from "@/utils/schema";
 
 const g1 = "/assets/gallery-1.webp";
 const g2 = "/assets/gallery-2.webp";
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "twitter:image", content: img },
       ],
       links: [{ rel: "canonical", href: `${SITE_URL}/services/${s.slug}` }],
-      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalServiceSchema(s), getWebPageSchema(s.title, "/services/" + s.slug, s.long, "ItemPage"), getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: s.title, path: "/services/" + s.slug }])]) }],
+      scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getMedicalServiceSchema(s), getWebPageSchema(s.title, "/services/" + s.slug, s.long, "ItemPage", img), getAggregateRatingSchema(), getFAQSchema(s.faqs || [{q:`What does ${s.title} include?`,a:s.long}]), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Services",path:"/services"},{name:s.title,path:"/services/"+s.slug}])]) }],
     };
   },
   notFoundComponent: () => (

@@ -5,7 +5,7 @@ import { EquipmentGrid } from "@/components/home/EquipmentGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
 import { equipment, business } from "@/content/site";
-import { getMedicalBusinessSchema, getWebSiteSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getArticleSchema, getMedicalServiceSchema, getMedicalDeviceSchema } from "@/utils/schema";
+import { getMedicalBusinessSchema, getWebPageSchema, getFAQSchema, buildAdvancedSchema, getBreadcrumbSchema, getEquipmentListSchema, getAggregateRatingSchema } from "@/utils/schema";
 
 const bedImg = "/assets/equipment-bed.webp";
 
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/equipment")({
       { name: "twitter:image", content: bedImg },
     ],
     links: [{ rel: "canonical", href: SITE_URL + "/equipment" }],
-    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Medical Equipment", "/equipment", "Rent or buy hospital beds, BiPAP, oxygen concentrators.", "CollectionPage")]) }],
+    scripts: [{ type: "application/ld+json", children: buildAdvancedSchema([getMedicalBusinessSchema(), getWebPageSchema("Medical Equipment Rental", "/equipment", "Rent or buy hospital beds, BiPAP, oxygen concentrators.", "CollectionPage", bedImg), getEquipmentListSchema(equipment), getAggregateRatingSchema(), getFAQSchema([{q:"Do you deliver and install the equipment?",a:"Yes. Our technician delivers, installs and trains the family on every equipment rental."},{q:"Is the equipment sanitised?",a:"Yes. All units are serviced, sanitised and quality-tested before delivery."},{q:"Can I rent for just a few days?",a:"Yes, we offer daily, weekly and monthly rentals — no minimum contract."}]), getBreadcrumbSchema([{name:"Home",path:"/"},{name:"Equipment",path:"/equipment"}])]) }],
   }),
   component: EquipmentPage,
 });
