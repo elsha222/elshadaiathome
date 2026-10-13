@@ -1,6 +1,6 @@
 import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { Link } from "@tanstack/react-router";
-import { HeartPulse, Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin, Youtube, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin, Youtube, Twitter } from "lucide-react";
 import { business, nav, services, equipment, buildWhatsAppLink } from "@/content/site";
 const logo = "/assets/logo.webp";
 
@@ -69,7 +69,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             {equipment.slice(0, 4).map((e) => (
               <li key={e.slug}>
-                <Link to="/equipment" className="hover:text-[#0E7C6E] transition-colors">
+                <Link to="/equipment/$slug" params={{ slug: e.slug }} className="hover:text-[#0E7C6E] transition-colors">
                   {e.title}
                 </Link>
               </li>
@@ -110,33 +110,65 @@ export function Footer() {
         </div>
       </div>
 
+      {/* ── Quick nav links (SEO-friendly, properly linked) ── */}
       <div className="border-t border-white/10 bg-gradient-to-b from-transparent to-black/20">
-        <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:px-12 space-y-6">
-          <div className="text-center">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Our Services</h4>
-            <div className="mt-3 flex flex-wrap justify-center gap-2">
-              {["Home Nursing Care Mumbai", "Home Nurse Near Me", "ICU Nurse at Home Mumbai", "Elderly Care at Home Mumbai", "Patient Attendant Service Mumbai", "Home Healthcare Services Mumbai", "Nursing Bureau in Mumbai", "24 Hour Nurse at Home Mumbai", "Physiotherapist at Home Mumbai", "Doctor Home Visit Mumbai", "Newborn Baby Care Nurse at Home", "Post Surgery Care at Home Mumbai", "Bedridden Patient Care at Home", "Hospital Bed on Rent Mumbai", "Oxygen Concentrator on Rent Mumbai", "Wheelchair on Rent Mumbai", "BiPAP Machine on Rent Mumbai", "Nursing Bureau Near Me"].map((s) => (
-                <span key={s} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{s}</span>
-              ))}
+        <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:px-12">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70 mb-3">Popular Services</h4>
+              <ul className="space-y-2">
+                {[
+                  { label: "Home Nursing Care Mumbai", to: "/services/home-nursing" },
+                  { label: "ICU Nurse at Home", to: "/services/icu-nurse" },
+                  { label: "Elderly Care at Home", to: "/services/elderly-care" },
+                  { label: "Patient Care Attendant", to: "/services/patient-attendant" },
+                  { label: "Physiotherapy at Home Mumbai", to: "/services/physiotherapy" },
+                  { label: "Doctor Home Visit Mumbai", to: "/services/doctor-visit" },
+                ].map((s) => (
+                  <li key={s.to}>
+                    <Link to={s.to} className="text-[11px] text-white/45 hover:text-white/70 transition-colors">{s.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="text-center">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Areas We Serve</h4>
-            <div className="mt-3 flex flex-wrap justify-center gap-2">
-              {["Home Nurse in Churchgate", "Home Nurse in Marine Lines", "Home Nurse in Charni Road", "Home Nurse in Grant Road", "Home Nurse in Mumbai Central", "Home Nurse in Mahalaxmi", "Home Nurse in Lower Parel", "Home Nurse in Prabhadevi", "Home Nurse in Dadar", "Home Nurse in Matunga Road", "Home Nurse in Mahim", "Home Nurse in Bandra", "Home Nurse in Khar Road", "Home Nurse in Santacruz", "Home Nurse in Vile Parle", "Home Nurse in Andheri", "Home Nurse in Jogeshwari", "Home Nurse in Goregaon", "Home Nurse in Malad", "Home Nurse in Kandivali", "Home Nurse in Borivali", "Home Nurse in Dahisar", "Home Nurse in Mira Road", "Home Nurse in Bhayandar", "Home Nurse in Naigaon", "Home Nurse in Vasai Road", "Home Nurse in Nallasopara", "Home Nurse in Virar"].map((a) => (
-                <span key={a} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{a}</span>
-              ))}
+
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70 mb-3">Medical Equipment on Rent</h4>
+              <ul className="space-y-2">
+                {[
+                  { label: "Hospital Bed on Rent Mumbai", to: "/equipment/hospital-bed" },
+                  { label: "Oxygen Concentrator on Rent", to: "/equipment/oxygen-concentrator" },
+                  { label: "BiPAP / CPAP Machine on Rent", to: "/equipment/bipap-cpap" },
+                  { label: "Wheelchair on Rent Mumbai", to: "/equipment/wheelchair" },
+                  { label: "Walker on Rent Mumbai", to: "/equipment/walker" },
+                  { label: "Nebulizer on Rent Mumbai", to: "/equipment/nebulizer" },
+                ].map((e) => (
+                  <li key={e.to}>
+                    <Link to={e.to} className="text-[11px] text-white/45 hover:text-white/70 transition-colors">{e.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="text-center">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70">Search Near You</h4>
-            <div className="mt-3 flex flex-wrap justify-center gap-2">
-              {["Nurse at Home Near Me", "Home Nurse for Elderly Near Me", "ICU Nurse Near Me", "Patient Care Attendant Near Me", "Physiotherapist at Home Near Me", "24 Hour Nurse Near Me", "Baby Care Nurse Near Me", "Hospital Bed on Rent Near Me", "Oxygen Concentrator on Rent Near Me", "Home Healthcare Near Me"].map((n) => (
-                <span key={n} className="rounded-full bg-white/[0.04] border border-white/10 px-3 py-1 text-[10px] text-white/45 transition-colors hover:bg-white/[0.08] hover:text-white/60">{n}</span>
-              ))}
+
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0E7C6E]/70 mb-3">Areas We Serve</h4>
+              <ul className="space-y-2">
+                {[
+                  { label: "South Mumbai & Churchgate", to: "/blog/home-nurse-churchgate-south-mumbai" },
+                  { label: "Dadar & Central Mumbai", to: "/blog/home-nursing-dadar-central-mumbai" },
+                  { label: "Bandra & Western Suburbs", to: "/blog/home-nurse-bandra-western-suburbs" },
+                  { label: "Andheri & Goregaon", to: "/blog/home-nursing-andheri-goregaon" },
+                  { label: "Mira Road & Bhayandar", to: "/blog/home-nurse-mira-road-bhayandar" },
+                  { label: "Vasai, Virar & Nallasopara", to: "/blog/home-nursing-vasai-virar-nallasopara" },
+                ].map((a) => (
+                  <li key={a.to}>
+                    <Link to={a.to} className="text-[11px] text-white/45 hover:text-white/70 transition-colors">{a.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
+
           </div>
         </div>
       </div>

@@ -1,323 +1,264 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- ── Main pages (7) ─────────────────────────────────── -->
   <url>
-    <loc>https://www.elshadaihealthcare.com</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.elshadaihealthcare.com/</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/book</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+
+  <!-- ── Service pages (8) ──────────────────────────────── -->
+  <url>
+    <loc>https://www.elshadaihealthcare.com/services/home-nursing</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
-    <loc>https://www.elshadaihealthcare.com/services/24-hour-nursing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/services/home-icu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.elshadaihealthcare.com/services/icu-nurse</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/services/elderly-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
-    <loc>https://www.elshadaihealthcare.com/services/post-surgery-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/services/wound-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.elshadaihealthcare.com/services/patient-attendant</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/services/physiotherapy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/services/baby-mother-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/services/doctor-visit</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
-    <loc>https://www.elshadaihealthcare.com/services/dementia-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.elshadaihealthcare.com/services/wound-care</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
-    <loc>https://www.elshadaihealthcare.com/services/stroke-rehabilitation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.elshadaihealthcare.com/services/newborn-care</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/services/palliative-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- ── Equipment pages (8) ────────────────────────────── -->
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment/hospital-bed</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment/oxygen-concentrator</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment/bipap-cpap</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/equipment/wheelchair-walker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/equipment/suction-machine</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment/patient-monitor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/equipment/wheelchair</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/equipment/walker</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/equipment/suction-machine</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/equipment/nebulizer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
+
+  <!-- ── Blog: Informational guides (16) ────────────────── -->
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/home-nursing-care-mumbai</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/icu-trained-nurses-at-home</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/elderly-care-at-home-senior-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/post-surgery-recovery-at-home</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/24-hour-home-nursing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/newborn-mother-care-nicu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/patient-attendant-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/physiotherapy-at-home-faster-recovery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/doctor-home-visits-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/wound-care-dressing-home</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-churchgate-south-mumbai</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-dadar-central-mumbai</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-bandra-western-suburbs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-andheri-goregaon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-malad-kandivali-borivali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-mira-road-bhayandar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-vasai-virar-nallasopara</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/elderly-care-thane-navi-mumbai</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/hospital-bed-on-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/oxygen-concentrator-on-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/bipap-cpap-machine-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/wheelchair-walker-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/suction-machine-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.elshadaihealthcare.com/blog/nebulizer-on-rent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/home-healthcare-vs-hospital-cost</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/how-to-choose-nursing-bureau</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/bedridden-patient-care-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/stroke-recovery-at-home</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/dementia-care-at-home-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/setting-up-home-icu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+
+  <!-- ── Blog: Locality posts (8) ───────────────────────── -->
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-churchgate-south-mumbai</loc>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-dadar-central-mumbai</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-bandra-western-suburbs</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-andheri-goregaon</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-malad-kandivali-borivali</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nurse-mira-road-bhayandar</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/home-nursing-vasai-virar-nallasopara</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/elderly-care-thane-navi-mumbai</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+
+  <!-- ── Blog: Equipment Rental Guides (6) ──────────────── -->
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/hospital-bed-on-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/oxygen-concentrator-on-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/bipap-cpap-machine-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/wheelchair-walker-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/suction-machine-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.elshadaihealthcare.com/blog/nebulizer-on-rent</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+
+  <!-- ── Blog: Local "Near Me" Search Guides (9) ────────── -->
+  <url>
     <loc>https://www.elshadaihealthcare.com/blog/home-nurse-elderly-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/icu-nurse-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/patient-care-attendant-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/physiotherapist-at-home-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/24-hour-nurse-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/baby-care-nurse-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/hospital-bed-on-rent-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/oxygen-concentrator-on-rent-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://www.elshadaihealthcare.com/blog/home-healthcare-near-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-13</lastmod>
   </url>
 </urlset>

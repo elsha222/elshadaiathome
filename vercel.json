@@ -5,7 +5,15 @@
       "has": [{ "type": "host", "value": "elshadaihealthcare.com" }],
       "destination": "https://www.elshadaihealthcare.com/$1",
       "permanent": true
-    }
+    },
+    { "source": "/services/24-hour-nursing",      "destination": "/services/home-nursing",    "permanent": true },
+    { "source": "/services/home-icu",              "destination": "/services/icu-nurse",       "permanent": true },
+    { "source": "/services/post-surgery-care",     "destination": "/services/home-nursing",    "permanent": true },
+    { "source": "/services/baby-mother-care",      "destination": "/services/newborn-care",    "permanent": true },
+    { "source": "/services/dementia-care",         "destination": "/services/elderly-care",    "permanent": true },
+    { "source": "/services/stroke-rehabilitation", "destination": "/services/physiotherapy",   "permanent": true },
+    { "source": "/services/palliative-care",       "destination": "/services/elderly-care",    "permanent": true },
+    { "source": "/equipment/wheelchair-walker",    "destination": "/equipment/wheelchair",     "permanent": true }
   ],
   "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }],
   "headers": [
